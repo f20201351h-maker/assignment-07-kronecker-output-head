@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Rebuildable token streams and downloads (see docs/REPRODUCE.md)
+data/raw/*
+!data/raw/download_meta.json
+data/gpt2/
+data/tokens/*.npy
+data/tokens/*.npz
+data/logs/
+staging/
+
+# Checkpoints are not distributed (fetch or retrain; see docs/REPRODUCE.md)
+*.pt
+checkpoints/

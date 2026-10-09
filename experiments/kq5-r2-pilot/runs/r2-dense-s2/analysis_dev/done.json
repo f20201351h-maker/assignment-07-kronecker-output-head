@@ -1,0 +1,6 @@
+{
+  "run_id": "r2-dense-s2",
+  "split": "dev",
+  "wall_s": 104.51258087158203,
+  "best_rule_by_regret": "inherit"
+}

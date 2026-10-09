@@ -1,0 +1,109 @@
+{
+  "device": "Tesla T4",
+  "results": [
+    {
+      "head": "dense",
+      "V": 50257,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 25731584,
+      "train_state_bytes_adamw_fp32": 411705344,
+      "fwd_bwd_s_median": 0.38153886795043945,
+      "peak_mem_gb": 3.377080832,
+      "static_mem_gb": 0.1389056,
+      "logit_matmul_tflop": 1.686345089024
+    },
+    {
+      "head": "kas",
+      "V": 50257,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 4194304,
+      "train_state_bytes_adamw_fp32": 67108864,
+      "fwd_bwd_s_median": 0.4371659755706787,
+      "peak_mem_gb": 3.406204416,
+      "static_mem_gb": 0.07929344,
+      "logit_matmul_tflop": 1.686345089024
+    },
+    {
+      "head": "dense",
+      "V": 131072,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 67108864,
+      "train_state_bytes_adamw_fp32": 1073741824,
+      "fwd_bwd_s_median": 0.9682004451751709,
+      "peak_mem_gb": 4.951876096,
+      "static_mem_gb": 0.30441472,
+      "logit_matmul_tflop": 4.398046511104
+    },
+    {
+      "head": "kas",
+      "V": 131072,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 4194304,
+      "train_state_bytes_adamw_fp32": 67108864,
+      "fwd_bwd_s_median": 1.1037266254425049,
+      "peak_mem_gb": 4.606501376,
+      "static_mem_gb": 0.121962496,
+      "logit_matmul_tflop": 4.398046511104
+    },
+    {
+      "head": "dense",
+      "V": 262144,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 134217728,
+      "train_state_bytes_adamw_fp32": 2147483648,
+      "fwd_bwd_s_median": 1.9790265560150146,
+      "peak_mem_gb": 5.488747008,
+      "static_mem_gb": 0.572850176,
+      "logit_matmul_tflop": 8.796093022208
+    },
+    {
+      "head": "kas",
+      "V": 262144,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 4194304,
+      "train_state_bytes_adamw_fp32": 67108864,
+      "fwd_bwd_s_median": 2.2111568450927734,
+      "peak_mem_gb": 4.675783168,
+      "static_mem_gb": 0.191244288,
+      "logit_matmul_tflop": 8.796093022208
+    },
+    {
+      "head": "dense",
+      "V": 1048576,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 536870912,
+      "train_state_bytes_adamw_fp32": 8589934592,
+      "fwd_bwd_s_median": 8.71980881690979,
+      "peak_mem_gb": 8.70997248,
+      "static_mem_gb": 2.183462912,
+      "logit_matmul_tflop": 35.184372088832
+    },
+    {
+      "head": "kas",
+      "V": 1048576,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 4194304,
+      "train_state_bytes_adamw_fp32": 67108864,
+      "fwd_bwd_s_median": 8.868881702423096,
+      "peak_mem_gb": 5.090943488,
+      "static_mem_gb": 0.606404608,
+      "logit_matmul_tflop": 35.184372088832
+    }
+  ]
+}

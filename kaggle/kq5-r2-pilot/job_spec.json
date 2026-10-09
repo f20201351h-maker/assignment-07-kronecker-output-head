@@ -1,0 +1,406 @@
+{
+ "name": "r2_pilot",
+ "slug": "kq5-r2-pilot",
+ "title": "kq5 r2 pilot",
+ "deadline_s": 41400.0,
+ "require_gpus": 2,
+ "workers": {
+  "0": [
+   {
+    "type": "train",
+    "name": "r2-dense-s1",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-dense-s1",
+     "head": "dense",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 1.0,
+     "seed": 1
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kasp-s1",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kasp-s1",
+     "head": "kasp",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 1
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kasu-s1",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kasu-s1",
+     "head": "kasu",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 1
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kasg-v1-s1",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kasg-v1-s1",
+     "head": "kasg",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 1,
+     "generator": {
+      "emb": 64,
+      "channels": 128,
+      "layers": 2,
+      "kernel": 3,
+      "hidden": 256
+     },
+     "gen_lr_mult": 1.0
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kasg-v3-s1",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kasg-v3-s1",
+     "head": "kasg",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 1,
+     "generator": {
+      "emb": 64,
+      "channels": 256,
+      "layers": 3,
+      "kernel": 3,
+      "hidden": 512
+     },
+     "gen_lr_mult": 1.0
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kas0-s1",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kas0-s1",
+     "head": "kas0",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 1
+    }
+   },
+   {
+    "type": "python",
+    "name": "analysis-r2-dense-s1",
+    "module": "kq5.analysis",
+    "est_s": 600,
+    "kwargs": {
+     "runs": [
+      "r2-dense-s1",
+      "r2-kasp-s1",
+      "r2-kasu-s1",
+      "r2-kasg-v1-s1",
+      "r2-kasg-v3-s1",
+      "r2-kas0-s1"
+     ],
+     "split": "dev",
+     "retok_rules": [
+      "mean",
+      "inherit",
+      "bytes",
+      "count",
+      "inherit_prior",
+      "gen_count",
+      "gen_inherit"
+     ]
+    }
+   }
+  ],
+  "1": [
+   {
+    "type": "train",
+    "name": "r2-dense-s2",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-dense-s2",
+     "head": "dense",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 1.0,
+     "seed": 2
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kasp-s2",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kasp-s2",
+     "head": "kasp",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 2
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kasu-s2",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kasu-s2",
+     "head": "kasu",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 2
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kasg-v2-s1",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kasg-v2-s1",
+     "head": "kasg",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 1,
+     "generator": {
+      "emb": 64,
+      "channels": 128,
+      "layers": 2,
+      "kernel": 3,
+      "hidden": 256
+     },
+     "gen_lr_mult": 0.1
+    }
+   },
+   {
+    "type": "train",
+    "name": "r2-kasgshuf-v1-s1",
+    "est_s": 1800.0,
+    "config": {
+     "run_id": "r2-kasgshuf-v1-s1",
+     "head": "kasg_shuf",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 20971520,
+     "warmup_tokens": 1048576,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": null,
+     "save_checkpoint": true,
+     "log_every": 10,
+     "head_lr_mult": 0.1,
+     "seed": 1,
+     "generator": {
+      "emb": 64,
+      "channels": 128,
+      "layers": 2,
+      "kernel": 3,
+      "hidden": 256
+     },
+     "gen_lr_mult": 1.0
+    }
+   },
+   {
+    "type": "python",
+    "name": "analysis-r2-dense-s2",
+    "module": "kq5.analysis",
+    "est_s": 600,
+    "kwargs": {
+     "runs": [
+      "r2-dense-s2",
+      "r2-kasp-s2",
+      "r2-kasu-s2",
+      "r2-kasg-v2-s1",
+      "r2-kasgshuf-v1-s1"
+     ],
+     "split": "dev",
+     "retok_rules": [
+      "mean",
+      "inherit",
+      "bytes",
+      "count",
+      "inherit_prior",
+      "gen_count",
+      "gen_inherit"
+     ]
+    }
+   }
+  ]
+ },
+ "backbone": "8L512",
+ "head_lr_mult": 0.1
+}

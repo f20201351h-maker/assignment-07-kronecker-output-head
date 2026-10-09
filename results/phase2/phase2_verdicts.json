@@ -1,0 +1,590 @@
+{
+ "protocol": "06",
+ "arms_present": [
+  "Dense",
+  "KAS-G",
+  "KAS-G-occ",
+  "KAS-G-shuf",
+  "KAS-P",
+  "KAS-U16",
+  "KAS-U16-drop25",
+  "KAS-U16-dropU25",
+  "KAS-U64"
+ ],
+ "bpb_test": {
+  "KAS-U16": 1.4612712354119408,
+  "KAS-G": 1.5138022752228641,
+  "KAS-P": 1.630780687984679,
+  "Dense": 1.442741495665308,
+  "KAS-G-shuf": 1.5278782600012273,
+  "KAS-U16-drop25": 1.6346950107200269,
+  "KAS-U16-dropU25": 1.4843530199998463,
+  "KAS-G-occ": 1.5522132007442941,
+  "KAS-U64": 1.4145933887818085
+ },
+ "Q1_dropout_cost": {
+  "bpb(KAS-U16-drop25) - bpb(KAS-U16)": {
+   "point": 0.17342377530808606,
+   "ci95": [
+    0.16798604700888142,
+    0.17888683517170126
+   ],
+   "n_boot": 2000
+  },
+  "bpb(KAS-U16-dropU25) - bpb(KAS-U16)": {
+   "point": 0.02308178458790544,
+   "ci95": [
+    0.020710525772771667,
+    0.025410972084446013
+   ],
+   "n_boot": 2000
+  },
+  "report_value_20M_single_run": 0.028
+ },
+ "H5_dropout_minting": {
+  "KAS-U16-drop25": {
+   "rule_drop_by_dev_regret": "count",
+   "rule_kasu_by_dev_regret": "inherit",
+   "dev_regret_candidates": {
+    "KAS-U16-drop25": {
+     "floor": 7.653607896335901,
+     "zero": -1.6024952055226498,
+     "count": -1.7183728027919873,
+     "inherit": 1.165662627526363,
+     "inherit_prior": -1.6549083590924787
+    },
+    "KAS-U16": {
+     "floor": 10.764672118668418,
+     "zero": 1.5194173171408305,
+     "count": 1.4043619948086943,
+     "inherit": 0.5231353020677183,
+     "inherit_prior": 1.41228571938944
+    }
+   },
+   "delta_regret_bits": {
+    "point": -2.5913276051657026,
+    "ci95": [
+     -2.959011585548445,
+     -2.250928379949747
+    ],
+    "n_sites": 2110,
+    "n_windows": 748
+   },
+   "delta_leak_bpb": {
+    "point": -0.0004007115560803183,
+    "ci95": [
+     -0.0005460447664035633,
+     -0.00025931234846816723
+    ],
+    "n_boot": 2000
+   },
+   "verdict": "SUPPORTED",
+   "secondary_zero_rule": {
+    "delta_regret_bits": {
+     "point": -3.209373738343743,
+     "ci95": [
+      -3.5889258058662885,
+      -2.8545715730610883
+     ],
+     "n_sites": 2110,
+     "n_windows": 748
+    },
+    "delta_leak_bpb": {
+     "point": 0.0008821086936343257,
+     "ci95": [
+      0.0007253199523595999,
+      0.0010122286311317686
+     ],
+     "n_boot": 2000
+    },
+    "regret_drop": -1.5498195947844229,
+    "regret_kasu": 1.65955413978357
+   },
+   "net_retok": {
+    "rule_drop_by_net_dev": "inherit",
+    "rule_kasu_by_net_dev": "inherit_prior",
+    "test_delta_drop_per_seed": [
+     0.0007020373925221701,
+     0.0007868414603091622
+    ],
+    "test_delta_kasu_per_seed": [
+     0.0026589783184716165,
+     0.0025556835459272786
+    ],
+    "dev_candidates_drop": {
+     "count": 0.0021363303542613066,
+     "inherit": 0.0006828740017895685,
+     "inherit_prior": 0.0020063743668972123
+    }
+   }
+  },
+  "KAS-U16-dropU25": {
+   "rule_drop_by_dev_regret": "inherit",
+   "rule_kasu_by_dev_regret": "inherit",
+   "dev_regret_candidates": {
+    "KAS-U16-dropU25": {
+     "floor": 10.762336501358675,
+     "zero": 1.4914402239620492,
+     "count": 1.37687193061373,
+     "inherit": 0.29006859655967787,
+     "inherit_prior": 1.402479550362629
+    },
+    "KAS-U16": {
+     "floor": 10.764672118668418,
+     "zero": 1.5194173171408305,
+     "count": 1.4043619948086943,
+     "inherit": 0.5231353020677183,
+     "inherit_prior": 1.41228571938944
+    }
+   },
+   "delta_regret_bits": {
+    "point": -0.29220145083122817,
+    "ci95": [
+     -0.4228983204121923,
+     -0.1656976567102394
+    ],
+    "n_sites": 2110,
+    "n_windows": 748
+   },
+   "delta_leak_bpb": {
+    "point": -0.0023833052636378707,
+    "ci95": [
+     -0.0025135638373366092,
+     -0.0022540331382948156
+    ],
+    "n_boot": 2000
+   },
+   "verdict": "SUPPORTED",
+   "secondary_zero_rule": {
+    "delta_regret_bits": {
+     "point": 0.054921793989587187,
+     "ci95": [
+      -0.10969941876047813,
+      0.21800351463899215
+     ],
+     "n_sites": 2110,
+     "n_windows": 748
+    },
+    "delta_leak_bpb": {
+     "point": -0.0018259617516853863,
+     "ci95": [
+      -0.0019754152763639525,
+      -0.0016925992536413344
+     ],
+     "n_boot": 2000
+    },
+    "regret_drop": 1.7144759363260356,
+    "regret_kasu": 1.65955413978357
+   },
+   "net_retok": {
+    "rule_drop_by_net_dev": "inherit",
+    "rule_kasu_by_net_dev": "inherit_prior",
+    "test_delta_drop_per_seed": [
+     0.0007715282329499029,
+     0.0007069518446700673
+    ],
+    "test_delta_kasu_per_seed": [
+     0.0026589783184716165,
+     0.0025556835459272786
+    ],
+    "dev_candidates_drop": {
+     "count": 0.00018857078280676287,
+     "inherit": 1.5117866679847936e-05,
+     "inherit_prior": 0.00018634316121202144
+    }
+   }
+  }
+ },
+ "H6_frontier": {
+  "KAS-U16-drop25": {
+   "vs_KAS-G": {
+    "other": "KAS-G",
+    "rule_other_by_net_dev": "gen_count",
+    "bpb_diff_drop_minus_other": {
+     "point": 0.12089273549716273,
+     "ci95": [
+      0.11243840261189411,
+      0.12903279039089666
+     ],
+     "n_boot": 2000
+    },
+    "net_test_delta_drop_per_seed": [
+     0.0007020373925221701,
+     0.0007868414603091622
+    ],
+    "net_test_delta_other_per_seed": [
+     0.0003213076560126815,
+     0.00047894113600444044
+    ],
+    "delta_regret_bits_own_rules": {
+     "point": -2.2148210049483685,
+     "ci95": [
+      -2.573847030003581,
+      -1.8568709738529026
+     ],
+     "n_sites": 2110,
+     "n_windows": 748
+    },
+    "delta_leak_bpb_own_rules": {
+     "point": 0.002148447662951762,
+     "ci95": [
+      0.002103817724567401,
+      0.002200300401185259
+     ],
+     "n_boot": 2000
+    },
+    "verdict": "DOMINATED"
+   },
+   "vs_Dense": {
+    "other": "Dense",
+    "rule_other_by_net_dev": "inherit",
+    "bpb_diff_drop_minus_other": {
+     "point": 0.19195351505471892,
+     "ci95": [
+      0.18591790700620023,
+      0.19796560826117643
+     ],
+     "n_boot": 2000
+    },
+    "net_test_delta_drop_per_seed": [
+     0.0007020373925221701,
+     0.0007868414603091622
+    ],
+    "net_test_delta_other_per_seed": [
+     0.0012943071706119635,
+     0.0013554072032853082
+    ],
+    "delta_regret_bits_own_rules": {
+     "point": -2.310771608022974,
+     "ci95": [
+      -2.6870410866482977,
+      -1.9147532817648103
+     ],
+     "n_sites": 2110,
+     "n_windows": 748
+    },
+    "delta_leak_bpb_own_rules": {
+     "point": 0.002318148460452275,
+     "ci95": [
+      0.0022774260052551513,
+      0.0023651177873945054
+     ],
+     "n_boot": 2000
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "KAS-U16-dropU25": {
+   "vs_KAS-G": {
+    "other": "KAS-G",
+    "rule_other_by_net_dev": "gen_count",
+    "bpb_diff_drop_minus_other": {
+     "point": -0.02944925522301789,
+     "ci95": [
+      -0.035592232198799235,
+      -0.023296792517445302
+     ],
+     "n_boot": 2000
+    },
+    "net_test_delta_drop_per_seed": [
+     0.0007715282329499029,
+     0.0007069518446700673
+    ],
+    "net_test_delta_other_per_seed": [
+     0.0003213076560126815,
+     0.00047894113600444044
+    ],
+    "delta_regret_bits_own_rules": {
+     "point": 0.0843051493861059,
+     "ci95": [
+      -0.0680832312070595,
+      0.23900190185080894
+     ],
+     "n_sites": 2110,
+     "n_windows": 748
+    },
+    "delta_leak_bpb_own_rules": {
+     "point": 0.00016585395539420959,
+     "ci95": [
+      0.00014134096715446301,
+      0.00019214613558924364
+     ],
+     "n_boot": 2000
+    },
+    "verdict": "TRADE-OFF"
+   },
+   "vs_Dense": {
+    "other": "Dense",
+    "rule_other_by_net_dev": "inherit",
+    "bpb_diff_drop_minus_other": {
+     "point": 0.0416115243345383,
+     "ci95": [
+      0.03642046881230329,
+      0.04686292031610308
+     ],
+     "n_boot": 2000
+    },
+    "net_test_delta_drop_per_seed": [
+     0.0007715282329499029,
+     0.0007069518446700673
+    ],
+    "net_test_delta_other_per_seed": [
+     0.0012943071706119635,
+     0.0013554072032853082
+    ],
+    "delta_regret_bits_own_rules": {
+     "point": -0.011645453688499674,
+     "ci95": [
+      -0.45501175221248036,
+      0.4931818774806195
+     ],
+     "n_sites": 2110,
+     "n_windows": 748
+    },
+    "delta_leak_bpb_own_rules": {
+     "point": 0.00033555475289472276,
+     "ci95": [
+      0.0003176659347484487,
+      0.0003520337269243888
+     ],
+     "n_boot": 2000
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  }
+ },
+ "H7_report_generator_form": {
+  "d7 = bpb(KAS-P) - bpb(KAS-G-occ)": {
+   "point": 0.07856748724038476,
+   "ci95": [
+    0.07732133368905503,
+    0.07970641450023576
+   ],
+   "n_boot": 2000
+  },
+  "report_value": -0.24,
+  "verdict": "DOES NOT REPLICATE",
+  "rho_occ (H1 scale)": {
+   "point": 0.46349915033010164,
+   "ci95": [
+    0.45767964476570583,
+    0.4689320157563976
+   ],
+   "n_boot": 2000
+  },
+  "bpb(KAS-G) - bpb(KAS-G-occ)": {
+   "point": -0.038410925521429995,
+   "ci95": [
+    -0.04325287706226878,
+    -0.03358785116164235
+   ],
+   "n_boot": 2000
+  },
+  "bpb(KAS-G-shuf) - bpb(KAS-G-occ)": {
+   "point": -0.024334940743066857,
+   "ci95": [
+    -0.02630706065104139,
+    -0.022428801766618323
+   ],
+   "n_boot": 2000
+  },
+  "bpb(KAS-G-occ) - bpb(KAS-U16)": {
+   "point": 0.09094196533235333,
+   "ci95": [
+    0.08958508069610667,
+    0.09228195542370538
+   ],
+   "n_boot": 2000
+  },
+  "minting_vs_KAS-G": {
+   "rule_occ": "gen_count",
+   "rule_kasg": "inherit",
+   "delta_regret_bits": {
+    "point": -0.012246782460500039,
+    "ci95": [
+     -0.21657344719246263,
+     0.22321005855256557
+    ],
+    "n_sites": 2110,
+    "n_windows": 748
+   },
+   "delta_leak_bpb": {
+    "point": -0.00010539339967451187,
+    "ci95": [
+     -0.00012888442014721501,
+     -8.223979276428229e-05
+    ],
+    "n_boot": 2000
+   },
+   "gen_count_regret_occ": 0.6580246237572669,
+   "gen_count_regret_kasg": 0.8394046155691597
+  }
+ },
+ "H8_rank64": {
+  "bpb(KAS-U64) - bpb(KAS-U16)": {
+   "point": -0.0466778466301323,
+   "ci95": [
+    -0.049484809262041,
+    -0.043861255164886044
+   ],
+   "n_boot": 2000
+  },
+  "bpb(KAS-U64) - bpb(KAS-P)": {
+   "point": -0.2161872992028704,
+   "ci95": [
+    -0.21961478933836728,
+    -0.21294348836725718
+   ],
+   "n_boot": 2000
+  },
+  "bpb(KAS-U64) - bpb(Dense)": {
+   "point": -0.028148106883499446,
+   "ci95": [
+    -0.03371581511826334,
+    -0.022925718178129325
+   ],
+   "n_boot": 2000
+  },
+  "n_seeds": 2,
+  "note": "paired two-level bootstrap (seeds resampled with replacement, no small-sample multiplier); a Welch interval is in readme_derived_phase2.json",
+  "verdict": "TRAINS",
+  "net_retok": {
+   "rule_by_net_dev": "inherit_prior",
+   "test_delta_per_seed": [
+    0.007564758948615413,
+    0.008010907534615974
+   ]
+  }
+ },
+ "quality_vs_minting": {
+  "table": {
+   "KAS-U16": {
+    "rule_by_net_dev": "inherit_prior",
+    "in_vocab_test_bpb": 1.4612712354119408,
+    "net_minting_test_bpb": 0.0026073309321994476,
+    "net_minting_test_bpb_per_seed": [
+     0.0026589783184716165,
+     0.0025556835459272786
+    ],
+    "dev_candidates": {
+     "count": 0.0017742723843937602,
+     "inherit": 0.0025319958067008264,
+     "inherit_prior": 0.0017542869461715238
+    }
+   },
+   "KAS-U16-drop25": {
+    "rule_by_net_dev": "inherit",
+    "in_vocab_test_bpb": 1.6346950107200269,
+    "net_minting_test_bpb": 0.0007444394264156662,
+    "net_minting_test_bpb_per_seed": [
+     0.0007020373925221701,
+     0.0007868414603091622
+    ],
+    "dev_candidates": {
+     "count": 0.0021363303542613066,
+     "inherit": 0.0006828740017895685,
+     "inherit_prior": 0.0020063743668972123
+    }
+   },
+   "KAS-U16-dropU25": {
+    "rule_by_net_dev": "inherit",
+    "in_vocab_test_bpb": 1.4843530199998463,
+    "net_minting_test_bpb": 0.0007392400388099851,
+    "net_minting_test_bpb_per_seed": [
+     0.0007715282329499029,
+     0.0007069518446700673
+    ],
+    "dev_candidates": {
+     "count": 0.00018857078280676287,
+     "inherit": 1.5117866679847936e-05,
+     "inherit_prior": 0.00018634316121202144
+    }
+   },
+   "KAS-U64": {
+    "rule_by_net_dev": "inherit_prior",
+    "in_vocab_test_bpb": 1.4145933887818085,
+    "net_minting_test_bpb": 0.007787833241615694,
+    "net_minting_test_bpb_per_seed": [
+     0.007564758948615413,
+     0.008010907534615974
+    ],
+    "dev_candidates": {
+     "count": 0.007453772828051153,
+     "inherit": 0.007935703772480762,
+     "inherit_prior": 0.007331345749122531
+    }
+   },
+   "KAS-G": {
+    "rule_by_net_dev": "gen_count",
+    "in_vocab_test_bpb": 1.5138022752228641,
+    "net_minting_test_bpb": 0.000400124396008561,
+    "net_minting_test_bpb_per_seed": [
+     0.0003213076560126815,
+     0.00047894113600444044
+    ],
+    "dev_candidates": {
+     "count": 0.004361825599023539,
+     "inherit": -0.00030748398628321905,
+     "gen_count": -0.0004883215103151928,
+     "gen_inherit": -0.0004883215004027885
+    }
+   },
+   "KAS-G-occ": {
+    "rule_by_net_dev": "gen_inherit",
+    "in_vocab_test_bpb": 1.5522132007442941,
+    "net_minting_test_bpb": 0.0004032076380344751,
+    "net_minting_test_bpb_per_seed": [
+     0.00041581697802217654,
+     0.0003905982980467737
+    ],
+    "dev_candidates": {
+     "count": 0.009840815842112272,
+     "inherit": -3.374355015073327e-05,
+     "gen_count": -0.0005553451316553382,
+     "gen_inherit": -0.0005553451367851236
+    }
+   },
+   "KAS-P": {
+    "rule_by_net_dev": "inherit",
+    "in_vocab_test_bpb": 1.630780687984679,
+    "net_minting_test_bpb": 0.00031716333224152127,
+    "net_minting_test_bpb_per_seed": [
+     0.0003521304409257464,
+     0.0002821962235572961
+    ],
+    "dev_candidates": {
+     "count": -0.0006707559008733988,
+     "inherit": -0.0006707559130486596
+    }
+   },
+   "Dense": {
+    "rule_by_net_dev": "inherit",
+    "in_vocab_test_bpb": 1.442741495665308,
+    "net_minting_test_bpb": 0.0013248571869486359,
+    "net_minting_test_bpb_per_seed": [
+     0.0012943071706119635,
+     0.0013554072032853082
+    ],
+    "dev_candidates": {
+     "mean": 0.003390923814697744,
+     "inherit": 0.0010809672979786855
+    }
+   }
+  },
+  "dominance": [
+   "KAS-U16-dropU25 dominates KAS-U16-drop25",
+   "KAS-G dominates KAS-U16-drop25",
+   "KAS-G dominates KAS-G-occ",
+   "KAS-G-occ dominates KAS-U16-drop25",
+   "KAS-P dominates KAS-U16-drop25",
+   "Dense dominates KAS-U16"
+  ],
+  "non_dominated": [
+   "KAS-U16-dropU25",
+   "KAS-U64",
+   "KAS-G",
+   "KAS-P",
+   "Dense"
+  ]
+ }
+}

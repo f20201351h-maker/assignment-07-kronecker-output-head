@@ -1,0 +1,273 @@
+{
+ "name": "r1_smoke",
+ "slug": "kq5-r1-smoke",
+ "title": "kq5 r1 smoke",
+ "deadline_s": 10800,
+ "require_gpus": 2,
+ "workers": {
+  "0": [
+   {
+    "type": "train",
+    "name": "r1-tput-8L512-dense",
+    "est_s": 300,
+    "config": {
+     "run_id": "r1-tput-8L512-dense",
+     "head": "dense",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100000000,
+     "stop_tokens": 2621440,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [],
+     "final_dev_windows": 8,
+     "save_checkpoint": false,
+     "log_every": 5
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-tput-8L512-kasp",
+    "est_s": 300,
+    "config": {
+     "run_id": "r1-tput-8L512-kasp",
+     "head": "kasp",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100000000,
+     "stop_tokens": 2621440,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [],
+     "final_dev_windows": 8,
+     "save_checkpoint": false,
+     "log_every": 5
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-tput-8L512-kasu",
+    "est_s": 300,
+    "config": {
+     "run_id": "r1-tput-8L512-kasu",
+     "head": "kasu",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100000000,
+     "stop_tokens": 2621440,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [],
+     "final_dev_windows": 8,
+     "save_checkpoint": false,
+     "log_every": 5
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-tput-8L512-kasg",
+    "est_s": 300,
+    "config": {
+     "run_id": "r1-tput-8L512-kasg",
+     "head": "kasg",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100000000,
+     "stop_tokens": 2621440,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [],
+     "final_dev_windows": 8,
+     "save_checkpoint": false,
+     "log_every": 5
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-tput-6L768-dense",
+    "est_s": 300,
+    "config": {
+     "run_id": "r1-tput-6L768-dense",
+     "head": "dense",
+     "n_layer": 6,
+     "n_head": 12,
+     "d_model": 768,
+     "total_tokens": 100000000,
+     "stop_tokens": 2621440,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [],
+     "final_dev_windows": 8,
+     "save_checkpoint": false,
+     "log_every": 5
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-tput-6L768-kasp",
+    "est_s": 300,
+    "config": {
+     "run_id": "r1-tput-6L768-kasp",
+     "head": "kasp",
+     "n_layer": 6,
+     "n_head": 12,
+     "d_model": 768,
+     "total_tokens": 100000000,
+     "stop_tokens": 2621440,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [],
+     "final_dev_windows": 8,
+     "save_checkpoint": false,
+     "log_every": 5
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-tput-6L768-kasu",
+    "est_s": 300,
+    "config": {
+     "run_id": "r1-tput-6L768-kasu",
+     "head": "kasu",
+     "n_layer": 6,
+     "n_head": 12,
+     "d_model": 768,
+     "total_tokens": 100000000,
+     "stop_tokens": 2621440,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [],
+     "final_dev_windows": 8,
+     "save_checkpoint": false,
+     "log_every": 5
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-tput-6L768-kasg",
+    "est_s": 300,
+    "config": {
+     "run_id": "r1-tput-6L768-kasg",
+     "head": "kasg",
+     "n_layer": 6,
+     "n_head": 12,
+     "d_model": 768,
+     "total_tokens": 100000000,
+     "stop_tokens": 2621440,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [],
+     "final_dev_windows": 8,
+     "save_checkpoint": false,
+     "log_every": 5
+    }
+   }
+  ],
+  "1": [
+   {
+    "type": "train",
+    "name": "r1-lr-8L512-kasp-hm1.0",
+    "est_s": 600,
+    "config": {
+     "run_id": "r1-lr-8L512-kasp-hm1.0",
+     "head": "kasp",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 8388608,
+     "warmup_tokens": 1048576,
+     "head_lr_mult": 1.0,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": 256,
+     "save_checkpoint": false,
+     "log_every": 10
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-lr-8L512-kasp-hm0.1",
+    "est_s": 600,
+    "config": {
+     "run_id": "r1-lr-8L512-kasp-hm0.1",
+     "head": "kasp",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 8388608,
+     "warmup_tokens": 1048576,
+     "head_lr_mult": 0.1,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": 256,
+     "save_checkpoint": false,
+     "log_every": 10
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-lr-8L512-kasp-hm0.01",
+    "est_s": 600,
+    "config": {
+     "run_id": "r1-lr-8L512-kasp-hm0.01",
+     "head": "kasp",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 8388608,
+     "warmup_tokens": 1048576,
+     "head_lr_mult": 0.01,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": 256,
+     "save_checkpoint": false,
+     "log_every": 10
+    }
+   },
+   {
+    "type": "train",
+    "name": "r1-lr-8L512-dense-hm1.0",
+    "est_s": 600,
+    "config": {
+     "run_id": "r1-lr-8L512-dense-hm1.0",
+     "head": "dense",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 8388608,
+     "warmup_tokens": 1048576,
+     "head_lr_mult": 1.0,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      4194304,
+      8388608
+     ],
+     "eval_windows_mid": 256,
+     "final_dev_windows": 256,
+     "save_checkpoint": false,
+     "log_every": 10
+    }
+   }
+  ]
+ }
+}

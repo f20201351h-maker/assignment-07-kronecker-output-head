@@ -1,0 +1,6 @@
+{
+  "slug": "kq5-r1-smoke",
+  "spec": "configs\\jobs\\r1_smoke.json",
+  "src_zip_sha256": "112a2719749aec12a3470ad55c1eb765027d6e179830162d15c97318a3ee3f66",
+  "kernel_sha256": "377d6157648e6695b7e2d4ab483b28b0d7c568e76eb9adf1d31dfbcb01236ab3"
+}

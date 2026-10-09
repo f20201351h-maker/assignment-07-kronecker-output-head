@@ -1,0 +1,144 @@
+{
+ "provenance": "RECOMPUTED on CPU; floors of dense row sets against the Dense-prior (p4-densep-s1) distribution on the same dev contexts as floor_contextual.json",
+ "n_contexts": 1024,
+ "windows": [
+  0,
+  171,
+  341,
+  512,
+  683,
+  854,
+  1024,
+  1195
+ ],
+ "dense_prior_nll": 4.356521129608154,
+ "rows": {
+  "dense_prior_W (sanity)": {
+   "d": 512,
+   "floor_nats_per_target": -9.553366726322565e-05,
+   "floor_bpb_equiv": -2.933687246514146e-05,
+   "mimic_minus_dense_prior_nats": -0.00035703906438300237,
+   "floor_quantiles": [
+    -0.00020570755004882811,
+    -0.0001507401466369629,
+    -9.870529174804688e-05,
+    -5.97834587097168e-05,
+    -2.4914741516113227e-05
+   ],
+   "seconds": 215.7
+  },
+  "read_to_write_k0": {
+   "d": 512,
+   "floor_nats_per_target": 0.7790718618066421,
+   "floor_bpb_equiv": 0.23924059973566708,
+   "mimic_minus_dense_prior_nats": 0.8432254799037651,
+   "floor_quantiles": [
+    0.19120876789093016,
+    0.3608855605125427,
+    0.7220199108123779,
+    1.131651520729065,
+    1.4853037834167482
+   ],
+   "seconds": 222.3
+  },
+  "read_to_write_k1": {
+   "d": 512,
+   "floor_nats_per_target": 0.4042074730227796,
+   "floor_bpb_equiv": 0.124125697518272,
+   "mimic_minus_dense_prior_nats": 0.38831849624699544,
+   "floor_quantiles": [
+    0.07223641872406007,
+    0.16597187519073486,
+    0.368180513381958,
+    0.59577476978302,
+    0.8207806587219239
+   ],
+   "seconds": 222.1
+  },
+  "read_to_write_k2": {
+   "d": 512,
+   "floor_nats_per_target": 0.3279021485186604,
+   "floor_bpb_equiv": 0.1006935438334288,
+   "mimic_minus_dense_prior_nats": 0.31127589547221035,
+   "floor_quantiles": [
+    0.05354251861572267,
+    0.12985795736312866,
+    0.2936828136444092,
+    0.4817075729370117,
+    0.6540467262268068
+   ],
+   "seconds": 214.6
+  },
+  "read_to_write_k4": {
+   "d": 512,
+   "floor_nats_per_target": 0.28886499024247314,
+   "floor_bpb_equiv": 0.08870585230480173,
+   "mimic_minus_dense_prior_nats": 0.2668859978911655,
+   "floor_quantiles": [
+    0.04554696083068848,
+    0.11389541625976562,
+    0.2556302547454834,
+    0.42609941959381104,
+    0.5843830585479738
+   ],
+   "seconds": 217.7
+  },
+  "read_to_write_k8": {
+   "d": 512,
+   "floor_nats_per_target": 0.26737698968236145,
+   "floor_bpb_equiv": 0.08210722848953503,
+   "mimic_minus_dense_prior_nats": 0.24907829233890233,
+   "floor_quantiles": [
+    0.04574751853942871,
+    0.10561972856521606,
+    0.23196911811828613,
+    0.39292359352111816,
+    0.5384117603302002
+   ],
+   "seconds": 217.8
+  },
+  "kasu64_rows (own bias)": {
+   "d": 512,
+   "floor_nats_per_target": 0.11928374404624265,
+   "floor_bpb_equiv": 0.036630143974345754,
+   "mimic_minus_dense_prior_nats": 0.12786623627213345,
+   "floor_quantiles": [
+    0.017847549915313725,
+    0.04665982723236084,
+    0.10043597221374512,
+    0.17111539840698242,
+    0.2393039703369141
+   ],
+   "seconds": 214.4
+  },
+  "kasu16_rows (own bias)": {
+   "d": 512,
+   "floor_nats_per_target": 0.24954125532576654,
+   "floor_bpb_equiv": 0.07663015763973859,
+   "mimic_minus_dense_prior_nats": 0.28743421656565715,
+   "floor_quantiles": [
+    0.044395160675048825,
+    0.10052764415740967,
+    0.21065747737884521,
+    0.36826980113983154,
+    0.5006791591644287
+   ],
+   "seconds": 217.1
+  },
+  "dense_nobias_W (beta fixed)": {
+   "d": 512,
+   "floor_nats_per_target": 0.029067070274777507,
+   "floor_bpb_equiv": 0.008926035794657504,
+   "mimic_minus_dense_prior_nats": 0.037996136143362946,
+   "floor_quantiles": [
+    0.004588437080383301,
+    0.011301279067993164,
+    0.023587703704833984,
+    0.04266476631164551,
+    0.060081768035888675
+   ],
+   "seconds": 222.7
+  }
+ },
+ "seconds_total": 2002.7
+}

@@ -1,0 +1,6 @@
+{
+  "run_id": "p2-kasu-drop25-s1",
+  "split": "dev",
+  "wall_s": 23.24237084388733,
+  "best_rule_by_regret": "count"
+}

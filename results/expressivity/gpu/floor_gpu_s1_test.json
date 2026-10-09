@@ -1,0 +1,255 @@
+{
+ "provenance": "RECOMPUTED on CPU from checkpoint p4-densep-s1 on test-split contexts; floors are KL(p_dense_prior || best additive fit), i.e. representational floors conditional on the dense-prior distribution being the truth",
+ "checkpoint": "/__modal/volumes/vo-XJ6KqwVasZr4XQDqjcBHoK/runs/p4-densep-s1/model.pt",
+ "n_contexts": 4096,
+ "windows": [
+  0,
+  36,
+  71,
+  107,
+  142,
+  178,
+  214,
+  249,
+  285,
+  321,
+  356,
+  392,
+  427,
+  463,
+  499,
+  534,
+  570,
+  605,
+  641,
+  677,
+  712,
+  748,
+  783,
+  819,
+  855,
+  890,
+  926,
+  962,
+  997,
+  1033,
+  1068,
+  1104
+ ],
+ "positions_per_window": 128,
+ "n_valid_byte_targets": 4096,
+ "bytes_per_target_here": 4.774169921875,
+ "dense_prior_nll_recomputed_cpu": 4.549406051635742,
+ "dense_prior_nll_saved_gpu": 4.549383652213436,
+ "reference_entropy_nats_mean": 4.750977039337158,
+ "arms_nll_nats_per_target_same_positions": {
+  "Dense-prior": 4.549383652213436,
+  "Dense": 4.689679355383053,
+  "KAS-U64": 4.625263818988771,
+  "KAS-U16": 4.772794990006738,
+  "KAS-G": 4.992260008974502,
+  "KAS-P": 5.344295865897102,
+  "KAS-0": 6.4208437888692025
+ },
+ "arms_bpb_same_positions": {
+  "Dense-prior": 1.3747674132997671,
+  "Dense": 1.4171630377817177,
+  "KAS-U64": 1.3976974602189205,
+  "KAS-U16": 1.4422795535015513,
+  "KAS-G": 1.5085991650140478,
+  "KAS-P": 1.6149800423829597,
+  "KAS-0": 1.9402994958516768
+ },
+ "floors": {
+  "kas | bias = dense-prior's learned beta (fixed)": {
+   "n_contexts": 4096,
+   "n_features": 1787,
+   "floor_nats_per_target": 0.7398981690628688,
+   "floor_bpb_equiv_global_ratio": 0.2272109806397497,
+   "floor_bpb_byte_weighted_here": 0.22358806593348002,
+   "mimic_nll_true_targets": 5.333032075471051,
+   "dense_prior_nll_true_targets_same": 4.549406051635742,
+   "mimic_minus_dense_prior_nats": 0.7836260238353088,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.549383652213436,
+    "Dense": 4.689679355383053,
+    "KAS-U64": 4.625263818988771,
+    "KAS-U16": 4.772794990006738,
+    "KAS-G": 4.992260008974502,
+    "KAS-P": 5.344295865897102,
+    "KAS-0": 6.4208437888692025
+   },
+   "floor_quantiles_nats": [
+    0.1654052734375,
+    0.3494395315647125,
+    0.6878054141998291,
+    1.0786947011947632,
+    1.3939299583435059
+   ],
+   "seconds": 219.0
+  },
+  "kas | bias = log-unigram prior (fixed; KAS-P family)": {
+   "n_contexts": 4096,
+   "n_features": 1787,
+   "floor_nats_per_target": 0.7407406054220047,
+   "floor_bpb_equiv_global_ratio": 0.22746967947060137,
+   "floor_bpb_byte_weighted_here": 0.22384263977091745,
+   "mimic_nll_true_targets": 5.334090103984556,
+   "dense_prior_nll_true_targets_same": 4.549406051635742,
+   "mimic_minus_dense_prior_nats": 0.7846840523488137,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.549383652213436,
+    "Dense": 4.689679355383053,
+    "KAS-U64": 4.625263818988771,
+    "KAS-U16": 4.772794990006738,
+    "KAS-G": 4.992260008974502,
+    "KAS-P": 5.344295865897102,
+    "KAS-0": 6.4208437888692025
+   },
+   "floor_quantiles_nats": [
+    0.16559255123138428,
+    0.3505067825317383,
+    0.6900585889816284,
+    1.0810843706130981,
+    1.3946290016174316
+   ],
+   "seconds": 216.9
+  },
+  "kas | bias = free per-token, init beta (looser lower bound)": {
+   "n_contexts": 4096,
+   "n_features": 1787,
+   "floor_nats_per_target": 0.6292896022635688,
+   "floor_bpb_equiv_global_ratio": 0.19324484586547808,
+   "floor_bpb_byte_weighted_here": 0.19016352650307058,
+   "mimic_nll_true_targets": 5.154216556783563,
+   "dense_prior_nll_true_targets_same": 4.549406051635742,
+   "mimic_minus_dense_prior_nats": 0.604810505147821,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.549383652213436,
+    "Dense": 4.689679355383053,
+    "KAS-U64": 4.625263818988771,
+    "KAS-U16": 4.772794990006738,
+    "KAS-G": 4.992260008974502,
+    "KAS-P": 5.344295865897102,
+    "KAS-0": 6.4208437888692025
+   },
+   "floor_quantiles_nats": [
+    0.15144896507263184,
+    0.3152814507484436,
+    0.5948723554611206,
+    0.9008402824401855,
+    1.1626827716827393
+   ],
+   "seconds": 223.5
+  },
+  "kas+suffix | bias = beta (fixed)": {
+   "n_contexts": 4096,
+   "n_features": 3560,
+   "floor_nats_per_target": 0.5399572704848339,
+   "floor_bpb_equiv_global_ratio": 0.16581230507139866,
+   "floor_bpb_byte_weighted_here": 0.16316840187256465,
+   "mimic_nll_true_targets": 5.0927399943789915,
+   "dense_prior_nll_true_targets_same": 4.549406051635742,
+   "mimic_minus_dense_prior_nats": 0.5433339427432493,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.549383652213436,
+    "Dense": 4.689679355383053,
+    "KAS-U64": 4.625263818988771,
+    "KAS-U16": 4.772794990006738,
+    "KAS-G": 4.992260008974502,
+    "KAS-P": 5.344295865897102,
+    "KAS-0": 6.4208437888692025
+   },
+   "floor_quantiles_nats": [
+    0.10739552974700928,
+    0.23875296115875244,
+    0.4876692295074463,
+    0.792076826095581,
+    1.052427053451538
+   ],
+   "seconds": 267.4
+  },
+  "kas+trigram_free | bias = beta (fixed)": {
+   "n_contexts": 4096,
+   "n_features": 9979,
+   "floor_nats_per_target": 0.20615426905033019,
+   "floor_bpb_equiv_global_ratio": 0.06330670299309298,
+   "floor_bpb_byte_weighted_here": 0.06229726768924746,
+   "mimic_nll_true_targets": 4.712258055080049,
+   "dense_prior_nll_true_targets_same": 4.549406051635742,
+   "mimic_minus_dense_prior_nats": 0.16285200344430706,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.549383652213436,
+    "Dense": 4.689679355383053,
+    "KAS-U64": 4.625263818988771,
+    "KAS-U16": 4.772794990006738,
+    "KAS-G": 4.992260008974502,
+    "KAS-P": 5.344295865897102,
+    "KAS-0": 6.4208437888692025
+   },
+   "floor_quantiles_nats": [
+    0.03947782516479492,
+    0.08885270357131958,
+    0.18454527854919434,
+    0.3078463077545166,
+    0.4054985046386719
+   ],
+   "seconds": 281.4
+  },
+  "kas+private4000 | bias = beta (fixed)": {
+   "n_contexts": 4096,
+   "n_features": 5787,
+   "floor_nats_per_target": 0.28509222874338036,
+   "floor_bpb_equiv_global_ratio": 0.08754729714711769,
+   "floor_bpb_byte_weighted_here": 0.08615134176927727,
+   "mimic_nll_true_targets": 4.829372779567715,
+   "dense_prior_nll_true_targets_same": 4.549406051635742,
+   "mimic_minus_dense_prior_nats": 0.2799667279319724,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.549383652213436,
+    "Dense": 4.689679355383053,
+    "KAS-U64": 4.625263818988771,
+    "KAS-U16": 4.772794990006738,
+    "KAS-G": 4.992260008974502,
+    "KAS-P": 5.344295865897102,
+    "KAS-0": 6.4208437888692025
+   },
+   "floor_quantiles_nats": [
+    0.04178619384765625,
+    0.10434240102767944,
+    0.22971391677856445,
+    0.40878140926361084,
+    0.5975861549377441
+   ],
+   "seconds": 224.4
+  },
+  "kas+hash8192 | bias = beta (fixed)": {
+   "n_contexts": 4096,
+   "n_features": 9979,
+   "floor_nats_per_target": 0.14106344118782488,
+   "floor_bpb_equiv_global_ratio": 0.0433183431786273,
+   "floor_bpb_byte_weighted_here": 0.04262762540560771,
+   "mimic_nll_true_targets": 4.662529758717384,
+   "dense_prior_nll_true_targets_same": 4.549406051635742,
+   "mimic_minus_dense_prior_nats": 0.11312370708164199,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.549383652213436,
+    "Dense": 4.689679355383053,
+    "KAS-U64": 4.625263818988771,
+    "KAS-U16": 4.772794990006738,
+    "KAS-G": 4.992260008974502,
+    "KAS-P": 5.344295865897102,
+    "KAS-0": 6.4208437888692025
+   },
+   "floor_quantiles_nats": [
+    0.03642916679382324,
+    0.07220351696014404,
+    0.13027381896972656,
+    0.19789493083953857,
+    0.2599499225616455
+   ],
+   "seconds": 248.5
+  }
+ },
+ "seconds_total": 1688.9
+}

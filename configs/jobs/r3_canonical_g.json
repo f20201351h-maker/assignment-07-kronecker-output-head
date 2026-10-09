@@ -1,0 +1,394 @@
+{
+ "name": "r3_canonical_g",
+ "slug": "kq5-r3-canonical-g",
+ "title": "kq5 r3 canonical g",
+ "deadline_s": 41760.0,
+ "require_gpus": 2,
+ "workers": {
+  "0": [
+   {
+    "type": "train",
+    "name": "r3-kasg-s1",
+    "est_s": 5500,
+    "config": {
+     "run_id": "r3-kasg-s1",
+     "head": "kasg",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100007936,
+     "warmup_tokens": 2097152,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      12000000,
+      24000000,
+      46000000,
+      68000000
+     ],
+     "eval_windows_mid": null,
+     "final_dev_windows": null,
+     "final_test": true,
+     "save_checkpoint": true,
+     "log_every": 20,
+     "head_lr_mult": 0.1,
+     "seed": 1,
+     "generator": {
+      "emb": 64,
+      "channels": 256,
+      "layers": 3,
+      "kernel": 3,
+      "hidden": 512
+     },
+     "gen_lr_mult": 1.0,
+     "corr_init": "u_zero"
+    }
+   },
+   {
+    "type": "python",
+    "name": "analysis-r3-kasg-s1",
+    "module": "kq5.analysis",
+    "est_s": 900,
+    "kwargs": {
+     "runs": [
+      "r3-kasg-s1"
+     ],
+     "splits": [
+      "dev",
+      "test"
+     ],
+     "retok_rules": [
+      "mean",
+      "inherit",
+      "bytes",
+      "count",
+      "inherit_prior",
+      "gen_count",
+      "gen_inherit"
+     ]
+    }
+   },
+   {
+    "type": "train",
+    "name": "r3-kasu0-s1",
+    "est_s": 4700,
+    "config": {
+     "run_id": "r3-kasu0-s1",
+     "head": "kasu",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100007936,
+     "warmup_tokens": 2097152,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      12000000,
+      24000000,
+      46000000,
+      68000000
+     ],
+     "eval_windows_mid": null,
+     "final_dev_windows": null,
+     "final_test": true,
+     "save_checkpoint": true,
+     "log_every": 20,
+     "head_lr_mult": 0.1,
+     "seed": 1,
+     "corr_init": "u_zero"
+    }
+   },
+   {
+    "type": "python",
+    "name": "analysis-r3-kasu0-s1",
+    "module": "kq5.analysis",
+    "est_s": 900,
+    "kwargs": {
+     "runs": [
+      "r3-kasu0-s1"
+     ],
+     "splits": [
+      "dev",
+      "test"
+     ],
+     "retok_rules": [
+      "mean",
+      "inherit",
+      "bytes",
+      "count",
+      "inherit_prior",
+      "gen_count",
+      "gen_inherit"
+     ]
+    }
+   },
+   {
+    "type": "train",
+    "name": "r3-kasgshuf-s1",
+    "est_s": 5500,
+    "config": {
+     "run_id": "r3-kasgshuf-s1",
+     "head": "kasg_shuf",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100007936,
+     "warmup_tokens": 2097152,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      12000000,
+      24000000,
+      46000000,
+      68000000
+     ],
+     "eval_windows_mid": null,
+     "final_dev_windows": null,
+     "final_test": true,
+     "save_checkpoint": true,
+     "log_every": 20,
+     "head_lr_mult": 0.1,
+     "seed": 1,
+     "generator": {
+      "emb": 64,
+      "channels": 256,
+      "layers": 3,
+      "kernel": 3,
+      "hidden": 512
+     },
+     "gen_lr_mult": 1.0,
+     "corr_init": "u_zero"
+    }
+   },
+   {
+    "type": "python",
+    "name": "analysis-r3-kasgshuf-s1",
+    "module": "kq5.analysis",
+    "est_s": 900,
+    "kwargs": {
+     "runs": [
+      "r3-kasgshuf-s1"
+     ],
+     "splits": [
+      "dev",
+      "test"
+     ],
+     "retok_rules": [
+      "mean",
+      "inherit",
+      "bytes",
+      "count",
+      "inherit_prior",
+      "gen_count",
+      "gen_inherit"
+     ]
+    }
+   },
+   {
+    "type": "python",
+    "name": "growth-r3-kasg-s1",
+    "module": "kq5.growth",
+    "est_s": 1500,
+    "kwargs": {
+     "runs": [
+      "r3-kasg-s1",
+      "r3-kasu0-s1",
+      "r3-kasgshuf-s1"
+     ]
+    }
+   }
+  ],
+  "1": [
+   {
+    "type": "train",
+    "name": "r3-kasg-s2",
+    "est_s": 5500,
+    "config": {
+     "run_id": "r3-kasg-s2",
+     "head": "kasg",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100007936,
+     "warmup_tokens": 2097152,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      12000000,
+      24000000,
+      46000000,
+      68000000
+     ],
+     "eval_windows_mid": null,
+     "final_dev_windows": null,
+     "final_test": true,
+     "save_checkpoint": true,
+     "log_every": 20,
+     "head_lr_mult": 0.1,
+     "seed": 2,
+     "generator": {
+      "emb": 64,
+      "channels": 256,
+      "layers": 3,
+      "kernel": 3,
+      "hidden": 512
+     },
+     "gen_lr_mult": 1.0,
+     "corr_init": "u_zero"
+    }
+   },
+   {
+    "type": "python",
+    "name": "analysis-r3-kasg-s2",
+    "module": "kq5.analysis",
+    "est_s": 900,
+    "kwargs": {
+     "runs": [
+      "r3-kasg-s2"
+     ],
+     "splits": [
+      "dev",
+      "test"
+     ],
+     "retok_rules": [
+      "mean",
+      "inherit",
+      "bytes",
+      "count",
+      "inherit_prior",
+      "gen_count",
+      "gen_inherit"
+     ]
+    }
+   },
+   {
+    "type": "train",
+    "name": "r3-kasu0-s2",
+    "est_s": 4700,
+    "config": {
+     "run_id": "r3-kasu0-s2",
+     "head": "kasu",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100007936,
+     "warmup_tokens": 2097152,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      12000000,
+      24000000,
+      46000000,
+      68000000
+     ],
+     "eval_windows_mid": null,
+     "final_dev_windows": null,
+     "final_test": true,
+     "save_checkpoint": true,
+     "log_every": 20,
+     "head_lr_mult": 0.1,
+     "seed": 2,
+     "corr_init": "u_zero"
+    }
+   },
+   {
+    "type": "python",
+    "name": "analysis-r3-kasu0-s2",
+    "module": "kq5.analysis",
+    "est_s": 900,
+    "kwargs": {
+     "runs": [
+      "r3-kasu0-s2"
+     ],
+     "splits": [
+      "dev",
+      "test"
+     ],
+     "retok_rules": [
+      "mean",
+      "inherit",
+      "bytes",
+      "count",
+      "inherit_prior",
+      "gen_count",
+      "gen_inherit"
+     ]
+    }
+   },
+   {
+    "type": "train",
+    "name": "r3-kasgshuf-s2",
+    "est_s": 5500,
+    "config": {
+     "run_id": "r3-kasgshuf-s2",
+     "head": "kasg_shuf",
+     "n_layer": 8,
+     "n_head": 8,
+     "d_model": 512,
+     "total_tokens": 100007936,
+     "warmup_tokens": 2097152,
+     "batch_seqs": 64,
+     "micro_seqs": 8,
+     "eval_at_tokens": [
+      12000000,
+      24000000,
+      46000000,
+      68000000
+     ],
+     "eval_windows_mid": null,
+     "final_dev_windows": null,
+     "final_test": true,
+     "save_checkpoint": true,
+     "log_every": 20,
+     "head_lr_mult": 0.1,
+     "seed": 2,
+     "generator": {
+      "emb": 64,
+      "channels": 256,
+      "layers": 3,
+      "kernel": 3,
+      "hidden": 512
+     },
+     "gen_lr_mult": 1.0,
+     "corr_init": "u_zero"
+    }
+   },
+   {
+    "type": "python",
+    "name": "analysis-r3-kasgshuf-s2",
+    "module": "kq5.analysis",
+    "est_s": 900,
+    "kwargs": {
+     "runs": [
+      "r3-kasgshuf-s2"
+     ],
+     "splits": [
+      "dev",
+      "test"
+     ],
+     "retok_rules": [
+      "mean",
+      "inherit",
+      "bytes",
+      "count",
+      "inherit_prior",
+      "gen_count",
+      "gen_inherit"
+     ]
+    }
+   },
+   {
+    "type": "python",
+    "name": "headcost",
+    "module": "kq5.headcost",
+    "est_s": 1200,
+    "kwargs": {
+     "d_model": 512,
+     "BT": 8192,
+     "chunk": 32768
+    }
+   }
+  ]
+ },
+ "generator_variant": "v3"
+}

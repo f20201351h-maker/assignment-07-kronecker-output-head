@@ -1,0 +1,547 @@
+{
+ "protocol": "08",
+ "runs": {
+  "Dense": [
+   {
+    "id": "m3-dense-s1",
+    "seed": 1,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 471.61619114875793,
+    "dense_bias": false,
+    "head": "dense",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4451521620470513
+   },
+   {
+    "id": "m3-dense-s2",
+    "seed": 2,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 468.40257143974304,
+    "dense_bias": false,
+    "head": "dense",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4403308292835646
+   },
+   {
+    "id": "p3-dense-s3",
+    "seed": 3,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 466.3293056488037,
+    "dense_bias": false,
+    "head": "dense",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4395909972506131
+   },
+   {
+    "id": "p3-dense-s4",
+    "seed": 4,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 465.4578273296356,
+    "dense_bias": false,
+    "head": "dense",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4368546015483976
+   }
+  ],
+  "Dense-prior": [
+   {
+    "id": "p4-densep-s1",
+    "seed": 1,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 524.0863683223724,
+    "dense_bias": true,
+    "head": "dense",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.3985781859556912
+   },
+   {
+    "id": "p4-densep-s2",
+    "seed": 2,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 519.9252064228058,
+    "dense_bias": true,
+    "head": "dense",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.3989948896590672
+   },
+   {
+    "id": "p4-densep-s3",
+    "seed": 3,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 521.7637922763824,
+    "dense_bias": true,
+    "head": "dense",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.3969076650329215
+   },
+   {
+    "id": "p4-densep-s4",
+    "seed": 4,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 519.3164689540863,
+    "dense_bias": true,
+    "head": "dense",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4004400403798811
+   }
+  ],
+  "KAS-U64": [
+   {
+    "id": "p2-kasu64-s1",
+    "seed": 1,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 546.8311078548431,
+    "dense_bias": false,
+    "head": "kasu",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4167513174685227
+   },
+   {
+    "id": "p2-kasu64-s2",
+    "seed": 2,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 542.662501335144,
+    "dense_bias": false,
+    "head": "kasu",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4124354600950944
+   },
+   {
+    "id": "p3-kasu64-s3",
+    "seed": 3,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 540.1801583766937,
+    "dense_bias": false,
+    "head": "kasu",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.410055933389917
+   },
+   {
+    "id": "p3-kasu64-s4",
+    "seed": 4,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 541.5160238742828,
+    "dense_bias": false,
+    "head": "kasu",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4225621305876706
+   }
+  ]
+ },
+ "per_seed": {
+  "1": {
+   "Dense": 1.4451521620470513,
+   "Dense-prior": 1.3985781859556912,
+   "KAS-U64": 1.4167513174685227,
+   "P_dense_minus_prior": 0.04657397609136016,
+   "R_u64_minus_prior": 0.01817313151283151,
+   "G_dense_minus_u64": 0.02840084457852865
+  },
+  "2": {
+   "Dense": 1.4403308292835646,
+   "Dense-prior": 1.3989948896590672,
+   "KAS-U64": 1.4124354600950944,
+   "P_dense_minus_prior": 0.04133593962449744,
+   "R_u64_minus_prior": 0.0134405704360272,
+   "G_dense_minus_u64": 0.027895369188470243
+  },
+  "3": {
+   "Dense": 1.4395909972506131,
+   "Dense-prior": 1.3969076650329215,
+   "KAS-U64": 1.410055933389917,
+   "P_dense_minus_prior": 0.042683332217691605,
+   "R_u64_minus_prior": 0.013148268356995452,
+   "G_dense_minus_u64": 0.029535063860696154
+  },
+  "4": {
+   "Dense": 1.4368546015483976,
+   "Dense-prior": 1.4004400403798811,
+   "KAS-U64": 1.4225621305876706,
+   "P_dense_minus_prior": 0.03641456116851649,
+   "R_u64_minus_prior": 0.022122090207789435,
+   "G_dense_minus_u64": 0.014292470960727055
+  }
+ },
+ "means": {
+  "Dense": 1.4404821475324066,
+  "Dense-prior": 1.3987301952568902,
+  "KAS-U64": 1.4154512103853012
+ },
+ "seeds": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "G_dense_minus_u64": 0.02503093714710536,
+ "P_dense_minus_prior": {
+  "point": 0.04175195227551631,
+  "paired_t": {
+   "point": 0.041751952275516424,
+   "sd": 0.004194448419523924,
+   "se": 0.002097224209761962,
+   "df": 3,
+   "t": 3.1824463052837197,
+   "ci95": [
+    0.035077648837807895,
+    0.04842625571322495
+   ]
+  },
+  "bootstrap": {
+   "point": 0.04175195227551631,
+   "ci95": [
+    0.03874853636837611,
+    0.045109060442565754
+   ],
+   "n_boot": 2000
+  }
+ },
+ "R_u64_minus_prior": {
+  "point": 0.016721015128410954,
+  "bootstrap": {
+   "point": 0.016721015128410954,
+   "ci95": [
+    0.011388284911818624,
+    0.022358098337193523
+   ],
+   "n_boot": 2000
+  },
+  "welch": {
+   "point": 0.016721015128410954,
+   "se": 0.002840152357095805,
+   "df": 3.41835797006664,
+   "t": 2.9730604377362564,
+   "ci95": [
+    0.00827707051838604,
+    0.02516495973843587
+   ]
+  }
+ },
+ "share_explained": {
+  "point": 1.6680139473061883,
+  "ci95": [
+   1.3717213141951845,
+   2.176958584184239
+  ],
+  "n_boot": 2000,
+  "n_nan_draws": 0
+ },
+ "seed_sd": {
+  "Dense": 0.003453750206672226,
+  "Dense-prior": 0.0014535424218198804,
+  "KAS-U64": 0.005491181664636259
+ },
+ "pairs_u64_below_prior": 0,
+ "n_pairs": 16,
+ "all_u64_below_all_prior": false,
+ "all_prior_below_all_dense": true,
+ "rank_order_all_runs": [
+  {
+   "id": "p4-densep-s3",
+   "test_bpb": 1.3969076650329215
+  },
+  {
+   "id": "p4-densep-s1",
+   "test_bpb": 1.3985781859556912
+  },
+  {
+   "id": "p4-densep-s2",
+   "test_bpb": 1.3989948896590672
+  },
+  {
+   "id": "p4-densep-s4",
+   "test_bpb": 1.4004400403798811
+  },
+  {
+   "id": "p3-kasu64-s3",
+   "test_bpb": 1.410055933389917
+  },
+  {
+   "id": "p2-kasu64-s2",
+   "test_bpb": 1.4124354600950944
+  },
+  {
+   "id": "p2-kasu64-s1",
+   "test_bpb": 1.4167513174685227
+  },
+  {
+   "id": "p3-kasu64-s4",
+   "test_bpb": 1.4225621305876706
+  },
+  {
+   "id": "p3-dense-s4",
+   "test_bpb": 1.4368546015483976
+  },
+  {
+   "id": "p3-dense-s3",
+   "test_bpb": 1.4395909972506131
+  },
+  {
+   "id": "m3-dense-s2",
+   "test_bpb": 1.4403308292835646
+  },
+  {
+   "id": "m3-dense-s1",
+   "test_bpb": 1.4451521620470513
+  }
+ ],
+ "verdict": {
+  "word": "D_PRIOR_MATCHED_DENSE_MATCHES_OR_BEATS_U64",
+  "conditions": {
+   "R_point_lt_0": false,
+   "R_bootstrap_ci_below_0": false,
+   "R_welch_ci_below_0": false,
+   "P_paired_ci_above_0": true,
+   "share_point": 1.6680139473061883
+  }
+ },
+ "buckets": {
+  "rows": [
+   {
+    "bucket": "[0,1)",
+    "n_targets": 1,
+    "dense_minus_u64_nats": -2.6752233505249023,
+    "dense_minus_u64_ci95": [
+     -3.9395424246788027,
+     -1.2807302474975586
+    ],
+    "dense_minus_prior_nats": -2.374547004699707,
+    "dense_minus_prior_ci95": [
+     -2.9694372177124024,
+     -1.7119879722595215
+    ],
+    "contribution_nats_u64": -2.6752233505249023,
+    "contribution_nats_prior": -2.374547004699707
+   },
+   {
+    "bucket": "[1,10)",
+    "n_targets": 17,
+    "dense_minus_u64_nats": -0.259352165109971,
+    "dense_minus_u64_ci95": [
+     -0.925546794959477,
+     0.3719612082882199
+    ],
+    "dense_minus_prior_nats": -0.5902577007518095,
+    "dense_minus_prior_ci95": [
+     -1.0208875105141453,
+     -0.07284268860231406
+    ],
+    "contribution_nats_u64": -4.408986806869507,
+    "contribution_nats_prior": -10.034380912780762
+   },
+   {
+    "bucket": "[10,100)",
+    "n_targets": 1191,
+    "dense_minus_u64_nats": 0.9223757388647317,
+    "dense_minus_u64_ci95": [
+     0.6140654477586198,
+     1.214270696038502
+    ],
+    "dense_minus_prior_nats": -0.35036397847643325,
+    "dense_minus_prior_ci95": [
+     -0.41644930713918216,
+     -0.28770566157608135
+    ],
+    "contribution_nats_u64": 1098.5495049878955,
+    "contribution_nats_prior": -417.283498365432
+   },
+   {
+    "bucket": "[100,1000)",
+    "n_targets": 66564,
+    "dense_minus_u64_nats": 0.3246189832300544,
+    "dense_minus_u64_ci95": [
+     0.2689588503148474,
+     0.3784899024317907
+    ],
+    "dense_minus_prior_nats": 0.18266191488847905,
+    "dense_minus_prior_ci95": [
+     0.16838274048878396,
+     0.19825769196366197
+    ],
+    "contribution_nats_u64": 21607.93799972534,
+    "contribution_nats_prior": 12158.707702636719
+   },
+   {
+    "bucket": "[1000,10000)",
+    "n_targets": 213347,
+    "dense_minus_u64_nats": 0.1927351660307531,
+    "dense_minus_u64_ci95": [
+     0.15274818428832931,
+     0.22842721281476305
+    ],
+    "dense_minus_prior_nats": 0.21763842331838287,
+    "dense_minus_prior_ci95": [
+     0.20397820665199745,
+     0.2323223371215781
+    ],
+    "contribution_nats_u64": 41119.469467163086,
+    "contribution_nats_prior": 46432.50469970703
+   },
+   {
+    "bucket": "[10000,100000)",
+    "n_targets": 300202,
+    "dense_minus_u64_nats": 0.06950375891796984,
+    "dense_minus_u64_ci95": [
+     0.04213904826181683,
+     0.09593366118323543
+    ],
+    "dense_minus_prior_nats": 0.18771267042089446,
+    "dense_minus_prior_ci95": [
+     0.1729723963101783,
+     0.2052949375624528
+    ],
+    "contribution_nats_u64": 20865.167434692383,
+    "contribution_nats_prior": 56351.71908569336
+   },
+   {
+    "bucket": "[100000,1000000)",
+    "n_targets": 200537,
+    "dense_minus_u64_nats": -0.010163660621585049,
+    "dense_minus_u64_ci95": [
+     -0.023626418226271918,
+     0.004384619293390513
+    ],
+    "dense_minus_prior_nats": 0.09925324103262964,
+    "dense_minus_prior_ci95": [
+     0.08746592838351994,
+     0.11250928200249725
+    ],
+    "contribution_nats_u64": -2038.190010070801,
+    "contribution_nats_prior": 19903.94719696045
+   },
+   {
+    "bucket": "[1000000,inf)",
+    "n_targets": 348442,
+    "dense_minus_u64_nats": 0.027226522411532308,
+    "dense_minus_u64_ci95": [
+     0.018157810189667396,
+     0.03549577144309211
+    ],
+    "dense_minus_prior_nats": 0.05527882135309685,
+    "dense_minus_prior_ci95": [
+     0.04831450997829463,
+     0.06193812317078117
+    ],
+    "contribution_nats_u64": 9486.86392211914,
+    "contribution_nats_prior": 19261.46306991577
+   }
+  ],
+  "note": "d = NLL(Dense) - NLL(arm) per target, positive = arm better; contribution = d x n_targets (nats over the test split)"
+ },
+ "derived": {
+  "mean_bpb": {
+   "Dense": 1.4404821475324066,
+   "Dense-prior": 1.3987301952568902,
+   "KAS-0": 1.939758849337148,
+   "KAS-G": 1.5138022752228641,
+   "KAS-G-occ": 1.5522132007442941,
+   "KAS-G-shuf": 1.5278782600012273,
+   "KAS-P": 1.630780687984679,
+   "KAS-U16": 1.4612712354119408,
+   "KAS-U16 (c_zero)": 1.5829896785226873,
+   "KAS-U16-drop25": 1.6346950107200269,
+   "KAS-U16-dropU25": 1.4843530199998463,
+   "KAS-U64": 1.4154512103853012
+  },
+  "mean_diff_vs_dense_prior": {
+   "Dense": 0.04175195227551631,
+   "Dense-prior": 0.0,
+   "KAS-0": 0.5410286540802578,
+   "KAS-G": 0.1150720799659739,
+   "KAS-G-occ": 0.1534830054874039,
+   "KAS-G-shuf": 0.12914806474433704,
+   "KAS-P": 0.23205049272778866,
+   "KAS-U16": 0.06254104015505058,
+   "KAS-U16 (c_zero)": 0.1842594832657971,
+   "KAS-U16-drop25": 0.23596481546313663,
+   "KAS-U16-dropU25": 0.08562282474295602,
+   "KAS-U64": 0.016721015128410954
+  },
+  "net_retok_delta_bpb_x1e3": {
+   "Dense": {
+    "mean": 3.5174521839772543,
+    "inherit": 1.3377447096016293
+   },
+   "KAS-0": {
+    "bytes": 2.423982595980423
+   },
+   "KAS-G": {
+    "count": 5.0826230998178845,
+    "inherit": 0.5638328030368456,
+    "gen_count": 0.400124396008561,
+    "gen_inherit": 0.40012440122827453
+   },
+   "KAS-G-shuf": {
+    "count": 8.284204680961471,
+    "inherit": 0.5066068119298217,
+    "gen_count": 0.6788401275965583,
+    "gen_inherit": 0.678840127923297
+   },
+   "KAS-P": {
+    "count": 0.31716333728659674,
+    "inherit": 0.31716333224152127
+   },
+   "KAS-U16 (c_zero)": {
+    "count": 0.4533496434770967,
+    "inherit": 0.4885712932581887,
+    "inherit_prior": 0.45544858332202676
+   },
+   "KAS-U16": {
+    "count": 2.6263633873832015,
+    "inherit": 3.463539163936047,
+    "inherit_prior": 2.6073309321994476
+   },
+   "KAS-G-occ": {
+    "count": 11.08721145431668,
+    "inherit": 0.8616155922999136,
+    "gen_count": 0.4032076411033536,
+    "gen_inherit": 0.4032076380344751
+   },
+   "KAS-U16-drop25": {
+    "count": 2.2148881828805145,
+    "inherit": 0.7444394264156662,
+    "inherit_prior": 2.083487790941585
+   },
+   "KAS-U16-dropU25": {
+    "count": 0.8919281286923209,
+    "inherit": 0.7392400388099851,
+    "inherit_prior": 0.889290736003967
+   },
+   "KAS-U64": {
+    "count": 8.427865376413656,
+    "inherit": 9.177118272447604,
+    "inherit_prior": 8.302444850976531
+   },
+   "Dense-prior": {
+    "mean": 4.0250741827818075,
+    "inherit": 1.4084232719182577
+   }
+  },
+  "dense_prior_ablation_mean": {
+   "bpb_full": 1.3987301952568902,
+   "bpb_no_prior": 2.1627266138111114
+  },
+  "dense_prior_term_share_prior_mean": 0.4563077315688133,
+  "kas_u64_term_share_prior_mean": 0.3506511077284813,
+  "bucket_share_below_100k": {
+   "u64": 0.9191527788568165,
+   "prior": 0.7451473549645541
+  },
+  "bucket_total_nats": {
+   "u64": 92132.71410845965,
+   "prior": 153678.64932863042
+  }
+ }
+}

@@ -1,0 +1,797 @@
+{
+  "scope": "Independent CPU array, construction, and arithmetic audit; not a rerun of floor matrix",
+  "inputs": {
+    "data\\tokens\\vocab.json": "7c4d46be4132d766a2f99c42359bb185795adba6a3f322c9af0745655d999617",
+    "data\\tokens\\unigram_train.npy": "8222f260184ca49eddac8f829ab59d733a105b1fa66d450195994ddcd4625916",
+    "src\\kq5\\codec.py": "383b5f0f5e2e5f75c94b09127ed74313f901f629cca1238a9107d79adf72690f",
+    "src\\kq5\\heads.py": "7f537a9c40c6da668181d224aaa0e0802f968ba02f3a0bc6a4706dcb8b9e8b22",
+    "scripts\\expressivity\\floor_lib.py": "e7d4d3ba7de432f235f9fd4eae96f87834e21ede541c351504f47a43a1d2fbcb",
+    "scripts\\expressivity\\floor_contextual.py": "553d7b46269649264822a53982322b28c658238b285b2fc20a28cfea235c62b5",
+    "results\\expressivity\\gpu\\floor_gpu_s1_dev.npz": "e0af81f0ff8ea57baa61982865ec1a25d6f0d227d0565e989d2ad9c9cadd66df",
+    "results\\expressivity\\gpu\\floor_gpu_s1_dev.json": "9012ce89cde465e302694bd05c63a5c21b83b4f1b392feb9952d0c13498aad15",
+    "experiments\\modal-p4\\runs\\p4-densep-s1\\nll_dev.npy": "1b1c697a4457df7d5bcad9c1aff0c6319faa868f30ed15322189522e0f6c028c",
+    "experiments\\modal-m3\\runs\\m3-dense-s1\\nll_dev.npy": "1cf6ba6b153db0ba82258d891e740e77b0222cabe817857b2998632f54c4d2a5",
+    "experiments\\modal-p2\\runs\\p2-kasu64-s1\\nll_dev.npy": "7ef1c273622f40ce68295c76b3d0715cff78daffe7d1501a58987c06b2622ba9",
+    "experiments\\modal-m3\\runs\\m3-kasu0-s1\\nll_dev.npy": "a23cd04348b55889084396fc8707428e4ebef889c8ddb885cf98f91d21a4e39f",
+    "experiments\\modal-m3\\runs\\m3-kasg-s1\\nll_dev.npy": "3762f75b78bcd6c7d49e0dce2a0561b446c495dd5cadf3ece77d122254fd2635",
+    "experiments\\modal-m3\\runs\\m3-kasp-s1\\nll_dev.npy": "1ae4311a87f0e41077ec5f757aa7c85c7065cf795ba8f6a076796925e35b8de7",
+    "experiments\\modal-m3\\runs\\m3-kas0-s1\\nll_dev.npy": "949c0b298a019917998c92f3aea5a54db36eb98b304227f9ecefc1358d62d0b3",
+    "results\\expressivity\\gpu\\floor_gpu_s1_test.npz": "44822463ffc2ffa2777c234d49c16d0280acfc320972bcaa0b5e5a6c4699497a",
+    "results\\expressivity\\gpu\\floor_gpu_s1_test.json": "066dfdc7253eee52b8da1d872d6261a22e951098050070bcf76c450e42aa943e",
+    "experiments\\modal-p4\\runs\\p4-densep-s1\\nll_test.npy": "774b4d361ecdc8644192856a5dcb0dd380cf879c7f26be22b0de62f595ba0248",
+    "experiments\\modal-m3\\runs\\m3-dense-s1\\nll_test.npy": "e861e11ea4f971a214005ac056aab80afbbe80c6dc37789c5716663d00489eb9",
+    "experiments\\modal-p2\\runs\\p2-kasu64-s1\\nll_test.npy": "b159f5560badbe84885eae7cdb3525cc219d28f1c80d7035581efc9d7fa93d7d",
+    "experiments\\modal-m3\\runs\\m3-kasu0-s1\\nll_test.npy": "09ce5dc4a77d2519757d4a8abe8819798aa93ddd62387cd54e9c249a353b3b11",
+    "experiments\\modal-m3\\runs\\m3-kasg-s1\\nll_test.npy": "9e7960b29e6c4f28b97221b215ae971937fbb5899172c51ce40959d784aecb44",
+    "experiments\\modal-m3\\runs\\m3-kasp-s1\\nll_test.npy": "7e71af8869f92f79562f48710e547b59288c032defc5dffddfae5f98a1885d18",
+    "experiments\\modal-m3\\runs\\m3-kas0-s1\\nll_test.npy": "84d25660f57cbb5ec923ef751ffbb477b255b1544c8b925467d86642ec1caa8d",
+    "results\\expressivity\\gpu\\floor_gpu_s2_dev.npz": "27937c39b13203facff5c410694138c32d8495410c0bb1b0e80b8a850cf171d5",
+    "results\\expressivity\\gpu\\floor_gpu_s2_dev.json": "a54fe1a86ae942b4b149d82d56dac85037e766476f7732a47969de745924b4bc",
+    "experiments\\modal-p4\\runs\\p4-densep-s2\\nll_dev.npy": "c7f750965a0f5344505961221a2fdcf15ec7b5abaddcc26f264617e9de4e5c08",
+    "results\\expressivity\\gpu\\floor_gpu_s2_test.npz": "254f4743bf140ee1d934cef13ae87402dab80ef2b0301eafb213cf346c121054",
+    "results\\expressivity\\gpu\\floor_gpu_s2_test.json": "bf93771e8cb0f3cd69d7b71ee019e5401a43ea019dc7bab60e67a77bb757f35e",
+    "experiments\\modal-p4\\runs\\p4-densep-s2\\nll_test.npy": "2eb0ca5920f1c30251a5111498e8306fbd5b4319e0c7580fb6537c66d6fb46c5"
+  },
+  "matrix": {
+    "floor_gpu_s1_dev": {
+      "valid": 4096,
+      "same_position_arrays_max_errors": {
+        "Dense-prior": 0.0,
+        "Dense": 0.0,
+        "KAS-U64": 0.0,
+        "KAS-U16": 0.0,
+        "KAS-G": 0.0,
+        "KAS-P": 0.0,
+        "KAS-0": 0.0
+      },
+      "kasp_gap": 0.829950769311308,
+      "ref_saved_vs_recomputed_mean": 4.5161177718355816e-05,
+      "eos_targets_in_saved_valid": 5,
+      "canonical_non_eos_kasp_gap": 0.8304747482016589,
+      "canonical_non_eos_bytes": 19272,
+      "fits": {
+        "kas | bias = dense-prior's learned beta (fixed)": {
+          "floor": 0.7415467802848639,
+          "mimic_gap": 0.7301932397533837,
+          "kasp_minus_mimic": 0.09971236838020589,
+          "window_cluster_se_kasp_minus_mimic": 0.02545999868761282,
+          "minimum_context_KL": 0.0001400343608111143,
+          "canonical_non_eos_floor": 0.7420356867285033,
+          "canonical_non_eos_mimic_gap": 0.7310812776932172,
+          "canonical_non_eos_kasp_minus_mimic": 0.09934772344818357
+        },
+        "kas | bias = log-unigram prior (fixed; KAS-P family)": {
+          "floor": 0.7421836539930382,
+          "mimic_gap": 0.7314297781268779,
+          "kasp_minus_mimic": 0.09847583000671165,
+          "window_cluster_se_kasp_minus_mimic": 0.025500682955826585,
+          "minimum_context_KL": 5.851057358086109e-05,
+          "canonical_non_eos_floor": 0.7426729031573945,
+          "canonical_non_eos_mimic_gap": 0.7323211736302542,
+          "canonical_non_eos_kasp_minus_mimic": 0.09810782751114658
+        },
+        "kas | bias = free per-token, init beta (looser lower bound)": {
+          "floor": 0.6141226076768476,
+          "mimic_gap": 0.5550032306410295,
+          "kasp_minus_mimic": 0.2749023774925601,
+          "window_cluster_se_kasp_minus_mimic": 0.028200968315958367,
+          "minimum_context_KL": 0.0007188129238784313,
+          "canonical_non_eos_floor": 0.6145219623255861,
+          "canonical_non_eos_mimic_gap": 0.5557162210435028,
+          "canonical_non_eos_kasp_minus_mimic": 0.274712780097898
+        },
+        "kas+suffix | bias = beta (fixed)": {
+          "floor": 0.5382315808573708,
+          "mimic_gap": 0.5309523055296392,
+          "kasp_minus_mimic": 0.29895330260395026,
+          "window_cluster_se_kasp_minus_mimic": 0.029630415710803167,
+          "minimum_context_KL": 0.000185307115316391,
+          "canonical_non_eos_floor": 0.5385663892742678,
+          "canonical_non_eos_mimic_gap": 0.5315971658878705,
+          "canonical_non_eos_kasp_minus_mimic": 0.2988318352535302
+        },
+        "kas+trigram_free | bias = beta (fixed)": {
+          "floor": 0.2004045441082667,
+          "mimic_gap": 0.17123468820920104,
+          "kasp_minus_mimic": 0.6586709199243885,
+          "window_cluster_se_kasp_minus_mimic": 0.0372292811098997,
+          "minimum_context_KL": 0.0002781525254249573,
+          "canonical_non_eos_floor": 0.20050956570931266,
+          "canonical_non_eos_mimic_gap": 0.17144053136752252,
+          "canonical_non_eos_kasp_minus_mimic": 0.6589884697738783
+        },
+        "kas+private4000 | bias = beta (fixed)": {
+          "floor": 0.2809448437387232,
+          "mimic_gap": 0.28700571269096486,
+          "kasp_minus_mimic": 0.5428998954426247,
+          "window_cluster_se_kasp_minus_mimic": 0.03210523778820242,
+          "minimum_context_KL": 0.00012990832328796387,
+          "canonical_non_eos_floor": 0.2810671753389499,
+          "canonical_non_eos_mimic_gap": 0.2873257842451729,
+          "canonical_non_eos_kasp_minus_mimic": 0.543103216896228
+        },
+        "kas+hash8192 | bias = beta (fixed)": {
+          "floor": 0.1376417764679445,
+          "mimic_gap": 0.13873883075341242,
+          "kasp_minus_mimic": 0.6911667773801772,
+          "window_cluster_se_kasp_minus_mimic": 0.039671241443536405,
+          "minimum_context_KL": 0.00014711706899106503,
+          "canonical_non_eos_floor": 0.1376833582922554,
+          "canonical_non_eos_mimic_gap": 0.13894020692754577,
+          "canonical_non_eos_kasp_minus_mimic": 0.691488794213855
+        }
+      }
+    },
+    "floor_gpu_s1_test": {
+      "valid": 4096,
+      "same_position_arrays_max_errors": {
+        "Dense-prior": 0.0,
+        "Dense": 0.0,
+        "KAS-U64": 0.0,
+        "KAS-U16": 0.0,
+        "KAS-G": 0.0,
+        "KAS-P": 0.0,
+        "KAS-0": 0.0
+      },
+      "kasp_gap": 0.7949122136836659,
+      "ref_saved_vs_recomputed_mean": 2.2165975721577524e-05,
+      "eos_targets_in_saved_valid": 4,
+      "canonical_non_eos_kasp_gap": 0.7954711504374802,
+      "canonical_non_eos_bytes": 19503,
+      "fits": {
+        "kas | bias = dense-prior's learned beta (fixed)": {
+          "floor": 0.7398981690628688,
+          "mimic_gap": 0.7836262572818934,
+          "kasp_minus_mimic": 0.01126379042605094,
+          "window_cluster_se_kasp_minus_mimic": 0.036331281937159,
+          "minimum_context_KL": 0.00015244446694850922,
+          "canonical_non_eos_floor": 0.7403456333900827,
+          "canonical_non_eos_mimic_gap": 0.7843947902482309,
+          "canonical_non_eos_kasp_minus_mimic": 0.011054866360286509
+        },
+        "kas | bias = log-unigram prior (fixed; KAS-P family)": {
+          "floor": 0.7407406054220047,
+          "mimic_gap": 0.7846842857953977,
+          "kasp_minus_mimic": 0.010205761912546657,
+          "window_cluster_se_kasp_minus_mimic": 0.03640250934825049,
+          "minimum_context_KL": 0.00015868619084358215,
+          "canonical_non_eos_floor": 0.7411888459343483,
+          "canonical_non_eos_mimic_gap": 0.7854484267659785,
+          "canonical_non_eos_kasp_minus_mimic": 0.010001229842538895
+        },
+        "kas | bias = free per-token, init beta (looser lower bound)": {
+          "floor": 0.6292896022635688,
+          "mimic_gap": 0.6048107385944057,
+          "kasp_minus_mimic": 0.19007930911353865,
+          "window_cluster_se_kasp_minus_mimic": 0.03754038798046036,
+          "minimum_context_KL": 0.0005825981497764587,
+          "canonical_non_eos_floor": 0.6295969525704695,
+          "canonical_non_eos_mimic_gap": 0.6054470014787903,
+          "canonical_non_eos_kasp_minus_mimic": 0.19000265512972708
+        },
+        "kas+suffix | bias = beta (fixed)": {
+          "floor": 0.5399572704848339,
+          "mimic_gap": 0.5433341761898342,
+          "kasp_minus_mimic": 0.2515558715181102,
+          "window_cluster_se_kasp_minus_mimic": 0.04095669123676964,
+          "minimum_context_KL": 0.00014939717948436737,
+          "canonical_non_eos_floor": 0.5402852769867037,
+          "canonical_non_eos_mimic_gap": 0.5438503846824903,
+          "canonical_non_eos_kasp_minus_mimic": 0.25159927192602716
+        },
+        "kas+trigram_free | bias = beta (fixed)": {
+          "floor": 0.20615426905033019,
+          "mimic_gap": 0.1628522368908918,
+          "kasp_minus_mimic": 0.6320378108170526,
+          "window_cluster_se_kasp_minus_mimic": 0.04119140047119365,
+          "minimum_context_KL": 0.0002775553148239851,
+          "canonical_non_eos_floor": 0.20622754440791286,
+          "canonical_non_eos_mimic_gap": 0.16303512498356496,
+          "canonical_non_eos_kasp_minus_mimic": 0.6324145316249524
+        },
+        "kas+private4000 | bias = beta (fixed)": {
+          "floor": 0.28509222874338036,
+          "mimic_gap": 0.27996696137855714,
+          "kasp_minus_mimic": 0.5149230863293872,
+          "window_cluster_se_kasp_minus_mimic": 0.04320106425929025,
+          "minimum_context_KL": 0.000205540272872895,
+          "canonical_non_eos_floor": 0.2852320544755983,
+          "canonical_non_eos_mimic_gap": 0.280267989258239,
+          "canonical_non_eos_kasp_minus_mimic": 0.5151816673502784
+        },
+        "kas+hash8192 | bias = beta (fixed)": {
+          "floor": 0.14106344118782488,
+          "mimic_gap": 0.11312394052822683,
+          "kasp_minus_mimic": 0.6817661071797175,
+          "window_cluster_se_kasp_minus_mimic": 0.043227859909892176,
+          "minimum_context_KL": 0.0001791762188076973,
+          "canonical_non_eos_floor": 0.14110241113704838,
+          "canonical_non_eos_mimic_gap": 0.11326034198720508,
+          "canonical_non_eos_kasp_minus_mimic": 0.6821893146213123
+        }
+      }
+    },
+    "floor_gpu_s2_dev": {
+      "valid": 4096,
+      "same_position_arrays_max_errors": {
+        "Dense-prior": 0.0,
+        "Dense": 0.0,
+        "KAS-U64": 0.0,
+        "KAS-U16": 0.0,
+        "KAS-G": 0.0,
+        "KAS-P": 0.0,
+        "KAS-0": 0.0
+      },
+      "kasp_gap": 0.8371818774982154,
+      "ref_saved_vs_recomputed_mean": -3.1620342536342605e-05,
+      "eos_targets_in_saved_valid": 5,
+      "canonical_non_eos_kasp_gap": 0.8376689398754872,
+      "canonical_non_eos_bytes": 19272,
+      "fits": {
+        "kas | bias = dense-prior's learned beta (fixed)": {
+          "floor": 0.7423079805298585,
+          "mimic_gap": 0.729669770203339,
+          "kasp_minus_mimic": 0.1075437276374127,
+          "window_cluster_se_kasp_minus_mimic": 0.024081523214114466,
+          "minimum_context_KL": 0.00015576649457216263,
+          "canonical_non_eos_floor": 0.7427376353249511,
+          "canonical_non_eos_mimic_gap": 0.7305558693850548,
+          "canonical_non_eos_kasp_minus_mimic": 0.10714400618098328
+        },
+        "kas | bias = log-unigram prior (fixed; KAS-P family)": {
+          "floor": 0.7429293585090591,
+          "mimic_gap": 0.7311533637640287,
+          "kasp_minus_mimic": 0.10606013407672298,
+          "window_cluster_se_kasp_minus_mimic": 0.024211649663842268,
+          "minimum_context_KL": 0.00013797124847769737,
+          "canonical_non_eos_floor": 0.7433596166786179,
+          "canonical_non_eos_mimic_gap": 0.7320494627263475,
+          "canonical_non_eos_kasp_minus_mimic": 0.10565041283969052
+        },
+        "kas | bias = free per-token, init beta (looser lower bound)": {
+          "floor": 0.6139012717093237,
+          "mimic_gap": 0.5537712180230224,
+          "kasp_minus_mimic": 0.2834422798177293,
+          "window_cluster_se_kasp_minus_mimic": 0.0266147933245765,
+          "minimum_context_KL": 0.0006516182329505682,
+          "canonical_non_eos_floor": 0.6142508584319174,
+          "canonical_non_eos_mimic_gap": 0.5544445628613937,
+          "canonical_non_eos_kasp_minus_mimic": 0.28325531270464444
+        },
+        "kas+suffix | bias = beta (fixed)": {
+          "floor": 0.5397072876185973,
+          "mimic_gap": 0.5306682671555061,
+          "kasp_minus_mimic": 0.30654523068524564,
+          "window_cluster_se_kasp_minus_mimic": 0.02735818185525878,
+          "minimum_context_KL": 0.00010328763164579868,
+          "canonical_non_eos_floor": 0.5400006009348134,
+          "canonical_non_eos_mimic_gap": 0.531328269178933,
+          "canonical_non_eos_kasp_minus_mimic": 0.306371606387105
+        },
+        "kas+trigram_free | bias = beta (fixed)": {
+          "floor": 0.20202263366101647,
+          "mimic_gap": 0.1755253429043083,
+          "kasp_minus_mimic": 0.6616881549364434,
+          "window_cluster_se_kasp_minus_mimic": 0.03699522973924718,
+          "minimum_context_KL": 0.00030844612047076225,
+          "canonical_non_eos_floor": 0.20211096612455548,
+          "canonical_non_eos_mimic_gap": 0.17574777871073147,
+          "canonical_non_eos_kasp_minus_mimic": 0.6619520968553065
+        },
+        "kas+private4000 | bias = beta (fixed)": {
+          "floor": 0.2827170992495951,
+          "mimic_gap": 0.2938044904913054,
+          "kasp_minus_mimic": 0.5434090073494463,
+          "window_cluster_se_kasp_minus_mimic": 0.02927863219059122,
+          "minimum_context_KL": 9.76957380771637e-05,
+          "canonical_non_eos_floor": 0.2828036957973659,
+          "canonical_non_eos_mimic_gap": 0.29412348544398886,
+          "canonical_non_eos_kasp_minus_mimic": 0.5435763901220492
+        },
+        "kas+hash8192 | bias = beta (fixed)": {
+          "floor": 0.1397770361545838,
+          "mimic_gap": 0.14938170498899594,
+          "kasp_minus_mimic": 0.6878317928517558,
+          "window_cluster_se_kasp_minus_mimic": 0.03801885376400686,
+          "minimum_context_KL": 0.000277490122243762,
+          "canonical_non_eos_floor": 0.13980683141994804,
+          "canonical_non_eos_mimic_gap": 0.14951843873843332,
+          "canonical_non_eos_kasp_minus_mimic": 0.6881814368276047
+        }
+      }
+    },
+    "floor_gpu_s2_test": {
+      "valid": 4096,
+      "same_position_arrays_max_errors": {
+        "Dense-prior": 0.0,
+        "Dense": 0.0,
+        "KAS-U64": 0.0,
+        "KAS-U16": 0.0,
+        "KAS-G": 0.0,
+        "KAS-P": 0.0,
+        "KAS-0": 0.0
+      },
+      "kasp_gap": 0.7915275490559739,
+      "ref_saved_vs_recomputed_mean": 1.9749346360953268e-05,
+      "eos_targets_in_saved_valid": 4,
+      "canonical_non_eos_kasp_gap": 0.792245680595643,
+      "canonical_non_eos_bytes": 19503,
+      "fits": {
+        "kas | bias = dense-prior's learned beta (fixed)": {
+          "floor": 0.7406699948148798,
+          "mimic_gap": 0.7795685560923982,
+          "kasp_minus_mimic": 0.01193924361721481,
+          "window_cluster_se_kasp_minus_mimic": 0.03645171733701523,
+          "minimum_context_KL": 0.00015897070989012718,
+          "canonical_non_eos_floor": 0.7411319157497853,
+          "canonical_non_eos_mimic_gap": 0.7803502777121032,
+          "canonical_non_eos_kasp_minus_mimic": 0.011875318670998652
+        },
+        "kas | bias = log-unigram prior (fixed; KAS-P family)": {
+          "floor": 0.7414020243230652,
+          "mimic_gap": 0.7801420584087442,
+          "kasp_minus_mimic": 0.011365741300868759,
+          "window_cluster_se_kasp_minus_mimic": 0.03649270226553993,
+          "minimum_context_KL": 9.542191401124e-05,
+          "canonical_non_eos_floor": 0.7418653517887533,
+          "canonical_non_eos_mimic_gap": 0.7809210183333041,
+          "canonical_non_eos_kasp_minus_mimic": 0.011304578049797656
+        },
+        "kas | bias = free per-token, init beta (looser lower bound)": {
+          "floor": 0.6309725778502298,
+          "mimic_gap": 0.6084891372833541,
+          "kasp_minus_mimic": 0.18301866242625886,
+          "window_cluster_se_kasp_minus_mimic": 0.038995770853694704,
+          "minimum_context_KL": 0.0006961226463317871,
+          "canonical_non_eos_floor": 0.6313030675568191,
+          "canonical_non_eos_mimic_gap": 0.6090583024260958,
+          "canonical_non_eos_kasp_minus_mimic": 0.18316729395700593
+        },
+        "kas+suffix | bias = beta (fixed)": {
+          "floor": 0.541030221814367,
+          "mimic_gap": 0.5358084285153495,
+          "kasp_minus_mimic": 0.2556993711942635,
+          "window_cluster_se_kasp_minus_mimic": 0.04290043120534316,
+          "minimum_context_KL": 0.0001852661371231079,
+          "canonical_non_eos_floor": 0.5413617977276417,
+          "canonical_non_eos_mimic_gap": 0.5363183612685003,
+          "canonical_non_eos_kasp_minus_mimic": 0.2559072351146015
+        },
+        "kas+trigram_free | bias = beta (fixed)": {
+          "floor": 0.20695136693308314,
+          "mimic_gap": 0.15942299626261597,
+          "kasp_minus_mimic": 0.6320848034469969,
+          "window_cluster_se_kasp_minus_mimic": 0.04164288719972378,
+          "minimum_context_KL": 0.0005229879170656204,
+          "canonical_non_eos_floor": 0.20703684965305383,
+          "canonical_non_eos_mimic_gap": 0.15951547126925372,
+          "canonical_non_eos_kasp_minus_mimic": 0.6327101251138479
+        },
+        "kas+private4000 | bias = beta (fixed)": {
+          "floor": 0.2863666874454225,
+          "mimic_gap": 0.28132465928646244,
+          "kasp_minus_mimic": 0.5101831404231505,
+          "window_cluster_se_kasp_minus_mimic": 0.043767735220089386,
+          "minimum_context_KL": 0.0003816550597548485,
+          "canonical_non_eos_floor": 0.286506297707661,
+          "canonical_non_eos_mimic_gap": 0.28159772859027515,
+          "canonical_non_eos_kasp_minus_mimic": 0.5106278677928265
+        },
+        "kas+hash8192 | bias = beta (fixed)": {
+          "floor": 0.14220900551561044,
+          "mimic_gap": 0.11956134981331201,
+          "kasp_minus_mimic": 0.6719464498963009,
+          "window_cluster_se_kasp_minus_mimic": 0.04349130827935197,
+          "minimum_context_KL": 0.00022654840722680092,
+          "canonical_non_eos_floor": 0.14224941223276685,
+          "canonical_non_eos_mimic_gap": 0.1196420613537298,
+          "canonical_non_eos_kasp_minus_mimic": 0.672583535029372
+        }
+      }
+    }
+  },
+  "codec_equivalence": {
+    "V": 57243,
+    "D": 8192,
+    "occupied_cells": 1753,
+    "features": 1787,
+    "forward_max_abs_error_float32_feature_weights": 1.632399289519526e-05,
+    "reverse_max_abs_error_float32_feature_weights": 5.004868217639569e-07,
+    "length_zero_tokens": 0,
+    "unused_codec_cells": 6439,
+    "numerical_rank_at_original_tolerance": 1333
+  },
+  "parallelogram_census": {
+    "top_n_tokens": 8000,
+    "n_single_substitution_pairs": 19950,
+    "n_groups": 8715,
+    "n_groups_with_2plus_pairs": 3263,
+    "n_pairs_in_such_groups": 14498,
+    "examples": [
+      {
+        "L": 3,
+        "p": 2,
+        "byte_from": "f",
+        "byte_to": "n",
+        "n_pairs": 5,
+        "examples": [
+          [
+            " of",
+            " on"
+          ],
+          [
+            " if",
+            " in"
+          ],
+          [
+            " If",
+            " In"
+          ],
+          [
+            " Of",
+            " On"
+          ],
+          [
+            "ref",
+            "ren"
+          ]
+        ]
+      },
+      {
+        "L": 4,
+        "p": 1,
+        "byte_from": "T",
+        "byte_to": "t",
+        "n_pairs": 6,
+        "examples": [
+          [
+            " The",
+            " the"
+          ],
+          [
+            " Two",
+            " two"
+          ],
+          [
+            " Ter",
+            " ter"
+          ],
+          [
+            " Ten",
+            " ten"
+          ],
+          [
+            " Top",
+            " top"
+          ],
+          [
+            " Try",
+            " try"
+          ]
+        ]
+      },
+      {
+        "L": 3,
+        "p": 1,
+        "byte_from": "i",
+        "byte_to": "o",
+        "n_pairs": 7,
+        "examples": [
+          [
+            " if",
+            " of"
+          ],
+          [
+            " in",
+            " on"
+          ],
+          [
+            "min",
+            "mon"
+          ],
+          [
+            "ris",
+            "ros"
+          ],
+          [
+            "rin",
+            "ron"
+          ],
+          [
+            "rim",
+            "rom"
+          ]
+        ]
+      },
+      {
+        "L": 4,
+        "p": 1,
+        "byte_from": "s",
+        "byte_to": "t",
+        "n_pairs": 9,
+        "examples": [
+          [
+            " she",
+            " the"
+          ],
+          [
+            " ser",
+            " ter"
+          ],
+          [
+            " son",
+            " ton"
+          ],
+          [
+            "ased",
+            "ated"
+          ],
+          [
+            "ised",
+            "ited"
+          ],
+          [
+            "ases",
+            "ates"
+          ]
+        ]
+      },
+      {
+        "L": 3,
+        "p": 0,
+        "byte_from": " ",
+        "byte_to": "r",
+        "n_pairs": 17,
+        "examples": [
+          [
+            " in",
+            "rin"
+          ],
+          [
+            " is",
+            "ris"
+          ],
+          [
+            " as",
+            "ras"
+          ],
+          [
+            " on",
+            "ron"
+          ],
+          [
+            " it",
+            "rit"
+          ],
+          [
+            " an",
+            "ran"
+          ]
+        ]
+      },
+      {
+        "L": 4,
+        "p": 3,
+        "byte_from": "e",
+        "byte_to": "y",
+        "n_pairs": 3,
+        "examples": [
+          [
+            " the",
+            " thy"
+          ],
+          [
+            "able",
+            "ably"
+          ],
+          [
+            "ence",
+            "ency"
+          ]
+        ]
+      },
+      {
+        "L": 4,
+        "p": 1,
+        "byte_from": "S",
+        "byte_to": "t",
+        "n_pairs": 4,
+        "examples": [
+          [
+            " She",
+            " the"
+          ],
+          [
+            " Ser",
+            " ter"
+          ],
+          [
+            " Son",
+            " ton"
+          ],
+          [
+            " Sea",
+            " tea"
+          ]
+        ]
+      },
+      {
+        "L": 4,
+        "p": 1,
+        "byte_from": "C",
+        "byte_to": "t",
+        "n_pairs": 3,
+        "examples": [
+          [
+            " Che",
+            " the"
+          ],
+          [
+            " Con",
+            " ton"
+          ],
+          [
+            " Cap",
+            " tap"
+          ]
+        ]
+      },
+      {
+        "L": 3,
+        "p": 1,
+        "byte_from": "a",
+        "byte_to": "i",
+        "n_pairs": 8,
+        "examples": [
+          [
+            " an",
+            " in"
+          ],
+          [
+            " as",
+            " is"
+          ],
+          [
+            " at",
+            " it"
+          ],
+          [
+            "man",
+            "min"
+          ],
+          [
+            " am",
+            " im"
+          ],
+          [
+            "ras",
+            "ris"
+          ]
+        ]
+      },
+      {
+        "L": 3,
+        "p": 0,
+        "byte_from": " ",
+        "byte_to": "a",
+        "n_pairs": 20,
+        "examples": [
+          [
+            " to",
+            "ato"
+          ],
+          [
+            " in",
+            "ain"
+          ],
+          [
+            " do",
+            "ado"
+          ],
+          [
+            " no",
+            "ano"
+          ],
+          [
+            " me",
+            "ame"
+          ],
+          [
+            " te",
+            "ate"
+          ]
+        ]
+      },
+      {
+        "L": 3,
+        "p": 2,
+        "byte_from": "n",
+        "byte_to": "s",
+        "n_pairs": 24,
+        "examples": [
+          [
+            " in",
+            " is"
+          ],
+          [
+            " an",
+            " as"
+          ],
+          [
+            " In",
+            " Is"
+          ],
+          [
+            " un",
+            " us"
+          ],
+          [
+            "inn",
+            "ins"
+          ],
+          [
+            " An",
+            " As"
+          ]
+        ]
+      },
+      {
+        "L": 3,
+        "p": 1,
+        "byte_from": "O",
+        "byte_to": "o",
+        "n_pairs": 4,
+        "examples": [
+          [
+            " Of",
+            " of"
+          ],
+          [
+            " On",
+            " on"
+          ],
+          [
+            " Or",
+            " or"
+          ],
+          [
+            " Ob",
+            " ob"
+          ]
+        ]
+      }
+    ]
+  },
+  "trigram": {
+    "allocated_buckets": 8192,
+    "occupied_buckets": 6299,
+    "occurrences": 257003
+  },
+  "output_head_accounting": {
+    "KAS-P": {
+      "trainable": 4194337,
+      "fp32_adam_moments_bytes": 33554696,
+      "fp32_weight_grad_adam_bytes": 67109392
+    },
+    "KAS+8192_trigrams": {
+      "trainable": 8388641,
+      "fp32_adam_moments_bytes": 67109128,
+      "fp32_weight_grad_adam_bytes": 134218256
+    },
+    "KAS-U16": {
+      "trainable": 5175660,
+      "fp32_adam_moments_bytes": 41405280,
+      "fp32_weight_grad_adam_bytes": 82810560
+    },
+    "KAS-U64": {
+      "trainable": 7947900,
+      "fp32_adam_moments_bytes": 63583200,
+      "fp32_weight_grad_adam_bytes": 127166400
+    },
+    "Dense-prior": {
+      "trainable": 29365659,
+      "fp32_adam_moments_bytes": 234925272,
+      "fp32_weight_grad_adam_bytes": 469850544
+    }
+  }
+}

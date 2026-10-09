@@ -1,0 +1,67 @@
+[
+  {
+    "rule": "count",
+    "K": 1000,
+    "vocab_total": 58243,
+    "leak_bpb": 0.0006085256222181603,
+    "n_sites": 490,
+    "mean_regret_bits": -0.5964185113804135,
+    "frac_regret_below_zero": 0.5857142857142857,
+    "retok_bpb": 1.6372378169199406,
+    "retok_tokens_in_windows": 261375,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 8.492696285247803
+  },
+  {
+    "rule": "count",
+    "K": 10000,
+    "vocab_total": 67243,
+    "leak_bpb": 0.0031179192542663613,
+    "n_sites": 2777,
+    "mean_regret_bits": -0.30915974317697553,
+    "frac_regret_below_zero": 0.590925459128556,
+    "retok_bpb": 1.640412272598649,
+    "retok_tokens_in_windows": 259325,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 10.059962034225464
+  },
+  {
+    "rule": "count",
+    "K": 100000,
+    "vocab_total": 157243,
+    "leak_bpb": 0.010563794827342364,
+    "n_sites": 11107,
+    "mean_regret_bits": -0.1037104610730017,
+    "frac_regret_below_zero": 0.5791842981903305,
+    "retok_bpb": 1.643228107962408,
+    "retok_tokens_in_windows": 252150,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 24.75829792022705
+  },
+  {
+    "rule": "count",
+    "K": 300000,
+    "vocab_total": 357243,
+    "leak_bpb": 0.013299167508650978,
+    "n_sites": 14236,
+    "mean_regret_bits": 0.11478188321514919,
+    "frac_regret_below_zero": 0.5627282944647373,
+    "retok_bpb": 1.645874506523556,
+    "retok_tokens_in_windows": 250100,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 57.19099712371826
+  },
+  {
+    "rule": "count",
+    "K": 721938,
+    "vocab_total": 779181,
+    "leak_bpb": 0.014667375942690616,
+    "n_sites": 15517,
+    "mean_regret_bits": 0.2852094220265917,
+    "frac_regret_below_zero": 0.5519752529483792,
+    "retok_bpb": 1.6485249011318552,
+    "retok_tokens_in_windows": 250100,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 127.14026975631714
+  }
+]

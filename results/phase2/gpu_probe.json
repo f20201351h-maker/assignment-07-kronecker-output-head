@@ -1,0 +1,41 @@
+{
+ "date": "2026-10-07",
+ "rates_usd_per_hour_modal_list": {
+  "B200": 6.25,
+  "H100": 3.95,
+  "RTX-PRO-6000": 3.03
+ },
+ "steps_per_probe": 32,
+ "tokens_per_run": 100007936,
+ "gpus": {
+  "B200": {
+   "tok_per_s_kasu_drop25": 281630.34654023533,
+   "tok_per_s_kasg_occ": 263089.71199123666,
+   "seconds_per_run_kasu": 355.10355055332184,
+   "seconds_per_run_kasg_occ": 380.1286460161209,
+   "five_run_train_gpu_hours": 0.5071022065811687,
+   "five_run_train_usd": 3.169388791132304,
+   "five_run_with_analyses_usd_x2.2": 6.97265534049107
+  },
+  "H100": {
+   "tok_per_s_kasu_drop25": 215545.96908325222,
+   "tok_per_s_kasg_occ": 207693.83282891687,
+   "seconds_per_run_kasu": 463.9749767780304,
+   "seconds_per_run_kasg_occ": 481.51615595817566,
+   "five_run_train_gpu_hours": 0.6541547895140118,
+   "five_run_train_usd": 2.583911418580347,
+   "five_run_with_analyses_usd_x2.2": 5.684605120876764
+  },
+  "RTX-PRO-6000": {
+   "tok_per_s_kasu_drop25": 188311.74912036478,
+   "tok_per_s_kasg_occ": 183478.56456967097,
+   "seconds_per_run_kasu": 531.0764541625977,
+   "seconds_per_run_kasg_occ": 545.0660475492477,
+   "five_run_train_gpu_hours": 0.7453781826628579,
+   "five_run_train_usd": 2.2584958934684596,
+   "five_run_with_analyses_usd_x2.2": 4.9686909656306115
+  }
+ },
+ "choice": "RTX-PRO-6000",
+ "reason": "lowest projected cost; same hardware as the Phase 1 canonical set (protocol 06 section 3 rule)"
+}

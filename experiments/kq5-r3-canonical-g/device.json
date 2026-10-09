@@ -1,0 +1,13 @@
+{
+  "torch": "2.10.0+cu128",
+  "cuda_available": true,
+  "device_count": 2,
+  "elapsed_s": 7.2376978397369385,
+  "devices": [
+    "Tesla T4",
+    "Tesla T4"
+  ],
+  "cuda": "12.8",
+  "nvidia_smi": "GPU 0: Tesla T4 (UUID: GPU-15ce3514-0233-9e10-8530-a16fa3462cb0)\nGPU 1: Tesla T4 (UUID: GPU-3b65781a-5c6e-82ad-61e1-ac8a025429e1)\n",
+  "spec_name": "r3_canonical_g"
+}

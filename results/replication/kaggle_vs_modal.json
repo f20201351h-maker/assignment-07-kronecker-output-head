@@ -1,0 +1,228 @@
+{
+ "note": "light replication check, seed means only; primary analysis is on m3. Only training-side test bpb is compared: the Kaggle X kernel ran its minting/growth analyses with code from before the pre-canonical code review (protocols/03a_errata.md), so those outputs are not used.",
+ "runs": [
+  {
+   "arm": "Dense",
+   "seed": 1,
+   "t4_bpb": 1.4429442433455464,
+   "modal_bpb": 1.445152162047051,
+   "diff": -0.0022079187015047186,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "Dense",
+   "seed": 2,
+   "t4_bpb": 1.4405705622744853,
+   "modal_bpb": 1.4403308292835646,
+   "diff": 0.00023973299092072686,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-0",
+   "seed": 1,
+   "t4_bpb": 1.950712230034207,
+   "modal_bpb": 1.939604907361073,
+   "diff": 0.011107322673133968,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-0",
+   "seed": 2,
+   "t4_bpb": 1.9384375698367184,
+   "modal_bpb": 1.9399127913132244,
+   "diff": -0.0014752214765059168,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-P",
+   "seed": 1,
+   "t4_bpb": 1.634581222458813,
+   "modal_bpb": 1.6307115105611474,
+   "diff": 0.0038697118976656064,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-P",
+   "seed": 2,
+   "t4_bpb": 1.635551632716016,
+   "modal_bpb": 1.6308498654082106,
+   "diff": 0.00470176730780536,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-U16",
+   "seed": 1,
+   "t4_bpb": 1.459329139884473,
+   "modal_bpb": 1.4607750177858374,
+   "diff": -0.0014458779013644119,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-U16",
+   "seed": 2,
+   "t4_bpb": 1.4603923367901075,
+   "modal_bpb": 1.4617674530380453,
+   "diff": -0.0013751162479378465,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-G",
+   "seed": 1,
+   "t4_bpb": 1.5171464207190952,
+   "modal_bpb": 1.5180873932092154,
+   "diff": -0.000940972490120151,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-G",
+   "seed": 2,
+   "t4_bpb": 1.5112992111932535,
+   "modal_bpb": 1.5095171572365125,
+   "diff": 0.0017820539567410254,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-G-shuf",
+   "seed": 1,
+   "t4_bpb": 1.532107228381662,
+   "modal_bpb": 1.5292916339379885,
+   "diff": 0.002815594443673408,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-G-shuf",
+   "seed": 2,
+   "t4_bpb": 1.5286698041288767,
+   "modal_bpb": 1.5264648860644647,
+   "diff": 0.0022049180644119204,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-U16 (c_zero)",
+   "seed": 1,
+   "t4_bpb": 1.582622350612394,
+   "modal_bpb": 1.5827754199685298,
+   "diff": -0.0001530693561357932,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  },
+  {
+   "arm": "KAS-U16 (c_zero)",
+   "seed": 2,
+   "t4_bpb": 1.581912410025176,
+   "modal_bpb": 1.5832039370768451,
+   "diff": -0.001291527051669128,
+   "same_windows": true,
+   "steps": 1526,
+   "tokens": 100007936
+  }
+ ],
+ "seed_means": {
+  "m3": {
+   "Dense": 1.4427414956653077,
+   "KAS-0": 1.9397588493371487,
+   "KAS-P": 1.6307806879846791,
+   "KAS-U16": 1.4612712354119415,
+   "KAS-G": 1.513802275222864,
+   "KAS-G-shuf": 1.5278782600012266,
+   "KAS-U16 (c_zero)": 1.5829896785226873
+  },
+  "r3": {
+   "Dense": 1.441757402810016,
+   "KAS-0": 1.9445748999354628,
+   "KAS-P": 1.6350664275874145,
+   "KAS-U16": 1.4598607383372904,
+   "KAS-G": 1.5142228159561744,
+   "KAS-G-shuf": 1.5303885162552693,
+   "KAS-U16 (c_zero)": 1.582267380318785
+  }
+ },
+ "missing_r3": [],
+ "ordering_m3": [
+  "Dense",
+  "KAS-U16",
+  "KAS-G",
+  "KAS-G-shuf",
+  "KAS-U16 (c_zero)",
+  "KAS-P",
+  "KAS-0"
+ ],
+ "ordering_r3": [
+  "Dense",
+  "KAS-U16",
+  "KAS-G",
+  "KAS-G-shuf",
+  "KAS-U16 (c_zero)",
+  "KAS-P",
+  "KAS-0"
+ ],
+ "ordering_agrees": true,
+ "paired": {
+  "KAS-P - KAS-U16": {
+   "m3": 0.16950945257273764,
+   "r3": 0.17520568925012414
+  },
+  "KAS-P - KAS-G": {
+   "m3": 0.1169784127618152,
+   "r3": 0.12084361163124013
+  },
+  "KAS-G-shuf - KAS-G": {
+   "m3": 0.014075984778362693,
+   "r3": 0.01616570029909492
+  },
+  "KAS-U16 - Dense": {
+   "m3": 0.018529739746633744,
+   "r3": 0.01810333552727439
+  },
+  "KAS-0 - KAS-P": {
+   "m3": 0.3089781613524696,
+   "r3": 0.30950847234804835
+  },
+  "KAS-U16 (c_zero) - KAS-U16": {
+   "m3": 0.12171844311074587,
+   "r3": 0.12240664198149465
+  },
+  "KAS-P - KAS-U16 (c_zero)": {
+   "m3": 0.047791009461991774,
+   "r3": 0.052799047268629495
+  },
+  "KAS-U16 (c_zero) - Dense": {
+   "m3": 0.1402481828573796,
+   "r3": 0.14050997750876904
+  },
+  "KAS-P - Dense": {
+   "m3": 0.18803919231937138,
+   "r3": 0.19330902477739853
+  }
+ },
+ "H1_ratio": {
+  "m3": 0.6900996433318016,
+  "r3": 0.6897242443921068
+ },
+ "max_abs_run_diff": 0.011107322673133968
+}

@@ -1,0 +1,104 @@
+{
+ "note": "exploratory, after an analysis review; not pre-registered",
+ "absolute_minted_bits": {
+  "KAS-U16": {
+   "rule": "inherit",
+   "mean_regret_bits": 1.0467780083582963,
+   "mean_minted_token_bits": 14.000587251097436,
+   "mean_two_token_bits": 12.953809242739139
+  },
+  "KAS-G": {
+   "rule": "inherit",
+   "mean_regret_bits": 0.6702714081409622,
+   "mean_minted_token_bits": 14.751411092947606,
+   "mean_two_token_bits": 14.081139684806644
+  },
+  "KAS-G-shuf": {
+   "rule": "inherit",
+   "mean_regret_bits": 0.7696274199418203,
+   "mean_minted_token_bits": 14.913367913305423,
+   "mean_two_token_bits": 14.143740493363604
+  }
+ },
+ "absolute_KASG_minus_KASU16_bits": {
+  "mean": 0.7508238418501705,
+  "ci95": [
+   0.5792531290066381,
+   0.9303549805491823
+  ],
+  "n": 2110,
+  "n_clusters": 748
+ },
+ "H2_gen_count_vs_kasu_count": {
+  "mean": -0.8238866409852468,
+  "ci95": [
+   -1.0114011524315212,
+   -0.6232385428043187
+  ],
+  "n": 2110,
+  "n_clusters": 748
+ },
+ "H4_gen_count_kasg_minus_shuf": {
+  "mean": -0.3192049721571851,
+  "ci95": [
+   -0.46539703126494186,
+   -0.1615597893116862
+  ],
+  "n": 2110,
+  "n_clusters": 748
+ },
+ "quality_vs_minting": {
+  "KAS-U16": {
+   "rule_by_net_dev": "inherit_prior",
+   "net_minting_test_bpb": 0.0026073309321994476,
+   "in_vocab_test_bpb": 1.4612712354119408
+  },
+  "KAS-G": {
+   "rule_by_net_dev": "gen_count",
+   "net_minting_test_bpb": 0.000400124396008561,
+   "in_vocab_test_bpb": 1.5138022752228641
+  },
+  "KAS-G-shuf": {
+   "rule_by_net_dev": "inherit",
+   "net_minting_test_bpb": 0.0005066068119298217,
+   "in_vocab_test_bpb": 1.5278782600012273
+  },
+  "KAS-P": {
+   "rule_by_net_dev": "inherit",
+   "net_minting_test_bpb": 0.00031716333224152127,
+   "in_vocab_test_bpb": 1.630780687984679
+  },
+  "Dense": {
+   "rule_by_net_dev": "inherit",
+   "net_minting_test_bpb": 0.0013248571869486359,
+   "in_vocab_test_bpb": 1.442741495665308
+  },
+  "KAS-0": {
+   "rule_by_net_dev": "bytes",
+   "net_minting_test_bpb": 0.002423982595980423,
+   "in_vocab_test_bpb": 1.939758849337148
+  },
+  "KAS-U16 (c_zero)": {
+   "rule_by_net_dev": "count",
+   "net_minting_test_bpb": 0.0004533496434770967,
+   "in_vocab_test_bpb": 1.5829896785226873
+  }
+ },
+ "dominance": [
+  "KAS-G dominates KAS-G-shuf",
+  "KAS-G dominates KAS-0",
+  "KAS-G dominates KAS-U16 (c_zero)",
+  "KAS-G-shuf dominates KAS-0",
+  "KAS-P dominates KAS-0",
+  "Dense dominates KAS-U16",
+  "Dense dominates KAS-0",
+  "KAS-U16 (c_zero) dominates KAS-0"
+ ],
+ "generator_cost_T4": {
+  "kasp_tok_per_s": 21773.911703992824,
+  "kasg_v3_tok_per_s": 15503.934031612045,
+  "overhead_s_per_step_V57243": 1.2172157287597654,
+  "overhead_fraction_of_kasg_step": 0.28795825746051,
+  "overhead_s_per_step_scaled_to_V1048576": 22.296930629072545
+ }
+}

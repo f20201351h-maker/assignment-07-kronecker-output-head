@@ -1,0 +1,20 @@
+{
+  "mean": {
+    "bpb": 1.4358335307209618,
+    "bpb_standard_same_text": 1.432332876607752,
+    "delta_bpb": 0.003500654113209656,
+    "bytes_retok": 5789082.0,
+    "bytes_standard": 5789082.0,
+    "n_tokens": 1223418,
+    "n_tokens_standard": 1225678
+  },
+  "inherit": {
+    "bpb": 1.4335212942701627,
+    "bpb_standard_same_text": 1.432332876607752,
+    "delta_bpb": 0.0011884176624106235,
+    "bytes_retok": 5789082.0,
+    "bytes_standard": 5789082.0,
+    "n_tokens": 1223418,
+    "n_tokens_standard": 1225678
+  }
+}

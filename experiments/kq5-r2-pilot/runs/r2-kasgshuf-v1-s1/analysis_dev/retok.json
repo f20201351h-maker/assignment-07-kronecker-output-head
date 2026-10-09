@@ -1,0 +1,26 @@
+{
+  "count": {
+    "bpb": 1.8882324611034274,
+    "n_tokens": 1223418,
+    "windows": 1194
+  },
+  "inherit": {
+    "bpb": 1.888073635604435,
+    "n_tokens": 1223418,
+    "windows": 1194
+  },
+  "gen_count": {
+    "bpb": 1.8880677397126537,
+    "n_tokens": 1223418,
+    "windows": 1194
+  },
+  "gen_inherit": {
+    "bpb": 1.8880677397016807,
+    "n_tokens": 1223418,
+    "windows": 1194
+  },
+  "_standard": {
+    "bpb": 1.8899463002268022,
+    "n_tokens": 1225678
+  }
+}

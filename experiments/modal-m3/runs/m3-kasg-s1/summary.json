@@ -1,0 +1,33 @@
+{
+  "run_id": "m3-kasg-s1",
+  "status": "complete",
+  "steps": 1526,
+  "skipped_steps": 0,
+  "tokens": 100007936,
+  "final": {
+    "dev": {
+      "bpb": 1.5144689370464313,
+      "nll_nats_per_token": 4.963075160980225,
+      "n_targets": 1223485,
+      "n_bytes": 5784471,
+      "windows_sha256": "bccbd2b753bbb434617eae43444dfcacd90c479a4799ca0951d4d2b6f78f7f2a"
+    },
+    "test": {
+      "bpb": 1.5180873932092154,
+      "nll_nats_per_token": 4.94355583190918,
+      "n_targets": 1130301,
+      "n_bytes": 5310205,
+      "windows_sha256": "fc2ce72cbe1cde8ac548eea1e3a7aa18bb2354ffaa2a28a58ff6a427ca4b4081"
+    }
+  },
+  "wall_s": 854.6185545921326,
+  "params": {
+    "body": 25698816,
+    "input_projection": 4194304,
+    "head": 4954418,
+    "head_V_dependent": 0,
+    "head_V_independent": 4954418,
+    "total": 34847538,
+    "total_V_independent": 34847538
+  }
+}

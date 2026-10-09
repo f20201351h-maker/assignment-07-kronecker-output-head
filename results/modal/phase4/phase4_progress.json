@@ -1,0 +1,50 @@
+[
+ {
+  "run_id": "p4-densep-s1",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "status": "complete",
+  "wall_s": 524.0863683223724,
+  "dev_bpb": 1.3908900179226098,
+  "test_bpb": 1.3985781859556905,
+  "analysis": {
+   "dev": "ok",
+   "test": "ok"
+  }
+ },
+ {
+  "run_id": "p4-densep-s2",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "status": "complete",
+  "wall_s": 519.9252064228058,
+  "dev_bpb": 1.3915338945473439,
+  "test_bpb": 1.3989948896590672,
+  "analysis": {
+   "dev": "ok",
+   "test": "ok"
+  }
+ },
+ {
+  "run_id": "p4-densep-s3",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "status": "complete",
+  "wall_s": 521.7637922763824,
+  "dev_bpb": 1.3894512055638544,
+  "test_bpb": 1.3969076650329215,
+  "analysis": {
+   "dev": "ok",
+   "test": "ok"
+  }
+ },
+ {
+  "run_id": "p4-densep-s4",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "status": "complete",
+  "wall_s": 519.3164689540863,
+  "dev_bpb": 1.3927385048329466,
+  "test_bpb": 1.4004400403798811,
+  "analysis": {
+   "dev": "ok",
+   "test": "ok"
+  }
+ }
+]

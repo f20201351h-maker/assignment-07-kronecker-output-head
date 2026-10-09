@@ -1,0 +1,25 @@
+{
+  "run_id": "r2-kasg-v3-s1",
+  "status": "complete",
+  "steps": 320,
+  "tokens": 20971520,
+  "final": {
+    "dev": {
+      "bpb": 1.8793534256199704,
+      "nll_nats_per_token": 6.158839225769043,
+      "n_targets": 1223485,
+      "n_bytes": 5784471,
+      "windows_sha256": "bccbd2b753bbb434617eae43444dfcacd90c479a4799ca0951d4d2b6f78f7f2a"
+    }
+  },
+  "wall_s": 1401.1351268291473,
+  "params": {
+    "body": 25698816,
+    "input_projection": 4194304,
+    "head": 4954418,
+    "head_V_dependent": 0,
+    "head_V_independent": 4954418,
+    "total": 34847538,
+    "total_V_independent": 34847538
+  }
+}

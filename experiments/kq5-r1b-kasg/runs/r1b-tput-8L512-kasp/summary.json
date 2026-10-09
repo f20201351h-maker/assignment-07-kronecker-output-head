@@ -1,0 +1,25 @@
+{
+  "run_id": "r1b-tput-8L512-kasp",
+  "status": "complete",
+  "steps": 40,
+  "tokens": 2621440,
+  "final": {
+    "dev": {
+      "bpb": 2.1293131823859017,
+      "nll_nats_per_token": 7.1224045753479,
+      "n_targets": 8182,
+      "n_bytes": 39484,
+      "windows_sha256": "3a49940eef7f5126214dee0fcf6e0ee89f039e1138884d391c9ce60f11a00537"
+    }
+  },
+  "wall_s": 123.14346694946289,
+  "params": {
+    "body": 25698816,
+    "input_projection": 4194304,
+    "head": 4194337,
+    "head_V_dependent": 0,
+    "head_V_independent": 4194337,
+    "total": 34087457,
+    "total_V_independent": 34087457
+  }
+}

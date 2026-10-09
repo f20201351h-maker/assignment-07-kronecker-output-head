@@ -1,0 +1,25 @@
+{
+  "run_id": "r1-tput-6L768-kasp",
+  "status": "complete",
+  "steps": 40,
+  "tokens": 2621440,
+  "final": {
+    "dev": {
+      "bpb": 4.222471462224918,
+      "nll_nats_per_token": 14.123875617980957,
+      "n_targets": 8182,
+      "n_bytes": 39484,
+      "windows_sha256": "3a49940eef7f5126214dee0fcf6e0ee89f039e1138884d391c9ce60f11a00537"
+    }
+  },
+  "wall_s": 159.98172760009766,
+  "params": {
+    "body": 43263744,
+    "input_projection": 6291456,
+    "head": 6291489,
+    "head_V_dependent": 0,
+    "head_V_independent": 6291489,
+    "total": 55846689,
+    "total_V_independent": 55846689
+  }
+}

@@ -1,0 +1,198 @@
+{
+ "gpu": "RTX-PRO-6000",
+ "runs": [
+  {
+   "run_id": "m3-dense-s1",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 471.61619114875793,
+   "dev_bpb": 1.4378330582083443,
+   "test_bpb": 1.445152162047051,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasp-s1",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 543.0467689037323,
+   "dev_bpb": 1.6281534180314765,
+   "test_bpb": 1.6307115105611474,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasu-s1",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 545.0342254638672,
+   "dev_bpb": 1.579750353868074,
+   "test_bpb": 1.5827754199685298,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kas0-s1",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 541.8537106513977,
+   "dev_bpb": 1.9371145821488607,
+   "test_bpb": 1.939604907361073,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-dense-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 468.40257143974304,
+   "dev_bpb": 1.4332061217755596,
+   "test_bpb": 1.4403308292835646,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasp-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 542.1071496009827,
+   "dev_bpb": 1.6272904070110945,
+   "test_bpb": 1.6308498654082106,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasu-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 542.6587753295898,
+   "dev_bpb": 1.5795324611244435,
+   "test_bpb": 1.5832039370768451,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kas0-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 543.9545812606812,
+   "dev_bpb": 1.9374043675664456,
+   "test_bpb": 1.9399127913132244,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasg-s1",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 854.6185545921326,
+   "dev_bpb": 1.5144689370464313,
+   "test_bpb": 1.5180873932092154,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasu0-s1",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 544.2177991867065,
+   "dev_bpb": 1.4562722487323359,
+   "test_bpb": 1.4607750177858374,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasgshuf-s1",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 851.8713438510895,
+   "dev_bpb": 1.5257988658797912,
+   "test_bpb": 1.5292916339379885,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasg-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 849.9026336669922,
+   "dev_bpb": 1.5055872283858829,
+   "test_bpb": 1.5095171572365125,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasu0-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 540.6170499324799,
+   "dev_bpb": 1.4570038012325586,
+   "test_bpb": 1.4617674530380453,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "m3-kasgshuf-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 852.5171775817871,
+   "dev_bpb": 1.522034935255021,
+   "test_bpb": 1.5264648860644647,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  }
+ ],
+ "post": [
+  {
+   "module": "kq5.growth",
+   "result": {
+    "m3-dense-s1": 6,
+    "m3-kasp-s1": 6,
+    "m3-kasu-s1": 12,
+    "m3-kas0-s1": 6
+   }
+  },
+  {
+   "module": "kq5.growth",
+   "result": {
+    "m3-kasg-s1": 12,
+    "m3-kasu0-s1": 12,
+    "m3-kasgshuf-s1": 6
+   }
+  },
+  {
+   "module": "kq5.headcost",
+   "result": {
+    "n": 8
+   }
+  }
+ ]
+}

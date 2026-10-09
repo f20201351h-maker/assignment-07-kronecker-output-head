@@ -1,0 +1,133 @@
+{
+  "corpus": {
+    "dataset": [
+      "HuggingFaceFW/fineweb-edu",
+      "sample-10BT"
+    ],
+    "docs": {
+      "train": 243560,
+      "dev": 1220,
+      "test": 1220
+    },
+    "gpt2_tokens": {
+      "train": 251031325,
+      "dev": 1243963,
+      "test": 1147892
+    },
+    "base_tokens": {
+      "train": 251031589,
+      "dev": 1243963,
+      "test": 1147892
+    },
+    "merged_tokens": {
+      "train": 247268406,
+      "dev": 1225678,
+      "test": 1131839
+    },
+    "train_compression_pct": 1.499087431582169
+  },
+  "vocab": {
+    "gpt2": 50257,
+    "dropped_long": 14,
+    "n_base": 50243,
+    "n_trained_merges": 7000,
+    "n_heldout_merges": 1000,
+    "n_train_vocab": 57243,
+    "n_total_with_heldout": 58243,
+    "growth_candidates": 720938,
+    "vocab_after_full_growth": 779181,
+    "gpt2_decode_equals_fffd": 255,
+    "train_tokens_never_seen_in_vocab": 376,
+    "kasu_stored_budget": 973131
+  },
+  "sites": {
+    "dev": {
+      "windows": 1196,
+      "targets": 1224704,
+      "heldout_sites": 2299,
+      "distinct_heldout_merges_present": 646,
+      "windows_with_sites": 821
+    },
+    "test": {
+      "windows": 1105,
+      "targets": 1131520,
+      "heldout_sites": 2110,
+      "distinct_heldout_merges_present": 617,
+      "windows_with_sites": 748
+    }
+  },
+  "params": {
+    "dense": {
+      "body": 25698816,
+      "input_projection": 4194304,
+      "head": 29308416,
+      "head_V_dependent": 29308416,
+      "head_V_independent": 0,
+      "total": 59201536,
+      "total_V_independent": 29893120
+    },
+    "kas0": {
+      "body": 25698816,
+      "input_projection": 4194304,
+      "head": 4194337,
+      "head_V_dependent": 0,
+      "head_V_independent": 4194337,
+      "total": 34087457,
+      "total_V_independent": 34087457
+    },
+    "kasp": {
+      "body": 25698816,
+      "input_projection": 4194304,
+      "head": 4194337,
+      "head_V_dependent": 0,
+      "head_V_independent": 4194337,
+      "total": 34087457,
+      "total_V_independent": 34087457
+    },
+    "kasu": {
+      "body": 25698816,
+      "input_projection": 4194304,
+      "head": 5175660,
+      "head_V_dependent": 973131,
+      "head_V_independent": 4202529,
+      "total": 35068780,
+      "total_V_independent": 34095649
+    },
+    "kasg-v1": {
+      "body": 25698816,
+      "input_projection": 4194304,
+      "head": 4375602,
+      "head_V_dependent": 0,
+      "head_V_independent": 4375602,
+      "total": 34268722,
+      "total_V_independent": 34268722
+    },
+    "kasg-v3": {
+      "body": 25698816,
+      "input_projection": 4194304,
+      "head": 4954418,
+      "head_V_dependent": 0,
+      "head_V_independent": 4954418,
+      "total": 34847538,
+      "total_V_independent": 34847538
+    },
+    "kasg_shuf-v1": {
+      "body": 25698816,
+      "input_projection": 4194304,
+      "head": 4375602,
+      "head_V_dependent": 0,
+      "head_V_independent": 4375602,
+      "total": 34268722,
+      "total_V_independent": 34268722
+    },
+    "kasg_shuf-v3": {
+      "body": 25698816,
+      "input_projection": 4194304,
+      "head": 4954418,
+      "head_V_dependent": 0,
+      "head_V_independent": 4954418,
+      "total": 34847538,
+      "total_V_independent": 34847538
+    }
+  }
+}

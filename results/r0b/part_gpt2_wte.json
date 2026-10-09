@@ -1,0 +1,43 @@
+{
+  "target": "gpt2_wte",
+  "n_tokens": 50242,
+  "n_train": 40697,
+  "n_val": 4521,
+  "n_test": 5024,
+  "linear_true": {
+    "lambda": 1000,
+    "r2_test": 0.08438556827209698,
+    "r2_test_weighted": -0.02886283567249115,
+    "r2_train": 0.12925296194795222,
+    "params": 6292992
+  },
+  "cnn_true": {
+    "r2_test": 0.1206895794350552,
+    "r2_test_weighted": 0.03692560279429957,
+    "r2_train": 0.1428132965063359,
+    "params": 366080
+  },
+  "linear_plus_cnn_true": {
+    "r2_test": 0.11519969765072269,
+    "r2_test_weighted": 0.03677817577182718,
+    "r2_train": 0.1866055998970917
+  },
+  "linear_shuffled": {
+    "lambda": 1000,
+    "r2_test": -0.02391259146366176,
+    "r2_test_weighted": -0.23256126496865792,
+    "r2_train": 0.027671275776069204,
+    "params": 6292992
+  },
+  "cnn_shuffled": {
+    "r2_test": -0.00030257302271063935,
+    "r2_test_weighted": -0.2040212189234898,
+    "r2_train": 5.0803102757956964e-05,
+    "params": 366080
+  },
+  "linear_plus_cnn_shuffled": {
+    "r2_test": -0.023985385647332658,
+    "r2_test_weighted": -0.2318770863007269,
+    "r2_train": 0.027685010162273094
+  }
+}

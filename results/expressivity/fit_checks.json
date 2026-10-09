@@ -1,0 +1,174 @@
+{
+  "scope": "Four-context numerical spot check only; not representative or a full-matrix certificate",
+  "picks": [
+    [
+      0,
+      17
+    ],
+    [
+      10,
+      43
+    ],
+    [
+      20,
+      79
+    ],
+    [
+      31,
+      111
+    ]
+  ],
+  "torch": "2.14.0+cpu",
+  "config": {
+    "run_id": "p4-densep-s1",
+    "head": "dense",
+    "seed": 1,
+    "data_seed": 1234,
+    "n_layer": 8,
+    "n_head": 8,
+    "d_model": 512,
+    "seq_len": 1024,
+    "rank": 16,
+    "corr_init": "c_zero",
+    "vocab_dropout": 0.0,
+    "vocab_dropout_target": "both",
+    "dense_bias": true,
+    "generator": {},
+    "lr": 0.001,
+    "min_lr_frac": 0.1,
+    "warmup_tokens": 2097152,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "grad_clip": 1.0,
+    "head_lr_mult": 1.0,
+    "gen_lr_mult": 1.0,
+    "batch_seqs": 64,
+    "micro_seqs": 8,
+    "total_tokens": 100007936,
+    "stop_tokens": null,
+    "eval_at_tokens": [
+      12000000,
+      24000000,
+      46000000,
+      68000000
+    ],
+    "eval_windows_mid": null,
+    "final_dev_windows": null,
+    "final_test": true,
+    "amp": true,
+    "require_cuda": true,
+    "time_limit_s": 39600,
+    "log_every": 20,
+    "save_checkpoint": true,
+    "out_dir": "/data/runs/p4-densep-s1",
+    "data_dir": "/data/C:/Program Files/Git/tokens"
+  },
+  "fits": {
+    "kas_fixed_unigram": {
+      "original_float32_200_KL": [
+        0.165313720703125,
+        1.4523797035217285,
+        0.5479183197021484,
+        0.7222170829772949
+      ],
+      "float64_stages": [
+        {
+          "iterations": 200,
+          "KL": [
+            0.1634045144865176,
+            1.4505538787231154,
+            0.5451881953407495,
+            0.7167616037861592
+          ],
+          "max_abs_moment_residual": 0.0008600890291395433
+        },
+        {
+          "iterations": 400,
+          "KL": [
+            0.16265880527672308,
+            1.4499650448417016,
+            0.5442661205520337,
+            0.7153027453832987
+          ],
+          "max_abs_moment_residual": 0.0001506295817448517
+        },
+        {
+          "iterations": 600,
+          "KL": [
+            0.1625026339278662,
+            1.4498552639517008,
+            0.5439882496499064,
+            0.7150685706856313
+          ],
+          "max_abs_moment_residual": 0.00011395918684663113
+        },
+        {
+          "iterations": 800,
+          "KL": [
+            0.16243915696763264,
+            1.449811975978589,
+            0.5438720193649424,
+            0.7149583650996706
+          ],
+          "max_abs_moment_residual": 0.00014024458861816935
+        }
+      ],
+      "seconds": 42.02532148361206
+    },
+    "kas_trigram_fixed_teacher_beta": {
+      "original_float32_200_KL": [
+        0.043250322341918945,
+        0.4066619873046875,
+        0.12015724182128906,
+        0.20606040954589844
+      ],
+      "float64_stages": [
+        {
+          "iterations": 200,
+          "KL": [
+            0.03255586226688329,
+            0.3782701532767966,
+            0.10370434810508503,
+            0.18039152612296194
+          ],
+          "max_abs_moment_residual": 0.002435687884341048
+        },
+        {
+          "iterations": 400,
+          "KL": [
+            0.027410551151214588,
+            0.36717603085247774,
+            0.09573172730628857,
+            0.16889863753655734
+          ],
+          "max_abs_moment_residual": 0.0009346202841308859
+        },
+        {
+          "iterations": 600,
+          "KL": [
+            0.02594948154307181,
+            0.36479697771686975,
+            0.09363995594204516,
+            0.16591091473726768
+          ],
+          "max_abs_moment_residual": 0.0005418677932117448
+        },
+        {
+          "iterations": 800,
+          "KL": [
+            0.02525577810991811,
+            0.36393570615289733,
+            0.09275851814333168,
+            0.16465277992674482
+          ],
+          "max_abs_moment_residual": 0.0008143077631807963
+        }
+      ],
+      "seconds": 61.21429419517517
+    }
+  },
+  "probability_sum_error": 2.220446049250313e-15
+}

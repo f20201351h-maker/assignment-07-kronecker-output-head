@@ -1,0 +1,28 @@
+{
+  "run_id": "p3-dense-s3",
+  "head": "dense",
+  "split": "dev",
+  "n_sites": 2299,
+  "n_positions": 1224704,
+  "total_bytes": 5784471.0,
+  "rules": {
+    "mean": {
+      "prior": "none",
+      "correction": "mean",
+      "mean_regret_bits": 8.042321432513265,
+      "beats_prefix": 0.0,
+      "median_rank": 26564.0,
+      "leak_bpb": 0.00013701230484190164,
+      "leak_mean_nats_per_pos": 0.00044984910889817416
+    },
+    "inherit": {
+      "prior": "logpba",
+      "correction": "inherit",
+      "mean_regret_bits": 0.7752457551264192,
+      "beats_prefix": 0.0,
+      "median_rank": 1236.0,
+      "leak_bpb": 0.0005699528105403844,
+      "leak_mean_nats_per_pos": 0.0018713119542909168
+    }
+  }
+}

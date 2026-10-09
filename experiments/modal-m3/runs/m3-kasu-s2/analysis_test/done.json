@@ -1,0 +1,6 @@
+{
+  "run_id": "m3-kasu-s2",
+  "split": "test",
+  "wall_s": 21.423434734344482,
+  "best_rule_by_regret": "inherit"
+}

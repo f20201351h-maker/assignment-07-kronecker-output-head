@@ -1,0 +1,6 @@
+{
+  "run_id": "m3-kasp-s1",
+  "split": "dev",
+  "wall_s": 13.74725866317749,
+  "best_rule_by_regret": "inherit"
+}

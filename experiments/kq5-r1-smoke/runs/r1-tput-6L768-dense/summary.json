@@ -1,0 +1,25 @@
+{
+  "run_id": "r1-tput-6L768-dense",
+  "status": "complete",
+  "steps": 40,
+  "tokens": 2621440,
+  "final": {
+    "dev": {
+      "bpb": 2.1784250645476355,
+      "nll_nats_per_token": 7.286681175231934,
+      "n_targets": 8182,
+      "n_bytes": 39484,
+      "windows_sha256": "3a49940eef7f5126214dee0fcf6e0ee89f039e1138884d391c9ce60f11a00537"
+    }
+  },
+  "wall_s": 149.20366954803467,
+  "params": {
+    "body": 43263744,
+    "input_projection": 6291456,
+    "head": 43962624,
+    "head_V_dependent": 43962624,
+    "head_V_independent": 0,
+    "total": 93517824,
+    "total_V_independent": 49555200
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "rule": "bytes",
+    "K": 1000,
+    "vocab_total": 58243,
+    "leak_bpb": 0.003345320318553502,
+    "n_sites": 490,
+    "mean_regret_bits": -2.700453228034199,
+    "frac_regret_below_zero": 0.7244897959183674,
+    "retok_bpb": 1.9554314987250359,
+    "retok_tokens_in_windows": 261375,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 8.478347539901733
+  },
+  {
+    "rule": "bytes",
+    "K": 10000,
+    "vocab_total": 67243,
+    "leak_bpb": 0.026028032632309305,
+    "n_sites": 2777,
+    "mean_regret_bits": -3.137430987453283,
+    "frac_regret_below_zero": 0.7263233705437523,
+    "retok_bpb": 1.9738113193652285,
+    "retok_tokens_in_windows": 259325,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 10.094199895858765
+  },
+  {
+    "rule": "bytes",
+    "K": 100000,
+    "vocab_total": 157243,
+    "leak_bpb": 0.16059615720218265,
+    "n_sites": 11107,
+    "mean_regret_bits": -3.1606137636694323,
+    "frac_regret_below_zero": 0.7152246331142523,
+    "retok_bpb": 2.085474622327836,
+    "retok_tokens_in_windows": 252150,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 24.85783553123474
+  },
+  {
+    "rule": "bytes",
+    "K": 300000,
+    "vocab_total": 357243,
+    "leak_bpb": 0.31246670787189823,
+    "n_sites": 14236,
+    "mean_regret_bits": -2.6213330808623354,
+    "frac_regret_below_zero": 0.687482438887328,
+    "retok_bpb": 2.232723154623876,
+    "retok_tokens_in_windows": 250100,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 57.41215229034424
+  },
+  {
+    "rule": "bytes",
+    "K": 721938,
+    "vocab_total": 779181,
+    "leak_bpb": 0.48902598979228645,
+    "n_sites": 15517,
+    "mean_regret_bits": -1.8829626099597323,
+    "frac_regret_below_zero": 0.6507701230908036,
+    "retok_bpb": 2.411898312681847,
+    "retok_tokens_in_windows": 250100,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 127.47438311576843
+  }
+]

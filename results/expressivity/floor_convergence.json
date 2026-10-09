@@ -1,0 +1,21 @@
+{
+ "provenance": "RECOMPUTED; KAS-family floor on floor_contextual chunk 1 (512 contexts) vs LBFGS iterations",
+ "n_contexts": 512,
+ "runs": {
+  "200": {
+   "floor_nats": 0.8080164194107056,
+   "floor_bpb_equiv": 0.2481290102005005,
+   "seconds": 391.3
+  },
+  "400": {
+   "floor_nats": 0.805566668510437,
+   "floor_bpb_equiv": 0.2473767250776291,
+   "seconds": 731.7
+  },
+  "800": {
+   "floor_nats": 0.8049286007881165,
+   "floor_bpb_equiv": 0.2471807897090912,
+   "seconds": 1078.0
+  }
+ }
+}

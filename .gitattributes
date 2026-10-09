@@ -1,0 +1,2 @@
+# Store and check out every file byte-for-byte (some records are CRLF, as written on Windows).
+* -text

@@ -1,0 +1,6 @@
+{
+  "slug": "kq5-r2-pilot",
+  "spec": "configs\\jobs\\r2_pilot.json",
+  "src_zip_sha256": "8c0758508bd1b38c88dbf06b6b363fcb0ede64f1832668c04047f6217feda828",
+  "kernel_sha256": "bba09ccfd46614033e13950cc5ffc80a7c222d34622047aa2de851fe81e205d1"
+}

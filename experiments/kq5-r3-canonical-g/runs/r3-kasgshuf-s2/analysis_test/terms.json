@@ -1,0 +1,13 @@
+{
+  "var_total": 48.46083068847656,
+  "share_kas": 0.25683361291885376,
+  "var_kas": 15.915721893310547,
+  "share_length_bias": 1.1944702237087768e-05,
+  "var_length_bias": 2.150075488316361e-06,
+  "share_prior": 0.13698291778564453,
+  "var_prior": 9.499624252319336,
+  "share_correction": 0.604608952999115,
+  "var_correction": 29.040170669555664,
+  "share_prior_residual": 0.0015617316821590066,
+  "var_prior_residual": 0.05155235528945923
+}

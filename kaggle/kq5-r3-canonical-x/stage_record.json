@@ -1,0 +1,6 @@
+{
+  "slug": "kq5-r3-canonical-x",
+  "spec": "configs\\jobs\\r3_canonical_x.json",
+  "src_zip_sha256": "3d7a0f22144e75aafcc49324cf6d77c072689def3664a18738eaef8b6d1c01c8",
+  "kernel_sha256": "2c2a005cd18255a0487e06c9b53348da13d3fc653366759f26b32e541fce7802"
+}

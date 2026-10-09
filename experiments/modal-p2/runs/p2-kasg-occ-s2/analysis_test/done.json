@@ -1,0 +1,6 @@
+{
+  "run_id": "p2-kasg-occ-s2",
+  "split": "test",
+  "wall_s": 33.778077602386475,
+  "best_rule_by_regret": "inherit"
+}

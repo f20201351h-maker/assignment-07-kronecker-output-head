@@ -1,0 +1,773 @@
+{
+ "provenance": "RECOMPUTED, CPU only, from data/tokens (training split) and the fixed codec; no model checkpoint used",
+ "V": 57243,
+ "pos_dim": 32,
+ "family_sizes": {
+  "kas": 1787,
+  "suffix_cells": 1773,
+  "bigram_pos_h4096": 4096,
+  "bigram_free_h4096": 4096,
+  "trigram_free_h8192": 8192,
+  "prefix_ge5": 8613,
+  "private_top1000": 1000,
+  "private_top4000": 4000,
+  "hash_m2048_k8": 2048,
+  "hash_m8192_k8": 8192
+ },
+ "rank_kas_features": 1333,
+ "unigram_floor": {
+  "kas": {
+   "floor_nats": 1.3481512069702148,
+   "floor_bpb_equiv": 0.4139958315808959,
+   "H_nats": 7.6568098068237305,
+   "n_features": 1787
+  },
+  "kas_adam1500_check": {
+   "floor_nats": 1.3474845886230469,
+   "floor_bpb_equiv": 0.4137911236701245,
+   "seconds": 456.5
+  },
+  "kas+suffix": {
+   "floor_nats": 1.1336746215820312,
+   "floor_bpb_equiv": 0.3481334773706728,
+   "H_nats": 7.6568098068237305,
+   "n_features": 3560
+  },
+  "kas+bigram_free": {
+   "floor_nats": 0.9630775451660156,
+   "floor_bpb_equiv": 0.2957458237076676,
+   "H_nats": 7.6568098068237305,
+   "n_features": 5883
+  },
+  "kas+trigram_free": {
+   "floor_nats": 0.617156982421875,
+   "floor_bpb_equiv": 0.18951911093704593,
+   "H_nats": 7.6568098068237305,
+   "n_features": 9979
+  },
+  "kas+private1000": {
+   "floor_nats": 0.2681303024291992,
+   "floor_bpb_equiv": 0.08233855887403134,
+   "H_nats": 7.6568098068237305,
+   "n_features": 2787
+  },
+  "kas+hash8192": {
+   "floor_nats": 0.3386263847351074,
+   "floor_bpb_equiv": 0.10398678651091432,
+   "H_nats": 7.6568098068237305,
+   "n_features": 9979
+  }
+ },
+ "unigram_additive_residual": {
+  "note": "log p_unigram minus best additive-in-bytes fit; token-weighted and count-weighted",
+  "std_nats_token_weighted": 1.6353726558404014,
+  "std_nats_count_weighted": 1.4946667391680277,
+  "pct_1_99_nats": [
+   -5.1477310838161205,
+   2.948283166018312
+  ],
+  "r2_token_weighted": -0.10443750381103434
+ },
+ "bigram": {
+  "n_contexts": 128,
+  "position_coverage": 0.45861583084179314,
+  "min_context_count": 146297,
+  "H_nats_weighted": 6.465040683746338,
+  "floors": {
+   "kas": {
+    "no_bias": {
+     "floor_nats": 1.7031605243682861,
+     "floor_bpb_equiv": 0.5230135566070679,
+     "ce_nats": 8.168201446533203,
+     "H_nats": 6.465040683746338,
+     "n_features": 1787,
+     "seconds": 215.3
+    },
+    "unigram_bias": {
+     "floor_nats": 0.5525475144386292,
+     "floor_bpb_equiv": 0.16967856909913465,
+     "ce_nats": 7.017588138580322,
+     "H_nats": 6.465040683746338,
+     "n_features": 1787,
+     "seconds": 209.5
+    },
+    "free_bias": {
+     "floor_nats": 0.48067229986190796,
+     "floor_bpb_equiv": 0.14760683183783913,
+     "ce_nats": 6.945713520050049,
+     "H_nats": 6.465040683746338,
+     "n_features": 1787,
+     "seconds": 209.2
+    }
+   },
+   "kas+suffix": {
+    "unigram_bias": {
+     "floor_nats": 0.4335499405860901,
+     "floor_bpb_equiv": 0.13313630344786084,
+     "ce_nats": 6.898591041564941,
+     "H_nats": 6.465040683746338,
+     "n_features": 3560,
+     "seconds": 400.8
+    }
+   },
+   "kas+bigram_pos": {
+    "unigram_bias": {
+     "floor_nats": 0.2767719626426697,
+     "floor_bpb_equiv": 0.08499227552526324,
+     "ce_nats": 6.741812229156494,
+     "H_nats": 6.465040683746338,
+     "n_features": 5883,
+     "seconds": 384.2
+    }
+   },
+   "kas+bigram_free": {
+    "unigram_bias": {
+     "floor_nats": 0.38493698835372925,
+     "floor_bpb_equiv": 0.11820803762650092,
+     "ce_nats": 6.849978446960449,
+     "H_nats": 6.465040683746338,
+     "n_features": 5883,
+     "seconds": 388.9
+    }
+   },
+   "kas+trigram_free": {
+    "unigram_bias": {
+     "floor_nats": 0.21601992845535278,
+     "floor_bpb_equiv": 0.0663362903630848,
+     "ce_nats": 6.681060791015625,
+     "H_nats": 6.465040683746338,
+     "n_features": 9979,
+     "seconds": 465.7
+    }
+   },
+   "kas+prefix": {
+    "unigram_bias": {
+     "floor_nats": 0.21706454455852509,
+     "floor_bpb_equiv": 0.0666570753833998,
+     "ce_nats": 6.682106018066406,
+     "H_nats": 6.465040683746338,
+     "n_features": 10400,
+     "seconds": 328.7
+    }
+   },
+   "kas+suffix+bigram_free+trigram_free": {
+    "unigram_bias": {
+     "floor_nats": 0.190458282828331,
+     "floor_bpb_equiv": 0.05848671482347039,
+     "ce_nats": 6.655499458312988,
+     "H_nats": 6.465040683746338,
+     "n_features": 15848,
+     "seconds": 1610.1
+    }
+   },
+   "kas+private1000": {
+    "unigram_bias": {
+     "floor_nats": 0.28311675786972046,
+     "floor_bpb_equiv": 0.08694066140561015,
+     "ce_nats": 6.748157978057861,
+     "H_nats": 6.465040683746338,
+     "n_features": 2787,
+     "seconds": 256.7
+    }
+   },
+   "kas+private4000": {
+    "unigram_bias": {
+     "floor_nats": 0.18921291828155518,
+     "floor_bpb_equiv": 0.05810428314333081,
+     "ce_nats": 6.654253959655762,
+     "H_nats": 6.465040683746338,
+     "n_features": 5787,
+     "seconds": 225.3
+    }
+   },
+   "kas+hash2048": {
+    "unigram_bias": {
+     "floor_nats": 0.2547023594379425,
+     "floor_bpb_equiv": 0.07821505077171727,
+     "ce_nats": 6.7197442054748535,
+     "H_nats": 6.465040683746338,
+     "n_features": 3835,
+     "seconds": 268.4
+    }
+   },
+   "kas+hash8192": {
+    "unigram_bias": {
+     "floor_nats": 0.15804003179073334,
+     "floor_bpb_equiv": 0.04853158462196251,
+     "ce_nats": 6.623080730438232,
+     "H_nats": 6.465040683746338,
+     "n_features": 9979,
+     "seconds": 385.5
+    }
+   }
+  },
+  "kas_unigram_bias_per_context": {
+   "contexts_top16": [
+    " the",
+    ",",
+    ".",
+    " of",
+    " and",
+    "\n",
+    " to",
+    " a",
+    " in",
+    "-",
+    " is",
+    " that",
+    " for",
+    "\ufffd",
+    " are",
+    " ("
+   ],
+   "floor_top16": [
+    0.6297330856323242,
+    0.2980790138244629,
+    0.27904748916625977,
+    0.4285292625427246,
+    0.24974536895751953,
+    0.16018152236938477,
+    0.8519678115844727,
+    0.7780380249023438,
+    0.6012988090515137,
+    0.9139089584350586,
+    0.650721549987793,
+    0.4100003242492676,
+    0.5453958511352539,
+    0.0006344318389892578,
+    0.734891414642334,
+    0.670598030090332
+   ],
+   "floor_quartiles": [
+    0.32765260338783264,
+    0.4633002281188965,
+    0.6326808929443359,
+    0.9152219295501709,
+    1.1053571701049805
+   ]
+  },
+  "convergence_check": {
+   "kas_unigram_bias_lbfgs_x2_floor_nats": 0.550419807434082,
+   "kas_unigram_bias_adam600_floor_nats": 0.5499102473258972,
+   "kas_unigram_bias_steps_x1_floor_nats": 0.5525475144386292
+  }
+ },
+ "parallelograms": {
+  "top_n_tokens": 8000,
+  "n_single_substitution_pairs": 19950,
+  "n_groups": 8715,
+  "n_groups_with_2plus_pairs": 3263,
+  "n_pairs_in_such_groups": 14498,
+  "examples": [
+   {
+    "L": 3,
+    "p": 2,
+    "byte_from": "f",
+    "byte_to": "n",
+    "n_pairs": 5,
+    "examples": [
+     [
+      " of",
+      " on"
+     ],
+     [
+      " if",
+      " in"
+     ],
+     [
+      " If",
+      " In"
+     ],
+     [
+      " Of",
+      " On"
+     ],
+     [
+      "ref",
+      "ren"
+     ]
+    ]
+   },
+   {
+    "L": 4,
+    "p": 1,
+    "byte_from": "T",
+    "byte_to": "t",
+    "n_pairs": 6,
+    "examples": [
+     [
+      " The",
+      " the"
+     ],
+     [
+      " Two",
+      " two"
+     ],
+     [
+      " Ter",
+      " ter"
+     ],
+     [
+      " Ten",
+      " ten"
+     ],
+     [
+      " Top",
+      " top"
+     ],
+     [
+      " Try",
+      " try"
+     ]
+    ]
+   },
+   {
+    "L": 3,
+    "p": 1,
+    "byte_from": "i",
+    "byte_to": "o",
+    "n_pairs": 7,
+    "examples": [
+     [
+      " if",
+      " of"
+     ],
+     [
+      " in",
+      " on"
+     ],
+     [
+      "min",
+      "mon"
+     ],
+     [
+      "ris",
+      "ros"
+     ],
+     [
+      "rin",
+      "ron"
+     ],
+     [
+      "rim",
+      "rom"
+     ]
+    ]
+   },
+   {
+    "L": 4,
+    "p": 1,
+    "byte_from": "s",
+    "byte_to": "t",
+    "n_pairs": 9,
+    "examples": [
+     [
+      " she",
+      " the"
+     ],
+     [
+      " ser",
+      " ter"
+     ],
+     [
+      " son",
+      " ton"
+     ],
+     [
+      "ased",
+      "ated"
+     ],
+     [
+      "ised",
+      "ited"
+     ],
+     [
+      "ases",
+      "ates"
+     ]
+    ]
+   },
+   {
+    "L": 3,
+    "p": 0,
+    "byte_from": " ",
+    "byte_to": "r",
+    "n_pairs": 17,
+    "examples": [
+     [
+      " in",
+      "rin"
+     ],
+     [
+      " is",
+      "ris"
+     ],
+     [
+      " as",
+      "ras"
+     ],
+     [
+      " on",
+      "ron"
+     ],
+     [
+      " it",
+      "rit"
+     ],
+     [
+      " an",
+      "ran"
+     ]
+    ]
+   },
+   {
+    "L": 4,
+    "p": 3,
+    "byte_from": "e",
+    "byte_to": "y",
+    "n_pairs": 3,
+    "examples": [
+     [
+      " the",
+      " thy"
+     ],
+     [
+      "able",
+      "ably"
+     ],
+     [
+      "ence",
+      "ency"
+     ]
+    ]
+   },
+   {
+    "L": 4,
+    "p": 1,
+    "byte_from": "S",
+    "byte_to": "t",
+    "n_pairs": 4,
+    "examples": [
+     [
+      " She",
+      " the"
+     ],
+     [
+      " Ser",
+      " ter"
+     ],
+     [
+      " Son",
+      " ton"
+     ],
+     [
+      " Sea",
+      " tea"
+     ]
+    ]
+   },
+   {
+    "L": 4,
+    "p": 1,
+    "byte_from": "C",
+    "byte_to": "t",
+    "n_pairs": 3,
+    "examples": [
+     [
+      " Che",
+      " the"
+     ],
+     [
+      " Con",
+      " ton"
+     ],
+     [
+      " Cap",
+      " tap"
+     ]
+    ]
+   },
+   {
+    "L": 3,
+    "p": 1,
+    "byte_from": "a",
+    "byte_to": "i",
+    "n_pairs": 8,
+    "examples": [
+     [
+      " an",
+      " in"
+     ],
+     [
+      " as",
+      " is"
+     ],
+     [
+      " at",
+      " it"
+     ],
+     [
+      "man",
+      "min"
+     ],
+     [
+      " am",
+      " im"
+     ],
+     [
+      "ras",
+      "ris"
+     ]
+    ]
+   },
+   {
+    "L": 3,
+    "p": 0,
+    "byte_from": " ",
+    "byte_to": "a",
+    "n_pairs": 20,
+    "examples": [
+     [
+      " to",
+      "ato"
+     ],
+     [
+      " in",
+      "ain"
+     ],
+     [
+      " do",
+      "ado"
+     ],
+     [
+      " no",
+      "ano"
+     ],
+     [
+      " me",
+      "ame"
+     ],
+     [
+      " te",
+      "ate"
+     ]
+    ]
+   },
+   {
+    "L": 3,
+    "p": 2,
+    "byte_from": "n",
+    "byte_to": "s",
+    "n_pairs": 24,
+    "examples": [
+     [
+      " in",
+      " is"
+     ],
+     [
+      " an",
+      " as"
+     ],
+     [
+      " In",
+      " Is"
+     ],
+     [
+      " un",
+      " us"
+     ],
+     [
+      "inn",
+      "ins"
+     ],
+     [
+      " An",
+      " As"
+     ]
+    ]
+   },
+   {
+    "L": 3,
+    "p": 1,
+    "byte_from": "O",
+    "byte_to": "o",
+    "n_pairs": 4,
+    "examples": [
+     [
+      " Of",
+      " of"
+     ],
+     [
+      " On",
+      " on"
+     ],
+     [
+      " Or",
+      " or"
+     ],
+     [
+      " Ob",
+      " ob"
+     ]
+    ]
+   }
+  ]
+ },
+ "parallelogram_defect_bigram": {
+  "n_groups_measured": 105,
+  "median_delta_std_nats": 2.1618764153511036,
+  "mean_delta_std_nats": 2.2597087546086647,
+  "min_count": 20,
+  "worst": [
+   {
+    "group": [
+     " have",
+     " wave",
+     " hill",
+     " will"
+    ],
+    "n_contexts": 8,
+    "delta_std_nats": 6.075085869357504,
+    "delta_range_nats": [
+     -4.326440051095622,
+     13.504751059672095
+    ]
+   },
+   {
+    "group": [
+     " well",
+     " will",
+     " were",
+     " wire"
+    ],
+    "n_contexts": 14,
+    "delta_std_nats": 4.628629117343178,
+    "delta_range_nats": [
+     -10.831665389581294,
+     4.30046657328174
+    ]
+   },
+   {
+    "group": [
+     " ban",
+     " can",
+     " but",
+     " cut"
+    ],
+    "n_contexts": 11,
+    "delta_std_nats": 4.5672244496861305,
+    "delta_range_nats": [
+     -10.212543598382034,
+     5.091837664433749
+    ]
+   },
+   {
+    "group": [
+     " in",
+     " it",
+     " an",
+     " at"
+    ],
+    "n_contexts": 88,
+    "delta_std_nats": 3.8768423731351165,
+    "delta_range_nats": [
+     -6.837939664713723,
+     7.579762289485618
+    ]
+   },
+   {
+    "group": [
+     " cor",
+     " for",
+     " can",
+     " fan"
+    ],
+    "n_contexts": 9,
+    "delta_std_nats": 3.8317056873266147,
+    "delta_range_nats": [
+     -9.943719550050247,
+     0.3847440904706474
+    ]
+   },
+   {
+    "group": [
+     " can",
+     " cat",
+     " non",
+     " not"
+    ],
+    "n_contexts": 29,
+    "delta_std_nats": 3.706654004837352,
+    "delta_range_nats": [
+     -4.694649445481622,
+     8.365151152091368
+    ]
+   },
+   {
+    "group": [
+     " and",
+     " ant",
+     " end",
+     " ent"
+    ],
+    "n_contexts": 12,
+    "delta_std_nats": 3.623062171666583,
+    "delta_range_nats": [
+     -6.301924763575415,
+     6.460062913873175
+    ]
+   },
+   {
+    "group": [
+     " and",
+     " end",
+     " ant",
+     " ent"
+    ],
+    "n_contexts": 12,
+    "delta_std_nats": 3.623062171666583,
+    "delta_range_nats": [
+     -6.301924763575415,
+     6.460062913873175
+    ]
+   },
+   {
+    "group": [
+     " She",
+     " the",
+     " Ser",
+     " ter"
+    ],
+    "n_contexts": 10,
+    "delta_std_nats": 3.267989480348415,
+    "delta_range_nats": [
+     -9.540606837212172,
+     -1.3079233816905091
+    ]
+   },
+   {
+    "group": [
+     " en",
+     " in",
+     " et",
+     " it"
+    ],
+    "n_contexts": 10,
+    "delta_std_nats": 3.2013696218431824,
+    "delta_range_nats": [
+     -5.785237905380169,
+     3.8913924906174726
+    ]
+   }
+  ]
+ },
+ "automaton": {
+  "trie_nodes": 112106,
+  "trie_edges": 112105,
+  "dafsa_states": 23144,
+  "dafsa_edges": 55878,
+  "V": 57243,
+  "note": "a per-node (trie) or per-state (DAFSA) parameter vector costs that many rows; KAS uses 256*32 cells regardless"
+ },
+ "seconds_total": 7318.4
+}

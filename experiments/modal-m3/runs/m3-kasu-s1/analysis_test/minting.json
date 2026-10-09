@@ -1,0 +1,64 @@
+{
+  "run_id": "m3-kasu-s1",
+  "head": "kasu",
+  "split": "test",
+  "n_sites": 2110,
+  "n_positions": 1131520,
+  "total_bytes": 5310205.0,
+  "rules": {
+    "floor": {
+      "prior": "floor",
+      "correction": "none",
+      "mean_regret_bits": 9.848292576298693,
+      "beats_prefix": 0.0009478672985781991,
+      "median_rank": 35774.0,
+      "leak_bpb": 1.0910329173168982e-06,
+      "leak_mean_nats_per_pos": 3.559524375090576e-06
+    },
+    "zero": {
+      "prior": "zero",
+      "correction": "none",
+      "mean_regret_bits": 0.5762243482722236,
+      "beats_prefix": 0.12890995260663507,
+      "median_rank": 3285.0,
+      "leak_bpb": 0.0006869429009763513,
+      "leak_mean_nats_per_pos": 0.0022411697772914507
+    },
+    "count": {
+      "prior": "count",
+      "correction": "none",
+      "mean_regret_bits": 0.5812117929818911,
+      "beats_prefix": 0.14170616113744075,
+      "median_rank": 3213.0,
+      "leak_bpb": 0.0005721688643393935,
+      "leak_mean_nats_per_pos": 0.0018667163812917345
+    },
+    "inherit": {
+      "prior": "inherit",
+      "correction": "inherit",
+      "mean_regret_bits": 0.40421015301996216,
+      "beats_prefix": 0.14502369668246445,
+      "median_rank": 2866.0,
+      "leak_bpb": 0.0006548822841111965,
+      "leak_mean_nats_per_pos": 0.002136571148413591
+    },
+    "inherit_prior": {
+      "prior": "inherit",
+      "correction": "none",
+      "mean_regret_bits": 0.5898431418694481,
+      "beats_prefix": 0.14170616113744075,
+      "median_rank": 3332.0,
+      "leak_bpb": 0.0005704788139063755,
+      "leak_mean_nats_per_pos": 0.0018612025460847692
+    },
+    "count_cal": {
+      "prior": "count_cal",
+      "correction": "none",
+      "mean_regret_bits": 0.6764612757592372,
+      "beats_prefix": 0.13459715639810427,
+      "median_rank": 3375.0,
+      "leak_bpb": 0.000536843293195275,
+      "leak_mean_nats_per_pos": 0.0017514657508518065
+    }
+  }
+}

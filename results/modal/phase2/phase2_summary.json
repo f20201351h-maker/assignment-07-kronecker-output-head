@@ -1,0 +1,49 @@
+{
+ "gpu": "RTX-PRO-6000",
+ "runs": [
+  {
+   "run_id": "p2-kasu-dropu25-s1",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 539.9100134372711,
+   "dev_bpb": 1.4778046984903837,
+   "test_bpb": 1.4825974018516777,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "p2-kasu-dropu25-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 544.7817225456238,
+   "dev_bpb": 1.481165713455186,
+   "test_bpb": 1.4861086381480173,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  },
+  {
+   "run_id": "p2-kasu64-s2",
+   "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "status": "complete",
+   "wall_s": 542.662501335144,
+   "dev_bpb": 1.4080278755481128,
+   "test_bpb": 1.4124354600950937,
+   "analysis": {
+    "dev": "ok",
+    "test": "ok"
+   }
+  }
+ ],
+ "post": [
+  {
+   "module": "kq5.growth",
+   "result": {
+    "p2-kasu-dropu25-s1": 12
+   }
+  }
+ ]
+}

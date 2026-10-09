@@ -1,0 +1,114 @@
+[
+ {
+  "value": "2016",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2016,",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2017",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2018",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2019",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2020",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2021",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2023",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2024",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2026",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2026,",
+  "reason": "publication year in a citation"
+ },
+ {
+  "value": "2605.29459",
+  "reason": "arXiv identifier of the Kronecker embedding paper"
+ },
+ {
+  "value": "6000",
+  "reason": "GPU model name (NVIDIA RTX PRO 6000)"
+ },
+ {
+  "value": "33",
+  "reason": "number of length classes / length biases in the codec (configuration constant)"
+ },
+ {
+  "value": "65",
+  "reason": "per-token parameters of KAS-U64: 64 correction coordinates + 1 bias (configuration constant)"
+ },
+ {
+  "value": "10,100",
+  "reason": "bounds of training-count buckets (analysis definition)"
+ },
+ {
+  "value": "100,1000",
+  "reason": "bounds of training-count buckets (analysis definition)"
+ },
+ {
+  "value": "1000,10000",
+  "reason": "bounds of training-count buckets (analysis definition)"
+ },
+ {
+  "value": "10000,100000",
+  "reason": "bounds of training-count buckets (analysis definition)"
+ },
+ {
+  "value": "100000,1000000",
+  "reason": "bounds of training-count buckets (analysis definition)"
+ },
+ {
+  "value": "20M",
+  "reason": "token budget of the reference report's runs and of the pilot (configuration constant)"
+ },
+ {
+  "value": "768",
+  "reason": "model width of the reference report's runs (quoted from the report)"
+ },
+ {
+  "value": "768,",
+  "reason": "model width of the reference report's runs (quoted from the report)"
+ },
+ {
+  "value": "3.11",
+  "reason": "Python / matplotlib version numbers"
+ },
+ {
+  "value": "3.14",
+  "reason": "Python / matplotlib version numbers"
+ },
+ {
+  "value": "75",
+  "reason": "number of unit tests in tests/ (pytest count)"
+ },
+ {
+  "value": "150",
+  "reason": "approximate checkpoint file sizes in MB (rounded from the run checkpoints, not distributed)"
+ },
+ {
+  "value": "240",
+  "reason": "approximate checkpoint file sizes in MB (rounded from the run checkpoints, not distributed)"
+ }
+]

@@ -1,0 +1,25 @@
+{
+  "run_id": "r1-tput-6L768-kasu",
+  "status": "complete",
+  "steps": 40,
+  "tokens": 2621440,
+  "final": {
+    "dev": {
+      "bpb": 4.332307196999026,
+      "nll_nats_per_token": 14.491267204284668,
+      "n_targets": 8182,
+      "n_bytes": 39484,
+      "windows_sha256": "3a49940eef7f5126214dee0fcf6e0ee89f039e1138884d391c9ce60f11a00537"
+    }
+  },
+  "wall_s": 160.33462500572205,
+  "params": {
+    "body": 43263744,
+    "input_projection": 6291456,
+    "head": 7276908,
+    "head_V_dependent": 973131,
+    "head_V_independent": 6303777,
+    "total": 56832108,
+    "total_V_independent": 55858977
+  }
+}

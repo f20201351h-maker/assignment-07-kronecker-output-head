@@ -1,0 +1,40 @@
+{
+  "target": "log_frequency",
+  "recovered_from_log": "data/logs/r0b.log (run started 13:54, crashed later in the gpt2_wte study)",
+  "linear_true": {
+    "lambda": 1000,
+    "r2_test": 0.22839395832264653,
+    "r2_test_weighted": -1.2263048084264558,
+    "r2_train": 0.2711655609751885,
+    "params": 8194
+  },
+  "cnn_true": {
+    "r2_test": 0.2728429598330736,
+    "r2_test_weighted": -1.0507278713652535,
+    "r2_train": 0.3727426064906514,
+    "params": 168961
+  },
+  "linear_plus_cnn_true": {
+    "r2_test": 0.28353100541106624,
+    "r2_test_weighted": -0.8786178308478256,
+    "r2_train": 0.44506878745650413
+  },
+  "linear_shuffled": {
+    "lambda": 1000,
+    "r2_test": -0.017987686102707956,
+    "r2_test_weighted": -3.0680507148354312,
+    "r2_train": 0.025596617193970328,
+    "params": 8194
+  },
+  "cnn_shuffled": {
+    "r2_test": -0.0011659923126001726,
+    "r2_test_weighted": -3.0498514405033426,
+    "r2_train": -0.00017151348113797482,
+    "params": 168961
+  },
+  "linear_plus_cnn_shuffled": {
+    "r2_test": -0.01907767699532026,
+    "r2_test_weighted": -3.0408702617457086,
+    "r2_train": 0.02517222194346702
+  }
+}

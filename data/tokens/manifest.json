@@ -1,0 +1,54 @@
+{
+  "created": "2026-10-01T13:26:42",
+  "pos_dim": 32,
+  "seed": 20261001,
+  "n_base": 50243,
+  "n_trained": 7000,
+  "n_heldout": 1000,
+  "n_train_vocab": 57243,
+  "n_total": 58243,
+  "eos_id": 50242,
+  "dropped_gpt2_long_tokens": [
+    10097,
+    16529,
+    20368,
+    23090,
+    23193,
+    23926,
+    27193,
+    30542,
+    35496,
+    38093,
+    41906,
+    43801,
+    46111,
+    47232
+  ],
+  "gpt2_decode_fffd": {
+    "vocab": 50257,
+    "decode_contains_fffd": 352,
+    "decode_equals_fffd": 255
+  },
+  "merge_rule": "adjacent base pair, word-internal (^ ?[^\\W_]+$ after UTF-8 decode), right piece not starting with whitespace, <= pos_dim bytes, string not already a token, ranked by train-split count summed over decompositions; top 8000; within each block of 8 ranks one held out at random",
+  "tokens": {
+    "train": 247268406,
+    "dev": 1225678,
+    "test": 1131839
+  },
+  "base_tokens": {
+    "train": 251031589,
+    "dev": 1243963,
+    "test": 1147892
+  },
+  "files": {
+    "dev.npy": "95154de393980347414b137e5cb8c7ff93acce94647256cb49193a18b1eca877",
+    "dev_base.npy": "b2698c0261dedad35e2c1e6fb99e1a97a020828d5727dcad79ecc3cb3baeb779",
+    "growth_candidates.npz": "5cf7293b15c1fec72d84618a84eae51ba125eedc49e3707bb293cb51405f1897",
+    "heldout_pair_count_train.npy": "33616e5401739a5f4515310e25988d5a81a6430003bbbfcf52ed20833aeafbf1",
+    "test.npy": "9c4c6c48773302284c28677428698dac01d08f8aa14e5189979866f128a034c6",
+    "test_base.npy": "8283bd53c6f2651c17b58f6264436575a63bd5256896e1c2344c951396d3be51",
+    "train.npy": "dc8610f77d0c7d0c0e698143924b97b378213c94434965fd86638aba10d86f4b",
+    "unigram_train.npy": "8222f260184ca49eddac8f829ab59d733a105b1fa66d450195994ddcd4625916",
+    "vocab.json": "7c4d46be4132d766a2f99c42359bb185795adba6a3f322c9af0745655d999617"
+  }
+}

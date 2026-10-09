@@ -1,0 +1,25 @@
+{
+  "run_id": "r2-kasu-s1",
+  "status": "complete",
+  "steps": 320,
+  "tokens": 20971520,
+  "final": {
+    "dev": {
+      "bpb": 1.925480884532161,
+      "nll_nats_per_token": 6.3100056648254395,
+      "n_targets": 1223485,
+      "n_bytes": 5784471,
+      "windows_sha256": "bccbd2b753bbb434617eae43444dfcacd90c479a4799ca0951d4d2b6f78f7f2a"
+    }
+  },
+  "wall_s": 990.7890326976776,
+  "params": {
+    "body": 25698816,
+    "input_projection": 4194304,
+    "head": 5175660,
+    "head_V_dependent": 973131,
+    "head_V_independent": 4202529,
+    "total": 35068780,
+    "total_V_independent": 34095649
+  }
+}

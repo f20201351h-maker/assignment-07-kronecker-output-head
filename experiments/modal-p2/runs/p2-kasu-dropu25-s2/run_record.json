@@ -1,0 +1,101 @@
+{
+  "config": {
+    "run_id": "p2-kasu-dropu25-s2",
+    "head": "kasu",
+    "seed": 2,
+    "data_seed": 1234,
+    "n_layer": 8,
+    "n_head": 8,
+    "d_model": 512,
+    "seq_len": 1024,
+    "rank": 16,
+    "corr_init": "u_zero",
+    "vocab_dropout": 0.25,
+    "vocab_dropout_target": "u",
+    "generator": {},
+    "lr": 0.001,
+    "min_lr_frac": 0.1,
+    "warmup_tokens": 2097152,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "grad_clip": 1.0,
+    "head_lr_mult": 0.1,
+    "gen_lr_mult": 1.0,
+    "batch_seqs": 64,
+    "micro_seqs": 8,
+    "total_tokens": 100007936,
+    "stop_tokens": null,
+    "eval_at_tokens": [
+      12000000,
+      24000000,
+      46000000,
+      68000000
+    ],
+    "eval_windows_mid": null,
+    "final_dev_windows": null,
+    "final_test": true,
+    "amp": true,
+    "require_cuda": true,
+    "time_limit_s": 39600,
+    "log_every": 20,
+    "save_checkpoint": true,
+    "out_dir": "/data/runs/p2-kasu-dropu25-s2",
+    "data_dir": "/data/C:/Program Files/Git/tokens"
+  },
+  "environment": {
+    "python": "3.11.12",
+    "torch": "2.10.0+cu128",
+    "numpy": "2.2.6",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "cuda_available": true,
+    "cuda": "12.8",
+    "device_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "device_count_visible": 1,
+    "CUDA_VISIBLE_DEVICES": null
+  },
+  "params": {
+    "body": 25698816,
+    "input_projection": 4194304,
+    "head": 5175660,
+    "head_V_dependent": 973131,
+    "head_V_independent": 4202529,
+    "total": 35068780,
+    "total_V_independent": 34095649
+  },
+  "head_params": {
+    "W_out": 4194304,
+    "len_bias": 33,
+    "beta": 57243,
+    "C": 8192,
+    "U": 915888,
+    "total": 5175660,
+    "V_dependent": 973131
+  },
+  "data_manifest_files": {
+    "dev.npy": "95154de393980347414b137e5cb8c7ff93acce94647256cb49193a18b1eca877",
+    "dev_base.npy": "b2698c0261dedad35e2c1e6fb99e1a97a020828d5727dcad79ecc3cb3baeb779",
+    "growth_candidates.npz": "5cf7293b15c1fec72d84618a84eae51ba125eedc49e3707bb293cb51405f1897",
+    "heldout_pair_count_train.npy": "33616e5401739a5f4515310e25988d5a81a6430003bbbfcf52ed20833aeafbf1",
+    "test.npy": "9c4c6c48773302284c28677428698dac01d08f8aa14e5189979866f128a034c6",
+    "test_base.npy": "8283bd53c6f2651c17b58f6264436575a63bd5256896e1c2344c951396d3be51",
+    "train.npy": "dc8610f77d0c7d0c0e698143924b97b378213c94434965fd86638aba10d86f4b",
+    "unigram_train.npy": "8222f260184ca49eddac8f829ab59d733a105b1fa66d450195994ddcd4625916",
+    "vocab.json": "7c4d46be4132d766a2f99c42359bb185795adba6a3f322c9af0745655d999617"
+  },
+  "train_order_sha256": "7822da3018ae67cb0496002552dda1a06eb0a3a6890d7be17f3875a190837360",
+  "first_step_windows_sha256": "0c484be8663e2dce213060021bd6146c9116ce84bfc3a925274e19650d8657a1",
+  "dev_mid_sha256": "bccbd2b753bbb434617eae43444dfcacd90c479a4799ca0951d4d2b6f78f7f2a",
+  "total_steps": 1526,
+  "tokens_per_step": 65536,
+  "warmup_steps": 32,
+  "eval_steps": [
+    184,
+    367,
+    702,
+    1038
+  ],
+  "n_vocab": 57243
+}

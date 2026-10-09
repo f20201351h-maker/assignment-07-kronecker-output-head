@@ -1,0 +1,109 @@
+{
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "results": [
+    {
+      "head": "dense",
+      "V": 50257,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 25731584,
+      "train_state_bytes_adamw_fp32": 411705344,
+      "fwd_bwd_s_median": 0.033743858337402344,
+      "peak_mem_gb": 3.366464,
+      "static_mem_gb": 0.119769088,
+      "logit_matmul_tflop": 1.686345089024
+    },
+    {
+      "head": "kas",
+      "V": 50257,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 4194304,
+      "train_state_bytes_adamw_fp32": 67108864,
+      "fwd_bwd_s_median": 0.04815053939819336,
+      "peak_mem_gb": 3.395587584,
+      "static_mem_gb": 0.068676608,
+      "logit_matmul_tflop": 1.686345089024
+    },
+    {
+      "head": "dense",
+      "V": 131072,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 67108864,
+      "train_state_bytes_adamw_fp32": 1073741824,
+      "fwd_bwd_s_median": 0.08385586738586426,
+      "peak_mem_gb": 4.941259264,
+      "static_mem_gb": 0.293797888,
+      "logit_matmul_tflop": 4.398046511104
+    },
+    {
+      "head": "kas",
+      "V": 131072,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 4194304,
+      "train_state_bytes_adamw_fp32": 67108864,
+      "fwd_bwd_s_median": 0.11882472038269043,
+      "peak_mem_gb": 4.595884544,
+      "static_mem_gb": 0.111345664,
+      "logit_matmul_tflop": 4.398046511104
+    },
+    {
+      "head": "dense",
+      "V": 262144,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 134217728,
+      "train_state_bytes_adamw_fp32": 2147483648,
+      "fwd_bwd_s_median": 0.17341208457946777,
+      "peak_mem_gb": 5.478130176,
+      "static_mem_gb": 0.562233344,
+      "logit_matmul_tflop": 8.796093022208
+    },
+    {
+      "head": "kas",
+      "V": 262144,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 4194304,
+      "train_state_bytes_adamw_fp32": 67108864,
+      "fwd_bwd_s_median": 0.23756694793701172,
+      "peak_mem_gb": 4.66509056,
+      "static_mem_gb": 0.18055168,
+      "logit_matmul_tflop": 8.796093022208
+    },
+    {
+      "head": "dense",
+      "V": 1048576,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 536870912,
+      "train_state_bytes_adamw_fp32": 8589934592,
+      "fwd_bwd_s_median": 0.8295948505401611,
+      "peak_mem_gb": 8.699355648,
+      "static_mem_gb": 2.17284608,
+      "logit_matmul_tflop": 35.184372088832
+    },
+    {
+      "head": "kas",
+      "V": 1048576,
+      "d": 512,
+      "BT": 8192,
+      "chunk": 32768,
+      "head_params": 4194304,
+      "train_state_bytes_adamw_fp32": 67108864,
+      "fwd_bwd_s_median": 0.9498562812805176,
+      "peak_mem_gb": 5.080326656,
+      "static_mem_gb": 0.595787776,
+      "logit_matmul_tflop": 35.184372088832
+    }
+  ]
+}

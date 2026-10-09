@@ -1,0 +1,6 @@
+{
+  "run_id": "p3-kasu64-s4",
+  "split": "dev",
+  "wall_s": 23.587681531906128,
+  "best_rule_by_regret": "inherit"
+}

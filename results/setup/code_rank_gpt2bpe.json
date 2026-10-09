@@ -1,0 +1,16 @@
+{
+ "V": 57243,
+ "D": 8192,
+ "pos_dim": 32,
+ "occupied_cells": 1753,
+ "rank_K_exact_svd": 1333,
+ "sigma_at_cutoff": [
+  3.0886449550728234,
+  3.4753639741007365e-12
+ ],
+ "binds_at_d512": false,
+ "binds_at_d768": false,
+ "binds_at_d1536": true,
+ "seconds": 268.8,
+ "note": "rank of the full V x 8192 code matrix K (GPT-2 BPE working vocabulary, pos_dim 32) by SVD of [K_occupied | B]; the KAS logit matrix K W_out has rank <= min(rank K, d). Anusha Raju's Brahmic-only 40,000-word slice gave 603 at pos_dim 32."
+}

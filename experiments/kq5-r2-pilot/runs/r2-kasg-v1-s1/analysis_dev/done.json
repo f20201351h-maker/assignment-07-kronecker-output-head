@@ -1,0 +1,6 @@
+{
+  "run_id": "r2-kasg-v1-s1",
+  "split": "dev",
+  "wall_s": 280.3450651168823,
+  "best_rule_by_regret": "gen_inherit"
+}

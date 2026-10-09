@@ -1,0 +1,22 @@
+{
+  "gen_floor": {
+    "mean_regret_bits_counterfactual": 10.626383971829267,
+    "mean_regret_bits_true": 9.31240331723484,
+    "beats_prefix_counterfactual": 0.0013049151805132667
+  },
+  "gen_zero": {
+    "mean_regret_bits_counterfactual": 1.3765793738363628,
+    "mean_regret_bits_true": 0.04324013332342659,
+    "beats_prefix_counterfactual": 0.1544149630274032
+  },
+  "gen_count": {
+    "mean_regret_bits_counterfactual": 1.2598456140904972,
+    "mean_regret_bits_true": -0.07002665546846575,
+    "beats_prefix_counterfactual": 0.15702479338842976
+  },
+  "gen_inherit": {
+    "mean_regret_bits_counterfactual": 1.2598456161851102,
+    "mean_regret_bits_true": -0.07002665546846573,
+    "beats_prefix_counterfactual": 0.15702479338842976
+  }
+}

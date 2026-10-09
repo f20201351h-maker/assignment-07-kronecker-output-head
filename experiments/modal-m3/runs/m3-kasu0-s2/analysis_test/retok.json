@@ -1,0 +1,29 @@
+{
+  "count": {
+    "bpb": 1.4644082857634824,
+    "bpb_standard_same_text": 1.461828025669848,
+    "delta_bpb": 0.0025802600936344344,
+    "bytes_retok": 5311617.0,
+    "bytes_standard": 5311617.0,
+    "n_tokens": 1129757,
+    "n_tokens_standard": 1131839
+  },
+  "inherit": {
+    "bpb": 1.4653771317735826,
+    "bpb_standard_same_text": 1.461828025669848,
+    "delta_bpb": 0.0035491061037347116,
+    "bytes_retok": 5311617.0,
+    "bytes_standard": 5311617.0,
+    "n_tokens": 1129757,
+    "n_tokens_standard": 1131839
+  },
+  "inherit_prior": {
+    "bpb": 1.4643837092157752,
+    "bpb_standard_same_text": 1.461828025669848,
+    "delta_bpb": 0.0025556835459272786,
+    "bytes_retok": 5311617.0,
+    "bytes_standard": 5311617.0,
+    "n_tokens": 1129757,
+    "n_tokens_standard": 1131839
+  }
+}

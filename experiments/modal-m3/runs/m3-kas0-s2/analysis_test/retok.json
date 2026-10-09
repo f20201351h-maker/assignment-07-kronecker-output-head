@@ -1,0 +1,11 @@
+{
+  "bytes": {
+    "bpb": 1.9422819470171395,
+    "bpb_standard_same_text": 1.9399761699620317,
+    "delta_bpb": 0.002305777055107816,
+    "bytes_retok": 5311617.0,
+    "bytes_standard": 5311617.0,
+    "n_tokens": 1129757,
+    "n_tokens_standard": 1131839
+  }
+}

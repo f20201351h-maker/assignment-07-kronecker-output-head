@@ -1,0 +1,6 @@
+{
+  "run_id": "p4-densep-s1",
+  "split": "dev",
+  "wall_s": 17.937302589416504,
+  "best_rule_by_regret": "inherit"
+}

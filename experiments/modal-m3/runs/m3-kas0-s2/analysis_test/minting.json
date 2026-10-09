@@ -1,0 +1,19 @@
+{
+  "run_id": "m3-kas0-s2",
+  "head": "kas0",
+  "split": "test",
+  "n_sites": 2110,
+  "n_positions": 1131520,
+  "total_bytes": 5310205.0,
+  "rules": {
+    "bytes": {
+      "prior": "none",
+      "correction": "none",
+      "mean_regret_bits": -1.7030163741512891,
+      "beats_prefix": 0.24407582938388625,
+      "median_rank": 2861.0,
+      "leak_bpb": 0.0032655868817427222,
+      "leak_mean_nats_per_pos": 0.010654065445729347
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "run_id": "p2-kasu64-s1",
+  "split": "test",
+  "wall_s": 21.54139256477356,
+  "best_rule_by_regret": "inherit"
+}

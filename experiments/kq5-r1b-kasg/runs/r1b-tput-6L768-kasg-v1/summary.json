@@ -1,0 +1,25 @@
+{
+  "run_id": "r1b-tput-6L768-kasg-v1",
+  "status": "complete",
+  "steps": 40,
+  "tokens": 2621440,
+  "final": {
+    "dev": {
+      "bpb": 2.1347474055607414,
+      "nll_nats_per_token": 7.140582084655762,
+      "n_targets": 8182,
+      "n_bytes": 39484,
+      "windows_sha256": "3a49940eef7f5126214dee0fcf6e0ee89f039e1138884d391c9ce60f11a00537"
+    }
+  },
+  "wall_s": 196.09535002708435,
+  "params": {
+    "body": 43263744,
+    "input_projection": 6291456,
+    "head": 6476850,
+    "head_V_dependent": 0,
+    "head_V_independent": 6476850,
+    "total": 56032050,
+    "total_V_independent": 56032050
+  }
+}

@@ -1,0 +1,13 @@
+# CPU analysis, tests, figures and notebooks (versions used for the local checks; the Modal training image
+# pins torch==2.10.0 and numpy==2.2.6 on Python 3.11, see scripts/modal_app.py)
+torch>=2.10
+numpy>=2.2
+matplotlib>=3.8
+pytest>=8
+tokenizers>=0.20        # GPT-2 byte-level tokenizer (data preparation, tests)
+datasets>=2.19          # FineWeb-Edu streaming (scripts/prepare_data.py download)
+kronecker-embeddings==0.1.1  # published reference codec, compared against src/kq5/codec.py in tests
+nbformat>=5.9
+nbclient>=0.10
+# GPU training and the 4,096-context projection matrix only
+modal>=1.0

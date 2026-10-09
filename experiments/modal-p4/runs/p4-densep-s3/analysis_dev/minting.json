@@ -1,0 +1,28 @@
+{
+  "run_id": "p4-densep-s3",
+  "head": "dense",
+  "split": "dev",
+  "n_sites": 2299,
+  "n_positions": 1224704,
+  "total_bytes": 5784471.0,
+  "rules": {
+    "mean": {
+      "prior": "zero",
+      "correction": "mean",
+      "mean_regret_bits": 9.66893520169657,
+      "beats_prefix": 0.0008699434536755111,
+      "median_rank": 26967.0,
+      "leak_bpb": 7.428752379497681e-05,
+      "leak_mean_nats_per_pos": 0.00024390638796992307
+    },
+    "inherit": {
+      "prior": "inherit",
+      "correction": "inherit",
+      "mean_regret_bits": 1.0449375134204022,
+      "beats_prefix": 0.0,
+      "median_rank": 974.0,
+      "leak_bpb": 0.0005754450664646296,
+      "leak_mean_nats_per_pos": 0.0018893445422122235
+    }
+  }
+}

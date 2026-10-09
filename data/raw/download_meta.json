@@ -1,0 +1,24 @@
+{
+  "dataset": [
+    "HuggingFaceFW/fineweb-edu",
+    "sample-10BT"
+  ],
+  "docs_seen": 246000,
+  "tokens": {
+    "train": 251031325,
+    "dev": 1243963,
+    "test": 1147892
+  },
+  "docs": {
+    "train": 243560,
+    "dev": 1220,
+    "test": 1220
+  },
+  "split_rule": "sha256(doc id)[:8] mod 1000: <5 test, <10 dev, else train",
+  "tokenizer_url": "https://huggingface.co/openai-community/gpt2/resolve/main/tokenizer.json",
+  "tokenizer_sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+  "eos_gpt2_id": 50256,
+  "train_gpt2_sha256": "539b728e1c85b9a9d72ec0eda016a89b6fd5f690fdf954101383830be0d1f0f1",
+  "dev_gpt2_sha256": "71fb1950581b5ff186011df69df89726d5cc466a0da7aba82565ee40e09f5945",
+  "test_gpt2_sha256": "eac89adcd00fd9dc0e680dd758b7e135ab5535e32c5d33c4d9a9bcef972f44f8"
+}

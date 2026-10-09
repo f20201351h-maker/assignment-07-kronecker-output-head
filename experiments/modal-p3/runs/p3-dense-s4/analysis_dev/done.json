@@ -1,0 +1,6 @@
+{
+  "run_id": "p3-dense-s4",
+  "split": "dev",
+  "wall_s": 13.962138652801514,
+  "best_rule_by_regret": "inherit"
+}

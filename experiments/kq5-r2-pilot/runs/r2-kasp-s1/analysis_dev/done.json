@@ -1,0 +1,6 @@
+{
+  "run_id": "r2-kasp-s1",
+  "split": "dev",
+  "wall_s": 104.81572341918945,
+  "best_rule_by_regret": "count"
+}

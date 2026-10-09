@@ -1,0 +1,25 @@
+{
+  "run_id": "r1-lr-8L512-kasp-hm0.01",
+  "status": "complete",
+  "steps": 128,
+  "tokens": 8388608,
+  "final": {
+    "dev": {
+      "bpb": 2.047923321834488,
+      "nll_nats_per_token": 6.658847808837891,
+      "n_targets": 261859,
+      "n_bytes": 1228365,
+      "windows_sha256": "20bce5d8cc60993c95102eb3ecf0316c83e39d3a9ca8c7baf5044c6e3e844e0e"
+    }
+  },
+  "wall_s": 391.36125588417053,
+  "params": {
+    "body": 25698816,
+    "input_projection": 4194304,
+    "head": 4194337,
+    "head_V_dependent": 0,
+    "head_V_independent": 4194337,
+    "total": 34087457,
+    "total_V_independent": 34087457
+  }
+}

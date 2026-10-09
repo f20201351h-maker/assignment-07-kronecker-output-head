@@ -1,0 +1,25 @@
+{
+  "run_id": "r1b-tput-8L512-kasg-v3",
+  "status": "complete",
+  "steps": 40,
+  "tokens": 2621440,
+  "final": {
+    "dev": {
+      "bpb": 2.1219681132928616,
+      "nll_nats_per_token": 7.097836494445801,
+      "n_targets": 8182,
+      "n_bytes": 39484,
+      "windows_sha256": "3a49940eef7f5126214dee0fcf6e0ee89f039e1138884d391c9ce60f11a00537"
+    }
+  },
+  "wall_s": 180.3261523246765,
+  "params": {
+    "body": 25698816,
+    "input_projection": 4194304,
+    "head": 4954418,
+    "head_V_dependent": 0,
+    "head_V_independent": 4954418,
+    "total": 34847538,
+    "total_V_independent": 34847538
+  }
+}

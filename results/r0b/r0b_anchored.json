@@ -1,0 +1,32 @@
+{
+  "log_frequency": {
+    "target": "log_frequency",
+    "linear_start_only": {
+      "lambda": 1000,
+      "r2_test": 0.22839395832264653,
+      "r2_train": 0.2711655609751885,
+      "features": 8194
+    },
+    "linear_both_ends": {
+      "lambda": 1000,
+      "r2_test": 0.2561244183564185,
+      "r2_train": 0.3191437674059838,
+      "features": 16386
+    }
+  },
+  "gpt2_wte": {
+    "target": "gpt2_wte",
+    "linear_start_only": {
+      "lambda": 1000,
+      "r2_test": 0.08438556827209698,
+      "r2_train": 0.12925296194795222,
+      "features": 8194
+    },
+    "linear_both_ends": {
+      "lambda": 1000,
+      "r2_test": 0.08855296437144544,
+      "r2_train": 0.16247837266005216,
+      "features": 16386
+    }
+  }
+}

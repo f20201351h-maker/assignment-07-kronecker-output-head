@@ -1,0 +1,6 @@
+{
+  "run_id": "r2-kasgshuf-v1-s1",
+  "split": "dev",
+  "wall_s": 255.53959918022156,
+  "best_rule_by_regret": "count"
+}

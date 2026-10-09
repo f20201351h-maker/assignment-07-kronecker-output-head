@@ -1,0 +1,6 @@
+{
+  "run_id": "r2-kasu-s2",
+  "split": "dev",
+  "wall_s": 181.2077944278717,
+  "best_rule_by_regret": "inherit"
+}

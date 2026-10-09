@@ -1,0 +1,20 @@
+{
+  "count": {
+    "bpb": 1.6311195745778693,
+    "bpb_standard_same_text": 1.6307674441355673,
+    "delta_bpb": 0.0003521304423019789,
+    "bytes_retok": 5311617.0,
+    "bytes_standard": 5311617.0,
+    "n_tokens": 1129757,
+    "n_tokens_standard": 1131839
+  },
+  "inherit": {
+    "bpb": 1.631119574576493,
+    "bpb_standard_same_text": 1.6307674441355673,
+    "delta_bpb": 0.0003521304409257464,
+    "bytes_retok": 5311617.0,
+    "bytes_standard": 5311617.0,
+    "n_tokens": 1129757,
+    "n_tokens_standard": 1131839
+  }
+}

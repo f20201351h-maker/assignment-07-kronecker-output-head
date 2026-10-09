@@ -1,0 +1,67 @@
+[
+  {
+    "rule": "inherit",
+    "K": 1000,
+    "vocab_total": 58243,
+    "leak_bpb": 0.000597087130615279,
+    "n_sites": 490,
+    "mean_regret_bits": 0.7192728424833135,
+    "frac_regret_below_zero": 0.2938775510204082,
+    "retok_bpb": 1.442216347047266,
+    "retok_tokens_in_windows": 261375,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 8.534265756607056
+  },
+  {
+    "rule": "inherit",
+    "K": 10000,
+    "vocab_total": 67243,
+    "leak_bpb": 0.003213289025021854,
+    "n_sites": 2777,
+    "mean_regret_bits": 0.36133981924017583,
+    "frac_regret_below_zero": 0.4112351458408355,
+    "retok_bpb": 1.44804478297743,
+    "retok_tokens_in_windows": 259325,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 10.20857858657837
+  },
+  {
+    "rule": "inherit",
+    "K": 100000,
+    "vocab_total": 157243,
+    "leak_bpb": 0.010734236544791534,
+    "n_sites": 11107,
+    "mean_regret_bits": -0.3625695405752584,
+    "frac_regret_below_zero": 0.5312865760331322,
+    "retok_bpb": 1.456802614135506,
+    "retok_tokens_in_windows": 252150,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 24.802908897399902
+  },
+  {
+    "rule": "inherit",
+    "K": 300000,
+    "vocab_total": 357243,
+    "leak_bpb": 0.013359755125254263,
+    "n_sites": 14236,
+    "mean_regret_bits": -0.5956317826476704,
+    "frac_regret_below_zero": 0.551137960101152,
+    "retok_bpb": 1.4584154477055808,
+    "retok_tokens_in_windows": 250100,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 56.94959354400635
+  },
+  {
+    "rule": "inherit",
+    "K": 721938,
+    "vocab_total": 779181,
+    "leak_bpb": 0.01466381258576504,
+    "n_sites": 15517,
+    "mean_regret_bits": -0.6293648544796712,
+    "frac_regret_below_zero": 0.5510085712444416,
+    "retok_bpb": 1.4597561799985308,
+    "retok_tokens_in_windows": 250100,
+    "base_tokens_in_windows": 262400,
+    "wall_s": 125.8743040561676
+  }
+]

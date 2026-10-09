@@ -1,0 +1,94 @@
+{
+  "config": {
+    "run_id": "r2-dense-s1",
+    "head": "dense",
+    "seed": 1,
+    "data_seed": 1234,
+    "n_layer": 8,
+    "n_head": 8,
+    "d_model": 512,
+    "seq_len": 1024,
+    "rank": 16,
+    "generator": {},
+    "lr": 0.001,
+    "min_lr_frac": 0.1,
+    "warmup_tokens": 1048576,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "grad_clip": 1.0,
+    "head_lr_mult": 1.0,
+    "gen_lr_mult": 1.0,
+    "batch_seqs": 64,
+    "micro_seqs": 8,
+    "total_tokens": 20971520,
+    "stop_tokens": null,
+    "eval_at_tokens": [
+      4194304,
+      8388608,
+      12582912,
+      16777216
+    ],
+    "eval_windows_mid": 256,
+    "final_dev_windows": null,
+    "final_test": false,
+    "amp": true,
+    "require_cuda": true,
+    "time_limit_s": 40792.354771375656,
+    "log_every": 10,
+    "save_checkpoint": true,
+    "out_dir": "/kaggle/working/runs/r2-dense-s1",
+    "data_dir": "/kaggle/input/datasets/KAGGLE_USER/kq5-fineweb-edu-tokens"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "numpy": "2.0.2",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "cuda_available": true,
+    "cuda": "12.8",
+    "device_name": "Tesla T4",
+    "device_count_visible": 1,
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "params": {
+    "body": 25698816,
+    "input_projection": 4194304,
+    "head": 29308416,
+    "head_V_dependent": 29308416,
+    "head_V_independent": 0,
+    "total": 59201536,
+    "total_V_independent": 29893120
+  },
+  "head_params": {
+    "W": 29308416,
+    "total": 29308416,
+    "V_dependent": 29308416
+  },
+  "data_manifest_files": {
+    "dev.npy": "95154de393980347414b137e5cb8c7ff93acce94647256cb49193a18b1eca877",
+    "dev_base.npy": "b2698c0261dedad35e2c1e6fb99e1a97a020828d5727dcad79ecc3cb3baeb779",
+    "growth_candidates.npz": "5cf7293b15c1fec72d84618a84eae51ba125eedc49e3707bb293cb51405f1897",
+    "heldout_pair_count_train.npy": "33616e5401739a5f4515310e25988d5a81a6430003bbbfcf52ed20833aeafbf1",
+    "test.npy": "9c4c6c48773302284c28677428698dac01d08f8aa14e5189979866f128a034c6",
+    "test_base.npy": "8283bd53c6f2651c17b58f6264436575a63bd5256896e1c2344c951396d3be51",
+    "train.npy": "dc8610f77d0c7d0c0e698143924b97b378213c94434965fd86638aba10d86f4b",
+    "unigram_train.npy": "8222f260184ca49eddac8f829ab59d733a105b1fa66d450195994ddcd4625916",
+    "vocab.json": "7c4d46be4132d766a2f99c42359bb185795adba6a3f322c9af0745655d999617"
+  },
+  "train_order_sha256": "7822da3018ae67cb0496002552dda1a06eb0a3a6890d7be17f3875a190837360",
+  "first_step_windows_sha256": "0c484be8663e2dce213060021bd6146c9116ce84bfc3a925274e19650d8657a1",
+  "dev_mid_sha256": "20bce5d8cc60993c95102eb3ecf0316c83e39d3a9ca8c7baf5044c6e3e844e0e",
+  "total_steps": 320,
+  "tokens_per_step": 65536,
+  "warmup_steps": 16,
+  "eval_steps": [
+    64,
+    128,
+    192,
+    256
+  ],
+  "n_vocab": 57243
+}

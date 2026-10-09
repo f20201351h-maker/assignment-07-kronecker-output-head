@@ -1,0 +1,6 @@
+{
+  "run_id": "p2-kasg-occ-s2",
+  "split": "dev",
+  "wall_s": 36.349953413009644,
+  "best_rule_by_regret": "gen_count"
+}

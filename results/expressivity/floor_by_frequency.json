@@ -1,0 +1,90 @@
+{
+ "provenance": "RECOMPUTED from floor_contextual.npz (tag 0: KAS features, bias = Dense-prior beta) and data/tokens/unigram_train.npy; buckets by training count of the TARGET token",
+ "tag": "kas | bias = dense-prior's learned beta (fixed)",
+ "buckets": [
+  {
+   "range": "[100,1000)",
+   "n_targets": 52,
+   "share_of_targets": 0.05078125,
+   "floor_nats_mean": 0.9686281004777322,
+   "floor_nats_median": 0.9007525444030762,
+   "mimic_minus_dense_prior": 2.4731268768127146,
+   "arms_gap_to_dense_prior": {
+    "Dense": 0.4158203166264754,
+    "KAS-U64": 0.4858263358921529,
+    "KAS-U16": 1.0004605097123063,
+    "KAS-G": 2.03606406527643,
+    "KAS-P": 2.3047597157195785,
+    "KAS-0": 1.7939850964511816
+   }
+  },
+  {
+   "range": "[1000,10000)",
+   "n_targets": 175,
+   "share_of_targets": 0.1708984375,
+   "floor_nats_mean": 1.0373625717631407,
+   "floor_nats_median": 1.0382871627807617,
+   "mimic_minus_dense_prior": 1.8323870099362518,
+   "arms_gap_to_dense_prior": {
+    "Dense": 0.3873929121598069,
+    "KAS-U64": 0.09434360800227816,
+    "KAS-U16": 0.47384100550162006,
+    "KAS-G": 0.8223362356497507,
+    "KAS-P": 1.5535897034203767,
+    "KAS-0": 1.9534719557905502
+   }
+  },
+  {
+   "range": "[10000,100000)",
+   "n_targets": 287,
+   "share_of_targets": 0.2802734375,
+   "floor_nats_mean": 1.002016297823876,
+   "floor_nats_median": 1.0190668106079102,
+   "mimic_minus_dense_prior": 1.1051490801266468,
+   "arms_gap_to_dense_prior": {
+    "Dense": 0.284336403661281,
+    "KAS-U64": 0.1530287278952395,
+    "KAS-U16": 0.29322712344055807,
+    "KAS-G": 0.5359892077477915,
+    "KAS-P": 1.2133365519189045,
+    "KAS-0": 2.703073185823131
+   }
+  },
+  {
+   "range": "[100000,1000000)",
+   "n_targets": 178,
+   "share_of_targets": 0.173828125,
+   "floor_nats_mean": 0.6855033174408286,
+   "floor_nats_median": 0.6579374074935913,
+   "mimic_minus_dense_prior": 0.43072935654320677,
+   "arms_gap_to_dense_prior": {
+    "Dense": 0.07474220435107598,
+    "KAS-U64": 0.0991856683725151,
+    "KAS-U16": 0.18666537379253437,
+    "KAS-G": 0.2857958491897509,
+    "KAS-P": 0.5747690198228831,
+    "KAS-0": 2.411274849512062
+   }
+  },
+  {
+   "range": "[1000000,inf)",
+   "n_targets": 332,
+   "share_of_targets": 0.32421875,
+   "floor_nats_mean": 0.4611376674231478,
+   "floor_nats_median": 0.409993052482605,
+   "mimic_minus_dense_prior": 0.05500695513875549,
+   "arms_gap_to_dense_prior": {
+    "Dense": 0.06267938944057026,
+    "KAS-U64": -0.022026126798187672,
+    "KAS-U16": -0.04382345960140032,
+    "KAS-G": -0.0013276092210934983,
+    "KAS-P": 0.0704163346400185,
+    "KAS-0": 0.873292173571358
+   }
+  }
+ ],
+ "overall": {
+  "floor_nats_mean": 0.7759795750466765,
+  "n_targets": 1024
+ }
+}

@@ -1,0 +1,21 @@
+{
+  "count": {
+    "bpb": 1.923624151653751,
+    "n_tokens": 1223418,
+    "windows": 1194
+  },
+  "inherit": {
+    "bpb": 1.9236383900839182,
+    "n_tokens": 1223418,
+    "windows": 1194
+  },
+  "inherit_prior": {
+    "bpb": 1.9236246514472906,
+    "n_tokens": 1223418,
+    "windows": 1194
+  },
+  "_standard": {
+    "bpb": 1.925480884532161,
+    "n_tokens": 1225678
+  }
+}

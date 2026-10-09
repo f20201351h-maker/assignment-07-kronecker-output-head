@@ -1,0 +1,96 @@
+{
+ "provenance": "RECOMPUTED on CPU from checkpoint p4-densep-s2 on dev-split contexts; floors are KL(p_dense_prior || best additive fit), i.e. representational floors conditional on the dense-prior distribution being the truth",
+ "checkpoint": "checkpoints\\p4-densep-s2\\model.pt",
+ "n_contexts": 1024,
+ "windows": [
+  0,
+  171,
+  341,
+  512,
+  683,
+  854,
+  1024,
+  1195
+ ],
+ "positions_per_window": 128,
+ "n_valid_byte_targets": 1024,
+ "bytes_per_target_here": 4.7373046875,
+ "dense_prior_nll_recomputed_cpu": 4.373849868774414,
+ "dense_prior_nll_saved_gpu": 4.373882347404923,
+ "reference_entropy_nats_mean": 4.766763687133789,
+ "arms_nll_nats_per_target_same_positions": {
+  "Dense-prior": 4.373882347404923,
+  "Dense": 4.556799565192279,
+  "KAS-U64": 4.450256681436363,
+  "KAS-U16": 4.588679175769015,
+  "KAS-G": 4.799875089156124,
+  "KAS-P": 5.201824729971163,
+  "KAS-0": 6.241303581634459
+ },
+ "arms_bpb_same_positions": {
+  "Dense-prior": 1.3320186874792102,
+  "Dense": 1.3877241530135136,
+  "KAS-U64": 1.3552776670523614,
+  "KAS-U16": 1.3974327445267187,
+  "KAS-G": 1.461750181761348,
+  "KAS-P": 1.5841596090082537,
+  "KAS-0": 1.900721680339789
+ },
+ "floors": {
+  "kas | bias = dense-prior's learned beta (fixed)": {
+   "n_contexts": 1024,
+   "n_features": 1787,
+   "floor_nats_per_target": 0.7784212672607964,
+   "floor_bpb_equiv_global_ratio": 0.23904081247987796,
+   "floor_bpb_byte_weighted_here": 0.23705980005105032,
+   "mimic_nll_true_targets": 5.214717761623335,
+   "dense_prior_nll_true_targets_same": 4.373849868774414,
+   "mimic_minus_dense_prior_nats": 0.8408678928489213,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.373882347404923,
+    "Dense": 4.556799565192279,
+    "KAS-U64": 4.450256681436363,
+    "KAS-U16": 4.588679175769015,
+    "KAS-G": 4.799875089156124,
+    "KAS-P": 5.201824729971163,
+    "KAS-0": 6.241303581634459
+   },
+   "floor_quantiles_nats": [
+    0.19309129714965823,
+    0.3800933361053467,
+    0.7106702327728271,
+    1.1201056838035583,
+    1.4871798992156984
+   ],
+   "seconds": 1142.5
+  },
+  "kas | bias = log-unigram prior (fixed; KAS-P family)": {
+   "n_contexts": 1024,
+   "n_features": 1787,
+   "floor_nats_per_target": 0.7792146780855091,
+   "floor_bpb_equiv_global_ratio": 0.23928445634746787,
+   "floor_bpb_byte_weighted_here": 0.23730142475912977,
+   "mimic_nll_true_targets": 5.215310057283508,
+   "dense_prior_nll_true_targets_same": 4.373849868774414,
+   "mimic_minus_dense_prior_nats": 0.8414601885090942,
+   "arms_nll_same_subset": {
+    "Dense-prior": 4.373882347404923,
+    "Dense": 4.556799565192279,
+    "KAS-U64": 4.450256681436363,
+    "KAS-U16": 4.588679175769015,
+    "KAS-G": 4.799875089156124,
+    "KAS-P": 5.201824729971163,
+    "KAS-0": 6.241303581634459
+   },
+   "floor_quantiles_nats": [
+    0.19380526542663576,
+    0.3804221749305725,
+    0.7121214866638184,
+    1.1195570230484009,
+    1.490976667404175
+   ],
+   "seconds": 1115.5
+  }
+ },
+ "seconds_total": 2273.8
+}

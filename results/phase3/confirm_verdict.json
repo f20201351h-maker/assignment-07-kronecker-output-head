@@ -1,0 +1,209 @@
+{
+ "protocol": "07",
+ "original_advantage_seeds12": 0.0281,
+ "runs": {
+  "Dense": [
+   {
+    "id": "m3-dense-s1",
+    "seed": 1,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 471.61619114875793,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4451521620470513
+   },
+   {
+    "id": "m3-dense-s2",
+    "seed": 2,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 468.40257143974304,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4403308292835646
+   },
+   {
+    "id": "p3-dense-s3",
+    "seed": 3,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 466.3293056488037,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4395909972506131
+   },
+   {
+    "id": "p3-dense-s4",
+    "seed": 4,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 465.4578273296356,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4368546015483976
+   }
+  ],
+  "KAS-U64": [
+   {
+    "id": "p2-kasu64-s1",
+    "seed": 1,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 546.8311078548431,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4167513174685227
+   },
+   {
+    "id": "p2-kasu64-s2",
+    "seed": 2,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 542.662501335144,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4124354600950944
+   },
+   {
+    "id": "p3-kasu64-s3",
+    "seed": 3,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 540.1801583766937,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.410055933389917
+   },
+   {
+    "id": "p3-kasu64-s4",
+    "seed": 4,
+    "complete": true,
+    "skipped_fp16_steps": 0,
+    "wall_s": 541.5160238742828,
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_bpb": 1.4225621305876706
+   }
+  ]
+ },
+ "fresh_pairs_seeds34": {
+  "dense_bpb": [
+   1.4395909972506131,
+   1.4368546015483976
+  ],
+  "u64_bpb": [
+   1.410055933389917,
+   1.4225621305876706
+  ],
+  "dense_mean": 1.4382227993995054,
+  "u64_mean": 1.4163090319887939,
+  "delta_point": -0.021913767410711493,
+  "bootstrap": {
+   "point": -0.021913767410711493,
+   "ci95": [
+    -0.030447310642706633,
+    -0.013465154170983554
+   ],
+   "n_boot": 2000
+  },
+  "welch": {
+   "point": -0.021913767410711493,
+   "se": 0.006401031748636371,
+   "df": 1.095530705826013,
+   "t": 10.36503937284471,
+   "ci95": [
+    -0.0882607135121565,
+    0.044433178690733516
+   ]
+  },
+  "dense_seed_sd": 0.001934923957046312,
+  "u64_seed_sd": 0.00884321684538776,
+  "pairs_u64_lower": 4,
+  "n_pairs": 4,
+  "all_u64_below_all_dense": true
+ },
+ "verdict": {
+  "word": "WEAKENED",
+  "conditions": {
+   "both_fresh_u64_below_both_fresh_dense": true,
+   "bootstrap_ci_below_0": true,
+   "welch_ci_below_0": false,
+   "at_least_half_original": true
+  }
+ },
+ "per_seed_diff_u64_minus_dense": {
+  "1": -0.02840084457852865,
+  "2": -0.027895369188470243,
+  "3": -0.029535063860696154,
+  "4": -0.014292470960727055
+ },
+ "combined_all_seeds": {
+  "dense_bpb": [
+   1.4451521620470513,
+   1.4403308292835646,
+   1.4395909972506131,
+   1.4368546015483976
+  ],
+  "u64_bpb": [
+   1.4167513174685227,
+   1.4124354600950944,
+   1.410055933389917,
+   1.4225621305876706
+  ],
+  "dense_mean": 1.4404821475324066,
+  "u64_mean": 1.4154512103853012,
+  "delta_point": -0.02503093714710536,
+  "bootstrap": {
+   "point": -0.02503093714710536,
+   "ci95": [
+    -0.03137875426217286,
+    -0.01872342029800322
+   ],
+   "n_boot": 2000
+  },
+  "welch": {
+   "point": -0.02503093714710536,
+   "se": 0.0032435114676892187,
+   "df": 5.052379734461124,
+   "t": 2.5625867376038,
+   "ci95": [
+    -0.03334271661747158,
+    -0.016719157676739132
+   ]
+  },
+  "dense_seed_sd": 0.003453750206672226,
+  "u64_seed_sd": 0.005491181664636259,
+  "pairs_u64_lower": 16,
+  "n_pairs": 16,
+  "all_u64_below_all_dense": true,
+  "u64_sd_over_advantage": 0.21937579213933958,
+  "original_minus_fresh_advantage": 0.006186232589288507,
+  "rank_order_all_runs": [
+   {
+    "id": "p3-kasu64-s3",
+    "test_bpb": 1.410055933389917
+   },
+   {
+    "id": "p2-kasu64-s2",
+    "test_bpb": 1.4124354600950944
+   },
+   {
+    "id": "p2-kasu64-s1",
+    "test_bpb": 1.4167513174685227
+   },
+   {
+    "id": "p3-kasu64-s4",
+    "test_bpb": 1.4225621305876706
+   },
+   {
+    "id": "p3-dense-s4",
+    "test_bpb": 1.4368546015483976
+   },
+   {
+    "id": "p3-dense-s3",
+    "test_bpb": 1.4395909972506131
+   },
+   {
+    "id": "m3-dense-s2",
+    "test_bpb": 1.4403308292835646
+   },
+   {
+    "id": "m3-dense-s1",
+    "test_bpb": 1.4451521620470513
+   }
+  ]
+ }
+}
